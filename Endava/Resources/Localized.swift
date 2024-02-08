@@ -14,7 +14,7 @@ internal enum L10n {
   ///   Endava
   /// 
   ///   Created by Mladen Mikic on 07.02.2024.
-  internal static let mainListNoObjectPlaceholderTitle = L10n.tr("Localizable", "main_list_no_object_placeholder_title", fallback: "")
+  internal static let mainListNoObjectPlaceholderTitle = L10n.tr("Localizable", "main_list_no_object_placeholder_title", fallback: "No RSS feeds are available. Tap on the '+' button to add your first RSS feed.")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

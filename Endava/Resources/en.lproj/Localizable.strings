@@ -8,4 +8,4 @@
 // MARK: - en (English).
 
 // MARK: - Main List Screen.
-"main_list_no_object_placeholder_title" = "";
+"main_list_no_object_placeholder_title" = "No RSS feeds are available. Tap on the '+' button to add your first RSS feed.";

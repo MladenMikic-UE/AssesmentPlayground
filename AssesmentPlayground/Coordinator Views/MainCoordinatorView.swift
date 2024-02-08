@@ -93,7 +93,7 @@ struct MainCoordinatorView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildEmptyTextPlaceholderView() -> some View {
         
-        Text("No Appointments are available. Tap the + button to create your first appointment.")
+        Text(L10n.mainListNoObjectPlaceholderTitle)
             .font(theme.font)
             .foregroundColor(theme.fontColor)
             .transition(.popUpWithOpacityTransitionSequence)
