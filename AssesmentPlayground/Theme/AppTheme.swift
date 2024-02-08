@@ -100,9 +100,7 @@ extension AppTheme {
         switch self {
         case .white:
             Color.white
-        case .movemedical:
-            Color(red: 0.09, green: 0.23, blue: 0.92, opacity: 1.00)
-        case .endava:
+        case .endava, .movemedical:
             Asset.primarySelectionThemeLabelColor.swiftUIColor
         }
     }
@@ -112,9 +110,7 @@ extension AppTheme {
         switch self {
         case .white:
             Color.white
-        case .movemedical:
-            Color(red: 0.02, green: 0.04, blue: 0.08, opacity: 1.00)
-        case .endava:
+        case .endava, .movemedical:
             Asset.themeBackgroundColor.swiftUIColor
         }
     }

@@ -22,7 +22,9 @@ internal typealias AssetColorTypeAlias = ColorAsset.Color
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
-  internal static let movemedical = ColorAsset(name: "Movemedical")
+  internal static let themeBackgroundColor = ColorAsset(name: "Theme Background Color")
+  internal static let primarySelectionThemeLabelColor = ColorAsset(name: "primarySelectionThemeLabelColor")
+  internal static let primayThemeLabelColor = ColorAsset(name: "primayThemeLabelColor")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
