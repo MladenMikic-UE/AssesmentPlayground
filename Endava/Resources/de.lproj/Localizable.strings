@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Endava
+
+  Created by Mladen Mikic on 07.02.2024.
+  
+*/
+// MARK: - de (German).
+
+// MARK: - Main List Screen.
+"main_list_no_object_placeholder_title" = "";

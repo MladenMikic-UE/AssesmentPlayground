@@ -15,16 +15,18 @@ final class DependencyContainer {
     @Published private(set) var storageInteractor: StorageInteractor
     lazy var delegate = factory.makeNavigationDelegate([FadeTransition()])
     lazy var navigationController = factory.makeNavigationController(delegate: delegate)
-    let theme: AppTheme
+
+    let theme: AppTheme = AppTheme.bundleTheme
+    
     let appViewConfiguration: AppViewConfiguration
     
     private(set) var appCoordinator: AppCoordinator?
     
     init(factory: NavigationControllerFactory? = nil,
          storageInteractor: StorageInteractor = .init(diskStorageClient: nil),
-         theme: AppTheme = .movemedical,
          appViewConfiguration: AppViewConfiguration = .init(),
          appCoordinator: AppCoordinator? = nil) {
+        
         
         if let efactory: NavigationControllerFactory = factory {
             self.factory = efactory
@@ -33,7 +35,6 @@ final class DependencyContainer {
         }
         
         self.storageInteractor = storageInteractor
-        self.theme = theme
         self.appViewConfiguration = appViewConfiguration
         self.appCoordinator = appCoordinator
         

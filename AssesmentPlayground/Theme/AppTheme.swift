@@ -38,6 +38,18 @@ public enum AppTheme: String, CaseIterable {
             "Endava"
         }
     }
+    
+    static var bundleTheme: AppTheme {
+        if Bundle.movemedical != nil {
+            return .movemedical
+        } else if Bundle.endava != nil {
+            return .endava
+        } else if Bundle.assesmentPlayground != nil {
+            return .white
+        } else {
+            return .white
+        }
+    }
 }
 
 // MARK: - Fonts.

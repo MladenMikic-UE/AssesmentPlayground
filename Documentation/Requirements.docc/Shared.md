@@ -38,3 +38,10 @@ The start:
 
 Animations:
 All things must have a beginning and ending. (Animate objects at start and end)
+
+Priorities:
+1)
+2)
+TODO: Setup swift gen for localizations
+TODO: Fix localization on all projects
+3)
