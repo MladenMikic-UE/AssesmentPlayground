@@ -126,6 +126,7 @@
 		F60F2ED52B75460E004E6D76 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2ED42B75460E004E6D76 /* Localized.swift */; };
 		F60F2ED72B75492E004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2ED62B75492E004E6D76 /* Assets.swift */; };
 		F60F2ED92B754959004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2ED82B754959004E6D76 /* Assets.swift */; };
+		F60F2EDB2B754A8A004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2EDA2B754A8A004E6D76 /* Assets.swift */; };
 		F634599F2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F634599E2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift */; };
 		F63459A12B6E4E3C009554B1 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459A02B6E4E3C009554B1 /* MainCoordinatorView.swift */; };
 		F63459A32B6E4E3D009554B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63459A22B6E4E3D009554B1 /* Assets.xcassets */; };
@@ -257,6 +258,7 @@
 		F60F2ED42B75460E004E6D76 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		F60F2ED62B75492E004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		F60F2ED82B754959004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		F60F2EDA2B754A8A004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		F634599B2B6E4E3C009554B1 /* AssesmentPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssesmentPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F634599E2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentPlaygroundApp.swift; sourceTree = "<group>"; };
 		F63459A02B6E4E3C009554B1 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				F60F2ED22B754600004E6D76 /* Localized.swift */,
 				F60F2EA32B74003E004E6D76 /* Localizable.strings */,
 				F60F2DB02B73EC50004E6D76 /* Assets.xcassets */,
+				F60F2EDA2B754A8A004E6D76 /* Assets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				F60F2DD42B73ED0E004E6D76 /* DiskStorageClient.swift in Sources */,
 				F60F2DDA2B73ED1C004E6D76 /* AppViewConfiguration.swift in Sources */,
 				F60F2DCC2B73ED09004E6D76 /* AddNewObjectView+Ext.swift in Sources */,
+				F60F2EDB2B754A8A004E6D76 /* Assets.swift in Sources */,
 				F60F2DD62B73ED0E004E6D76 /* AppointmentRepository.swift in Sources */,
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,

@@ -96,7 +96,15 @@ extension AppTheme {
 extension AppTheme {
     
     var selectionColor: Color {
-        Color(red: 0.09, green: 0.23, blue: 0.92, opacity: 1.00)
+        
+        switch self {
+        case .white:
+            Color.white
+        case .movemedical:
+            Color(red: 0.09, green: 0.23, blue: 0.92, opacity: 1.00)
+        case .endava:
+            Asset.primarySelectionThemeLabelColor.swiftUIColor
+        }
     }
     
     var backgroundColor: Color {
@@ -107,15 +115,17 @@ extension AppTheme {
         case .movemedical:
             Color(red: 0.02, green: 0.04, blue: 0.08, opacity: 1.00)
         case .endava:
-            Color(red: 0.09, green: 0.15, blue: 0.19, opacity: 1.00)
+            Asset.themeBackgroundColor.swiftUIColor
         }
     }
     
     var fontColor: Color {
         
         switch self {
-        case .white, .movemedical, .endava:
+        case .white, .movemedical:
             Color.white
+        case .endava:
+            Asset.primayThemeLabelColor.swiftUIColor
         }
     }
     
@@ -134,12 +144,10 @@ extension AppTheme {
     var primaryFontColor: Color {
         
         switch self {
-        case .white:
-                .white
-        case .movemedical:
-                .white
+        case .white, .movemedical:
+            Color.white
         case .endava:
-                .white
+            Asset.primayThemeLabelColor.swiftUIColor
         }
     }
 }
