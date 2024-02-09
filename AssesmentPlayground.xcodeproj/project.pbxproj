@@ -147,6 +147,8 @@
 		F635695D2B769E1B0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
 		F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
 		F635695F2B769EAF0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
+		F63569612B76A0290070C5B4 /* RSSFeedCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */; };
+		F63569632B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */; };
 		F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */; };
 		F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0462B6EE9120061A42C /* CenteredContainerView.swift */; };
 		F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
@@ -282,6 +284,8 @@
 		F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewObjectView+SpecificNewObjectView.swift"; sourceTree = "<group>"; };
 		F635695A2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewObjectView+SpecificNewObjectView.swift"; sourceTree = "<group>"; };
 		F635695C2B769E1B0070C5B4 /* RawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawViewState.swift; sourceTree = "<group>"; };
+		F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedCreationView.swift; sourceTree = "<group>"; };
+		F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSSFeedCreationView+Ext.swift"; sourceTree = "<group>"; };
 		F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		F681D0462B6EE9120061A42C /* CenteredContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContainerView.swift; sourceTree = "<group>"; };
 		F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+Ext.swift"; sourceTree = "<group>"; };
@@ -558,9 +562,9 @@
 		F63569542B7698D20070C5B4 /* Leaf Views */ = {
 			isa = PBXGroup;
 			children = (
-				F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
 				F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */,
 				F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */,
+				F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
 			);
 			path = "Leaf Views";
 			sourceTree = "<group>";
@@ -569,6 +573,8 @@
 			isa = PBXGroup;
 			children = (
 				F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
+				F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */,
+				F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */,
 			);
 			path = "Leaf Views";
 			sourceTree = "<group>";
@@ -866,6 +872,7 @@
 			files = (
 				F60F2DC32B73ECE6004E6D76 /* DependencyContainer.swift in Sources */,
 				F60F2DC92B73ED04004E6D76 /* ObjectsListContainerView.swift in Sources */,
+				F63569632B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift in Sources */,
 				F60F2DE12B73ED2B004E6D76 /* CenteredContainerView.swift in Sources */,
 				F60F2DBA2B73ECA7004E6D76 /* SceneDelegate.swift in Sources */,
 				F60F2DBD2B73ECCF004E6D76 /* MainCoordinator.swift in Sources */,
@@ -892,6 +899,7 @@
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,
 				F60F2DC62B73ED04004E6D76 /* MainCoordinatorView.swift in Sources */,
+				F63569612B76A0290070C5B4 /* RSSFeedCreationView.swift in Sources */,
 				F60F2DE32B73ED2F004E6D76 /* Date+Ext.swift in Sources */,
 				F60F2DDC2B73ED21004E6D76 /* HospitalRepository.swift in Sources */,
 				F60F2DE22B73ED2F004E6D76 /* Color+Ext.swift in Sources */,
