@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUICoordinator
 
-extension AddNewObjectView {
+public extension AddNewObjectView {
     
     @MainActor
     final class ViewModel<R: Routing, T: UniqueCodableClass>: ObservableObject {
@@ -17,9 +17,9 @@ extension AddNewObjectView {
         @Published var oldModel: UniqueCodableClass? = nil
         var coordinator: R?
         
-        init(storageInteractor: StorageInteractor, 
-             oldModel: UniqueCodableClass? = nil,
-             coordinator: R? = nil) {
+        public init(storageInteractor: StorageInteractor,
+                    oldModel: UniqueCodableClass? = nil,
+                    coordinator: R? = nil) {
             
             self.storageInteractor = storageInteractor
             self.oldModel = oldModel

@@ -9,13 +9,21 @@ import SwiftUI
 import SwiftUICoordinator
 import Combine
 
-extension MainCoordinatorView {
+public extension MainCoordinatorView {
     
     class ViewState: ObservableObject {
         
         @Published var leftButtonProgress: CGFloat = 0
         @Published var rightButtonProgress: CGFloat = 0
         @Published var startAnimations: Bool = true
+        
+        public init(leftButtonProgress: CGFloat = 0, 
+                    rightButtonProgress: CGFloat = 0,
+                    startAnimations: Bool = true) {
+            self.leftButtonProgress = leftButtonProgress
+            self.rightButtonProgress = rightButtonProgress
+            self.startAnimations = startAnimations
+        }
     }
     
     enum ViewContentState {
@@ -36,9 +44,9 @@ extension MainCoordinatorView {
         private var bag: Set<AnyCancellable> = Set<AnyCancellable>()
         
         // MARK: - Init.
-        init(viewContentState: MainCoordinatorView.ViewContentState = .loading,
-             storageInteractor: StorageInteractor,
-             coordinator: R? = nil) {
+        public init(viewContentState: MainCoordinatorView.ViewContentState = .loading,
+                    storageInteractor: StorageInteractor,
+                    coordinator: R? = nil) {
             
             self.viewContentState = viewContentState
             self.storageInteractor = storageInteractor

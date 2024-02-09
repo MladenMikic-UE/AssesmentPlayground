@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class StorageInteractor: ObservableObject {
+final public  class StorageInteractor: ObservableObject {
     
     @Published private(set) var localStorage: AppointmentRepository
     @Published private(set) var diskStorageClient: DiskStorageClient?
@@ -17,8 +17,8 @@ final class StorageInteractor: ObservableObject {
     private var appointmentsStoragePath: String = "appointments"
     private var bag: Set<AnyCancellable> = Set<AnyCancellable>()
     
-    init(localStorage: AppointmentRepository = .init(),
-         diskStorageClient: DiskStorageClient? ) {
+    public init(localStorage: AppointmentRepository = .init(),
+                diskStorageClient: DiskStorageClient? ) {
         
         self.localStorage = localStorage
         

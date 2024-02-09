@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUICoordinator
 
-struct MainCoordinatorView<Coordinator: Routing>: View {
+public struct MainCoordinatorView<Coordinator: Routing>: View {
     
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var appViewConfiguration: AppViewConfiguration

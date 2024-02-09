@@ -9,28 +9,6 @@ import SwiftUI
 import Combine
 import SwiftUICoordinator
 
-enum ViewState: Equatable {
-    
-    case full
-    case glance
-    
-    public static func == (lhs: ViewState, rhs: ViewState) -> Bool {
-        switch (lhs, rhs) {
-        case (.full, .full): return true
-        case (.glance, .glance): return true
-        default: return false
-        }
-    }
-    
-    var toggledValue: ViewState {
-        if self == .full {
-            return .glance
-        } else {
-            return .full
-        }
-    }
-}
-
 extension AppointmentCreationView {
     
     @MainActor
@@ -121,16 +99,16 @@ extension AppointmentCreationView {
     
     final class ViewStates: ObservableObject {
         
-        @Published var locationViewState: ViewState
-        @Published var dateViewState: ViewState
-        @Published var descriptionViewState: ViewState
-        @Published var scheduleButtonViewState: ViewState
+        @Published var locationViewState: RawViewState
+        @Published var dateViewState: RawViewState
+        @Published var descriptionViewState: RawViewState
+        @Published var scheduleButtonViewState: RawViewState
         @Published var startAnimations: Bool
         
-        init(locationViewState: ViewState = .glance,
-             dateViewState: ViewState = .glance,
-             descriptionViewState: ViewState = .glance,
-             scheduleButtonViewState: ViewState = .full,
+        init(locationViewState: RawViewState = .glance,
+             dateViewState: RawViewState = .glance,
+             descriptionViewState: RawViewState = .glance,
+             scheduleButtonViewState: RawViewState = .full,
              startAnimations: Bool = false) {
             
             self.locationViewState = locationViewState

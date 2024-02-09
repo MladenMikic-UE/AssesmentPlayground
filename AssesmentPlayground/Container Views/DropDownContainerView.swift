@@ -10,7 +10,7 @@ import SwiftUI
 struct DropDownContainerView<Content>: View where Content: View {
     
     @Binding var enteredValue: String
-    @Binding var viewState: ViewState
+    @Binding var viewState: RawViewState
     @EnvironmentObject var appViewConfiguration: AppViewConfiguration
     private let content: Content
     private let selectionColor: Color
@@ -19,7 +19,7 @@ struct DropDownContainerView<Content>: View where Content: View {
     public init(@ViewBuilder content: () -> Content,
                 enteredValue: Binding<String>,
                 selectionColor: Color,
-                viewState: Binding<ViewState>,
+                viewState: Binding<RawViewState>,
                 theme: AppTheme) {
         self.content = content()
         self.selectionColor = selectionColor

@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 import SwiftUICoordinator
 
-struct AddNewObjectView<Coordinator: Routing>: View {
+public struct AddNewObjectView<Coordinator: Routing>: View {
     
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var appViewConfiguration: AppViewConfiguration
     
     @ObservedObject var viewModel: ViewModel<Coordinator, UniqueCodableClass>
     
-    @State private var theme: AppTheme
+    @State private(set) var theme: AppTheme
     @State private var animationsStart: Bool = false
 
     // MARK: - Init.
@@ -26,7 +26,7 @@ struct AddNewObjectView<Coordinator: Routing>: View {
         self.viewModel = viewModel
     }
     
-    var body: some View {
+    public var body: some View {
     
         buildContentContainerView()
             .onAppear {
@@ -96,11 +96,7 @@ struct AddNewObjectView<Coordinator: Routing>: View {
             
             Spacer().frame(height: appViewConfiguration.appPadding.bottom)
             
-            AppointmentCreationView<MainCoordinator>(theme: theme,
-                                                     viewModel: .init(storageInteractor: viewModel.storageInteractor, 
-                                                                      availableLocations: HospitalRepository().locations,
-                                                                      coordinator: coordinator as? MainCoordinator,
-                                                                      oldAppointment: viewModel.oldModel as? Appointment))
+            buildTargetSpecificCreateNewObjectView()
             
             Spacer().frame(height: appViewConfiguration.appPadding.bottom)
         }

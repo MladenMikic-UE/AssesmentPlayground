@@ -27,7 +27,7 @@ public class DiskStorageClient: ObservableObject, Identifiable {
     // MARK: - Init.
     
     /// - WARNING: Dont call `init` from main-thread.
-    init() throws {
+    public init() throws {
         
         // ARPLogger.shared.log("")
         

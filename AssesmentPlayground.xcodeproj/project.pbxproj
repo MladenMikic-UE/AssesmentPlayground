@@ -28,9 +28,7 @@
 		F60F2DC82B73ED04004E6D76 /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
 		F60F2DC92B73ED04004E6D76 /* ObjectsListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0CE2B70FFC00061A42C /* ObjectsListContainerView.swift */; };
 		F60F2DCA2B73ED09004E6D76 /* AddNewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0682B6F91250061A42C /* AddNewObjectView.swift */; };
-		F60F2DCB2B73ED09004E6D76 /* AppointmentCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */; };
 		F60F2DCC2B73ED09004E6D76 /* AddNewObjectView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07B2B700A680061A42C /* AddNewObjectView+Ext.swift */; };
-		F60F2DCD2B73ED09004E6D76 /* AppointmentCreationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */; };
 		F60F2DCE2B73ED09004E6D76 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459DC2B6ECB68009554B1 /* CircularProgressBar.swift */; };
 		F60F2DCF2B73ED0E004E6D76 /* StorageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0AA2B70DA0D0061A42C /* StorageInteractor.swift */; };
 		F60F2DD02B73ED0E004E6D76 /* DiskStorageProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0DE2B7193D80061A42C /* DiskStorageProcess.swift */; };
@@ -143,6 +141,12 @@
 		F63459D82B6EBB98009554B1 /* ActionGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459D72B6EBB98009554B1 /* ActionGradient.swift */; };
 		F63459DB2B6ECB54009554B1 /* IndicatorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459DA2B6ECB54009554B1 /* IndicatorBuilder.swift */; };
 		F63459DD2B6ECB68009554B1 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459DC2B6ECB68009554B1 /* CircularProgressBar.swift */; };
+		F63569562B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */; };
+		F63569592B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */; };
+		F635695B2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695A2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */; };
+		F635695D2B769E1B0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
+		F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
+		F635695F2B769EAF0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
 		F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */; };
 		F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0462B6EE9120061A42C /* CenteredContainerView.swift */; };
 		F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
@@ -155,9 +159,7 @@
 		F681D0652B6F8D450061A42C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0642B6F8D450061A42C /* MainCoordinator.swift */; };
 		F681D0672B6F8F380061A42C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0662B6F8F380061A42C /* SceneDelegate.swift */; };
 		F681D0692B6F91250061A42C /* AddNewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0682B6F91250061A42C /* AddNewObjectView.swift */; };
-		F681D0762B7009EE0061A42C /* AppointmentCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */; };
 		F681D0782B700A090061A42C /* DropDownContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0772B700A090061A42C /* DropDownContainerView.swift */; };
-		F681D07A2B700A3F0061A42C /* AppointmentCreationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */; };
 		F681D07C2B700A680061A42C /* AddNewObjectView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07B2B700A680061A42C /* AddNewObjectView+Ext.swift */; };
 		F681D07E2B700A910061A42C /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07D2B700A910061A42C /* Color+Ext.swift */; };
 		F681D0802B700AAD0061A42C /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07F2B700AAD0061A42C /* Date+Ext.swift */; };
@@ -276,6 +278,10 @@
 		F63459D72B6EBB98009554B1 /* ActionGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGradient.swift; sourceTree = "<group>"; };
 		F63459DA2B6ECB54009554B1 /* IndicatorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorBuilder.swift; sourceTree = "<group>"; };
 		F63459DC2B6ECB68009554B1 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewObjectView+SpecificNewObjectView.swift"; sourceTree = "<group>"; };
+		F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewObjectView+SpecificNewObjectView.swift"; sourceTree = "<group>"; };
+		F635695A2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddNewObjectView+SpecificNewObjectView.swift"; sourceTree = "<group>"; };
+		F635695C2B769E1B0070C5B4 /* RawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawViewState.swift; sourceTree = "<group>"; };
 		F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		F681D0462B6EE9120061A42C /* CenteredContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContainerView.swift; sourceTree = "<group>"; };
 		F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+Ext.swift"; sourceTree = "<group>"; };
@@ -350,6 +356,7 @@
 			children = (
 				F60F2E622B73F8D7004E6D76 /* Launch Screen.storyboard */,
 				F60F2EC52B752B4C004E6D76 /* Resources */,
+				F63569572B769A2C0070C5B4 /* Leaf Views */,
 				F60F2DB22B73EC50004E6D76 /* Preview Content */,
 			);
 			path = Endava;
@@ -367,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				F60F2DEF2B73F0FF004E6D76 /* Bundle+Ext.swift */,
+				F635695C2B769E1B0070C5B4 /* RawViewState.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 			children = (
 				F60F2E602B73F872004E6D76 /* Launch Screen.storyboard */,
 				F60F2EC62B752B57004E6D76 /* Resources */,
+				F63569542B7698D20070C5B4 /* Leaf Views */,
 				F60F2E592B73F300004E6D76 /* Preview Content */,
 			);
 			path = Movemedical;
@@ -546,6 +555,24 @@
 			path = "View Builders";
 			sourceTree = "<group>";
 		};
+		F63569542B7698D20070C5B4 /* Leaf Views */ = {
+			isa = PBXGroup;
+			children = (
+				F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
+				F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */,
+				F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */,
+			);
+			path = "Leaf Views";
+			sourceTree = "<group>";
+		};
+		F63569572B769A2C0070C5B4 /* Leaf Views */ = {
+			isa = PBXGroup;
+			children = (
+				F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
+			);
+			path = "Leaf Views";
+			sourceTree = "<group>";
+		};
 		F681D0432B6EE47A0061A42C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,9 +615,8 @@
 			children = (
 				F681D0682B6F91250061A42C /* AddNewObjectView.swift */,
 				F681D07B2B700A680061A42C /* AddNewObjectView+Ext.swift */,
+				F635695A2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
 				F63459DC2B6ECB68009554B1 /* CircularProgressBar.swift */,
-				F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */,
-				F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */,
 			);
 			path = "Leaf Views";
 			sourceTree = "<group>";
@@ -865,10 +891,8 @@
 				F60F2DD62B73ED0E004E6D76 /* AppointmentRepository.swift in Sources */,
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,
-				F60F2DCD2B73ED09004E6D76 /* AppointmentCreationView+Ext.swift in Sources */,
 				F60F2DC62B73ED04004E6D76 /* MainCoordinatorView.swift in Sources */,
 				F60F2DE32B73ED2F004E6D76 /* Date+Ext.swift in Sources */,
-				F60F2DCB2B73ED09004E6D76 /* AppointmentCreationView.swift in Sources */,
 				F60F2DDC2B73ED21004E6D76 /* HospitalRepository.swift in Sources */,
 				F60F2DE22B73ED2F004E6D76 /* Color+Ext.swift in Sources */,
 				F60F2DC42B73ECE8004E6D76 /* DependencyContainer+Ext.swift in Sources */,
@@ -879,6 +903,7 @@
 				F60F2DE02B73ED2B004E6D76 /* ThemeContainerView.swift in Sources */,
 				F60F2DD52B73ED0E004E6D76 /* ContenRepository.swift in Sources */,
 				F60F2DDB2B73ED21004E6D76 /* Appointment.swift in Sources */,
+				F63569592B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
 				F60F2DBB2B73ECB8004E6D76 /* Requirements.docc in Sources */,
 				F60F2DD12B73ED0E004E6D76 /* ContentError.swift in Sources */,
 				F60F2DE72B73ED2F004E6D76 /* Gradient+Ext.swift in Sources */,
@@ -889,6 +914,7 @@
 				F60F2DC52B73ECEB004E6D76 /* MainRoute.swift in Sources */,
 				F60F2DCA2B73ED09004E6D76 /* AddNewObjectView.swift in Sources */,
 				F60F2DC22B73ECE3004E6D76 /* CoordinatorFactory.swift in Sources */,
+				F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +940,7 @@
 				F60F2E792B73FD90004E6D76 /* ActionGradient.swift in Sources */,
 				F60F2E742B73FD82004E6D76 /* AppTheme.swift in Sources */,
 				F60F2E7C2B73FD99004E6D76 /* DiskStorageClient.swift in Sources */,
+				F635695F2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
 				F60F2E692B73FD6D004E6D76 /* Storage+Protocols.swift in Sources */,
 				F60F2E752B73FD87004E6D76 /* HospitalRepository.swift in Sources */,
 				F60F2E8C2B73FDA8004E6D76 /* DependencyContainer.swift in Sources */,
@@ -937,6 +964,7 @@
 				F60F2E7D2B73FD99004E6D76 /* ContentError.swift in Sources */,
 				F60F2E762B73FD87004E6D76 /* Appointment.swift in Sources */,
 				F60F2E6D2B73FD7A004E6D76 /* Array+Ext.swift in Sources */,
+				F63569562B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
 				F60F2E872B73FDA3004E6D76 /* MainCoordinatorView.swift in Sources */,
 				F60F2E6F2B73FD7A004E6D76 /* Color+Ext.swift in Sources */,
 				F60F2E962B73FDC3004E6D76 /* MainCoordinator+Ext.swift in Sources */,
@@ -959,7 +987,6 @@
 				F63459B02B6E54E2009554B1 /* Requirements.docc in Sources */,
 				F681D0D52B718E890061A42C /* AppDelegate.swift in Sources */,
 				F681D0A32B70D9510061A42C /* ContentError.swift in Sources */,
-				F681D0762B7009EE0061A42C /* AppointmentCreationView.swift in Sources */,
 				F681D0DB2B7191FB0061A42C /* DependencyContainer+Ext.swift in Sources */,
 				F681D05C2B6F82AA0061A42C /* SlideTransition.swift in Sources */,
 				F681D07E2B700A910061A42C /* Color+Ext.swift in Sources */,
@@ -967,7 +994,6 @@
 				F63459CA2B6EBA3E009554B1 /* View+Ext.swift in Sources */,
 				F63459DD2B6ECB68009554B1 /* CircularProgressBar.swift in Sources */,
 				F681D07C2B700A680061A42C /* AddNewObjectView+Ext.swift in Sources */,
-				F681D07A2B700A3F0061A42C /* AppointmentCreationView+Ext.swift in Sources */,
 				F681D0A72B70D9A90061A42C /* Array+Ext.swift in Sources */,
 				F63459AD2B6E5484009554B1 /* AppTheme.swift in Sources */,
 				F63459C32B6E9D36009554B1 /* AnimatableGradientModifier.swift in Sources */,
@@ -995,6 +1021,7 @@
 				F681D0D12B71266E0061A42C /* Appointment.swift in Sources */,
 				F63459C82B6EB997009554B1 /* Gradient+Ext.swift in Sources */,
 				F681D0832B70481C0061A42C /* HospitalRepository.swift in Sources */,
+				F635695B2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
 				F681D0AB2B70DA0D0061A42C /* StorageInteractor.swift in Sources */,
 				F681D0D92B7191170061A42C /* MainCoordinator+Ext.swift in Sources */,
 				F681D0D32B713A350061A42C /* ObjectsListContainerView+Ext.swift in Sources */,
@@ -1005,6 +1032,7 @@
 				F681D05D2B6F82AA0061A42C /* FadeTransition.swift in Sources */,
 				F681D0DD2B7192480061A42C /* MainRoute.swift in Sources */,
 				F681D0652B6F8D450061A42C /* MainCoordinator.swift in Sources */,
+				F635695D2B769E1B0070C5B4 /* RawViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

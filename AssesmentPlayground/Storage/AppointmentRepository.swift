@@ -7,4 +7,4 @@
 
 import Foundation
 
-final class AppointmentRepository: ContenRepository {}
+final public class AppointmentRepository: ContenRepository {}

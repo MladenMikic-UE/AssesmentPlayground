@@ -9,7 +9,7 @@ import SwiftUI
 
 public enum AppTheme: String, CaseIterable {
     
-    case white
+    case assesmentPlayground
     case movemedical
     case endava
     
@@ -17,7 +17,7 @@ public enum AppTheme: String, CaseIterable {
     var description: String {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             ""
         case .movemedical:
             ""
@@ -30,7 +30,7 @@ public enum AppTheme: String, CaseIterable {
     var name: String {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             "White"
         case .movemedical:
             "Movemedical"
@@ -45,9 +45,9 @@ public enum AppTheme: String, CaseIterable {
         } else if Bundle.endava != nil {
             return .endava
         } else if Bundle.assesmentPlayground != nil {
-            return .white
+            return .assesmentPlayground
         } else {
-            return .white
+            return .assesmentPlayground
         }
     }
 }
@@ -58,7 +58,7 @@ extension AppTheme {
     var bigFont: Font {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             Font.custom("Helvetica", size: 24)
         case .movemedical:
             Font.custom("Futura", size: 24)
@@ -70,7 +70,7 @@ extension AppTheme {
     var smallFont: Font {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             Font.custom("Helvetica", size: 16)
         case .movemedical:
             Font.custom("Futura", size: 16)
@@ -82,7 +82,7 @@ extension AppTheme {
     var font: Font {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             Font.custom("Helvetica", size: 20)
         case .movemedical:
             Font.custom("Futura", size: 20)
@@ -96,33 +96,15 @@ extension AppTheme {
 extension AppTheme {
     
     var selectionColor: Color {
-        
-        switch self {
-        case .white:
-            Color.white
-        case .endava, .movemedical:
-            Asset.primarySelectionThemeLabelColor.swiftUIColor
-        }
+        Asset.primarySelectionThemeLabelColor.swiftUIColor
     }
     
     var backgroundColor: Color {
-        
-        switch self {
-        case .white:
-            Color.white
-        case .endava, .movemedical:
-            Asset.themeBackgroundColor.swiftUIColor
-        }
+        Asset.themeBackgroundColor.swiftUIColor
     }
     
     var fontColor: Color {
-        
-        switch self {
-        case .white, .movemedical:
-            Color.white
-        case .endava:
-            Asset.primayThemeLabelColor.swiftUIColor
-        }
+        Asset.primayThemeLabelColor.swiftUIColor
     }
     
     var shadowColor: Color {
@@ -130,21 +112,15 @@ extension AppTheme {
     }
     
     var regularButtonShadowMetadata: ShadowViewMetadata {
-        return ShadowViewMetadata(radius: 2, x: 1, y: 1)
+        ShadowViewMetadata(radius: 2, x: 1, y: 1)
     }
     
     var bigButtonShadowMetadata: ShadowViewMetadata {
-        return ShadowViewMetadata(radius: 4, x: 2, y: 4)
+        ShadowViewMetadata(radius: 4, x: 2, y: 4)
     }
 
     var primaryFontColor: Color {
-        
-        switch self {
-        case .white, .movemedical:
-            Color.white
-        case .endava:
-            Asset.primayThemeLabelColor.swiftUIColor
-        }
+        Asset.primayThemeLabelColor.swiftUIColor
     }
 }
 
@@ -173,7 +149,7 @@ extension AppTheme {
     var gradient: Gradient {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             .defaultWhite()
         case .movemedical:
             .defaultMovemedical()
@@ -185,7 +161,7 @@ extension AppTheme {
     var bottomHeavyGradient: Gradient {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             .defaultWhite()
         case .movemedical:
             .defaultMovemedical()
@@ -197,7 +173,7 @@ extension AppTheme {
     var reversedGradient: Gradient {
         
         switch self {
-        case .white:
+        case .assesmentPlayground:
             .defaultWhite(reversed: true)
         case .movemedical:
             .defaultMovemedical(reversed: true)

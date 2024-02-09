@@ -141,7 +141,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     @ViewBuilder private func buildBodyContentView() -> some View {
         
         switch theme {
-        case .white:
+        case .assesmentPlayground:
             EmptyView()
         case .movemedical:
             buildMoveMedicalListView()
