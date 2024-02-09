@@ -54,7 +54,10 @@ struct AddNewObjectView<Coordinator: Routing>: View {
                 
             }, padding: appViewConfiguration.appPadding)
             .compositingGroup()
-            .shadow(color: theme.shadowColor, radius: 2, x: 1, y: 2)
+            .shadow(color: theme.shadowColor,
+                    radius: theme.regularButtonShadowMetadata.radius,
+                    x: theme.regularButtonShadowMetadata.x,
+                    y: theme.regularButtonShadowMetadata.y)
 
         }, theme: theme)
     }
