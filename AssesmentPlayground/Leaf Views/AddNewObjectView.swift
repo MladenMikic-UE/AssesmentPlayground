@@ -74,7 +74,7 @@ struct AddNewObjectView<Coordinator: Routing>: View {
                 
                 if animationsStart {
                     
-                    Text(viewModel.oldModel == nil ? "New Appointment" : "Edit Appointment")
+                    Text(viewModel.oldModel == nil ? L10n.editNewObjectHeaderTitle : L10n.editNewObjectHeaderTitle)
                         .font(theme.bigFont)
                         .foregroundColor(theme.primaryFontColor)
                         .transition(.popUpWithOpacityTransitionSequence)

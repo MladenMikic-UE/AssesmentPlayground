@@ -9,3 +9,7 @@
 
 // MARK: - Main List Screen.
 "main_list_no_object_placeholder_title" = "No RSS feeds are available. Tap on the '+' button to add your first RSS feed.";
+
+// MARK: - Add New Object Screen.
+"add_new_object_header_title" = "New RSS Feed";
+"edit_new_object_header_title" = "Edit RSS Feed";

@@ -41,7 +41,8 @@ All things must have a beginning and ending. (Animate objects at start and end)
 
 Priorities:
 1)
+TODO: Add a new add_new_object screen that is agnostic to model
 2)
-TODO: Setup swift gen for localizations
-TODO: Fix localization on all projects
+DONE: Setup swift gen for localizations
+DONE: Fix localization on all projects
 3)

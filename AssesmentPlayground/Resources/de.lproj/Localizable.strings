@@ -9,3 +9,7 @@
 
 // MARK: - Main List Screen.
 "main_list_no_object_placeholder_title" = "";
+
+// MARK: - Add New Object Screen.
+"add_new_object_header_title" = "";
+"edit_new_object_header_title" = "";

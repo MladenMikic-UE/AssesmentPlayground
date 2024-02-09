@@ -10,6 +10,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// New RSS Feed
+  internal static let addNewObjectHeaderTitle = L10n.tr("Localizable", "add_new_object_header_title", fallback: "New RSS Feed")
+  /// Edit RSS Feed
+  internal static let editNewObjectHeaderTitle = L10n.tr("Localizable", "edit_new_object_header_title", fallback: "Edit RSS Feed")
   /// Localizable.strings
   ///   Endava
   /// 

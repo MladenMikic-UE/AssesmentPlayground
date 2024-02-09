@@ -9,3 +9,7 @@
 
 // MARK: - Main List Screen.
 "main_list_no_object_placeholder_title" = "No Appointments are available. Tap the + button to create your first appointment.";
+
+// MARK: - Add New Object Screen.
+"add_new_object_header_title" = "New Appointment";
+"edit_new_object_header_title" = "Edit Appointment";
