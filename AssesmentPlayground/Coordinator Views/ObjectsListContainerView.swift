@@ -102,7 +102,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     }
     
     @ViewBuilder private func buildHeaderView() -> some View {
-        Text("Appointments")
+        Text(L10n.mainListObjectHeaderTitle)
             .font(theme.bigFont)
             .foregroundColor(theme.fontColor)
             .frame(alignment: .leading)
