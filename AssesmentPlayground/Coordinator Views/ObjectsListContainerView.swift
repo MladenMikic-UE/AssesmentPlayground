@@ -62,7 +62,10 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                 }
             }, padding: .zero)
             .compositingGroup()
-            .shadow(color: theme.shadowColor, radius: 2, x: 1, y: 2)
+            .shadow(color: theme.shadowColor, 
+                    radius: theme.regularButtonShadowMetadata.radius,
+                    x: theme.regularButtonShadowMetadata.x,
+                    y: theme.regularButtonShadowMetadata.y)
 
         }, theme: theme)
     }
@@ -76,9 +79,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
             Spacer().frame(height: appViewConfiguration.appPadding.top)
             
             HStack(spacing: .zero) {
-                
-                Spacer().frame(width: appViewConfiguration.appPadding.left)
-                
+                                
                 if self.viewState.startAnimations {
                     
                     buildHeaderView()
@@ -92,9 +93,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                     buildHeaderControlView()
                         .transition(.popUpWithOpacityTransitionSequence)
 
-                }
-                
-                Spacer().frame(width: appViewConfiguration.appPadding.left)
+                }                
             }
             
             Spacer().frame(height: appViewConfiguration.appPadding.bottom)
