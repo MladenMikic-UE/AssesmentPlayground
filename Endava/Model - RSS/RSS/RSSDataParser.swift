@@ -13,9 +13,9 @@ import Combine
 
 class RSSDataParser {
     
-    static let shared = RSSDataParser()
-    internal var dataPublisher = PassthroughSubject<[RSSSource], Never>()
-    internal var dataStatusPublisher = PassthroughSubject<RSSUpdateStatus, Never>()
+    static let shared: RSSDataParser = RSSDataParser()
+    internal var dataPublisher: PassthroughSubject = PassthroughSubject<[RSSSource], Never>()
+    internal var dataStatusPublisher: PassthroughSubject = PassthroughSubject<RSSUpdateStatus, Never>()
     
     var updateInProgress: Bool = false
     
@@ -37,10 +37,10 @@ class RSSDataParser {
             
             RSSPlistReader().getPropertyList { dictionary in
                 
-                let sources = dictionary.map { (key, value) in
+                let sources: [RSSSource] = dictionary.map { (key, value) in
                     RSSSource(title: key, url: value)
                 }
-                
+        
                 RSSSourceManager.shared.sources = sources
                 self.prepareAndStartUpdate()
                 
@@ -55,6 +55,7 @@ class RSSDataParser {
     }
     
     fileprivate func prepareAndStartUpdate() {
+        
         if !updateInProgress {
             
             updateInProgress = true
@@ -76,25 +77,24 @@ class RSSDataParser {
     internal func updateNextInQueueIfNeed() {
                 
         // Get next source to update
-        let filtered = RSSSourceManager.shared.sources.filter { (source) -> Bool in
+        let filtered: [RSSSource] = RSSSourceManager.shared.sources.filter { (source) -> Bool in
             source.updated == false
         }
         
-        DispatchQueue.main.async {
-            let updated = RSSSourceManager.shared.sources.count - filtered.count
-            let total = RSSSourceManager.shared.sources.count
-            self.dataStatusPublisher.send(RSSUpdateStatus(updated: updated, totalSources: total))
+        DispatchQueue.main.async { [weak self] in
+            let updated: Int = RSSSourceManager.shared.sources.count - filtered.count
+            let total: Int = RSSSourceManager.shared.sources.count
+            self?.dataStatusPublisher.send(RSSUpdateStatus(updated: updated, totalSources: total))
         }
         
         if filtered.isEmpty {
             
             RSSSourceManager.shared.setUpToDate()
             didFinishUpdate()
-            
         } else {
             
-            guard let source = filtered.first else {
-                
+            guard let source: RSSSource = filtered.first else {
+            
                 RSSSourceManager.shared.setUpToDate()
                 didFinishUpdate()
                 return
@@ -106,15 +106,15 @@ class RSSDataParser {
     
     internal func didFinishUpdate() {
         
-        DispatchQueue.main.async {
-            self.dataPublisher.send(RSSSourceManager.shared.sources)
-            self.updateInProgress = false
+        DispatchQueue.main.async { [weak self] in
+            self?.dataPublisher.send(RSSSourceManager.shared.sources)
+            self?.updateInProgress = false
         }
     }
     
     internal func update(source: RSSSource) {
         
-        guard let url = source.url, let feedURL = URL(string: url.replace(target: "\n", withString: "")) else {
+        guard let feedURL: URL = URL(string: source.url.replace(target: "\n", withString: "")) else {
             
             source.updated = true
             print("Bad source url: \(source.url)")
@@ -122,7 +122,7 @@ class RSSDataParser {
             return
         }
         
-        let parser = FeedParser(URL: feedURL)
+        let parser: FeedParser = FeedParser(URL: feedURL)
         
         // Parse asynchronously, not to block the UI.
         parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in

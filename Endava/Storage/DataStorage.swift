@@ -11,26 +11,26 @@ import Foundation
 class DataStorage {
     
     // User defaults keys
-    let readArticlesKey = "ReadArticlesDetailsKey"
-    let bookMarkArticlesKey = "BookMarkArticlesKey"
+    let readArticlesKey: String = "ReadArticlesDetailsKey"
+    let bookMarkArticlesKey: String = "BookMarkArticlesKey"
     
     // Data
     var readArticles: [String]
     var bookMarkArticles: [RSSArticle]
     
-    static let shared = DataStorage()
+    static let shared: DataStorage = DataStorage()
     
     init() {
         
         // Load read articles info
-        if let result = UserDefaults.standard.stringArray(forKey: readArticlesKey) {
+        if let result: [String] = UserDefaults.standard.stringArray(forKey: readArticlesKey) {
             self.readArticles = result
         } else {
             readArticles = [String]()
         }
         
         // Load bookmarks
-        if let result = try? UserDefaults.standard.getObject(forKey: bookMarkArticlesKey, castTo: [RSSArticle].self) {
+        if let result: [RSSArticle] = try? UserDefaults.standard.getObject(forKey: bookMarkArticlesKey, castTo: [RSSArticle].self) {
             self.bookMarkArticles = result
         } else {
             self.bookMarkArticles = [RSSArticle]()

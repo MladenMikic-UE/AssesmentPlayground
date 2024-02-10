@@ -8,19 +8,21 @@
 import Foundation
 import Combine
 
-final public  class StorageInteractor: ObservableObject {
+final public class StorageInteractor: ObservableObject {
     
-    @Published private(set) var localStorage: AppointmentRepository
+    @Published private(set) var localStorage: ContenRepository
     @Published private(set) var diskStorageClient: DiskStorageClient?
     // Use the load process .finished to check if everything went correctly.
     @Published var loadProcess: DiskStorageProcess = .notStarted
-    private var appointmentsStoragePath: String = "appointments"
+    public let storagePath: String
     private var bag: Set<AnyCancellable> = Set<AnyCancellable>()
     
-    public init(localStorage: AppointmentRepository = .init(),
-                diskStorageClient: DiskStorageClient? ) {
+    public init(localStorage: ContenRepository = .init(),
+                diskStorageClient: DiskStorageClient?,
+                storagePath: String) {
         
         self.localStorage = localStorage
+        self.storagePath = storagePath
         
         if let diskStorageClient {
             self.diskStorageClient = diskStorageClient
@@ -29,60 +31,68 @@ final public  class StorageInteractor: ObservableObject {
                 self.diskStorageClient = try DiskStorageClient()
             } catch let error {
                 // TODO: Error handling.
+                print("\(#function) error: \(error.localizedDescription)")
                 self.diskStorageClient = nil
             }
         }
         
-        self.localStorage.$items.receive(on: RunLoop.main).sink { [weak self] items in
+        self.localStorage.$items
+            .receive(on: RunLoop.main).sink { [weak self] items in
             
-            self?.autoStore(type: Appointment.self)
+            self?.autoStore()
             
         }.store(in: &bag)
         
-        self.load(type: Appointment.self)
+        self.loadSpecificDataModelType()
     }
     
     func store(item: UniqueCodableClass) {
+        print("\(#function) Store item: \(item).")
         localStorage.add(item: item)
     }
     
     func remove(item: UniqueCodableClass) {
+        print("\(#function) Delete item: \(item).")
         localStorage.delete(item: item)
     }
     
-    private func load<T: UniqueCodableClass>(type: T.Type) {
+    public func load<T: UniqueCodableClass>(type: T.Type) {
         
         update(loadProcess: .willStart)
         
         guard let diskStorageClient: DiskStorageClient = self.diskStorageClient else {
+            print("\(#function) Storage loading FAILED.")
             return
         }
         
         update(loadProcess: .didStart)
         
         do {
-            let items: [T] = try diskStorageClient.codableLocalStorage?.fetch(for: appointmentsStoragePath) ?? []
+            let items: [T] = try diskStorageClient.codableLocalStorage?.fetch(for: storagePath) ?? []
             update(loadProcess: .finished)
+            print("\(#function) Storage loading SUCCESS. Items: \(items)")
             self.localStorage.add(itemContainer: items)
         } catch let error {
+            print("\(#function) error: \(error.localizedDescription)")
             update(loadProcess: .failed(error: error))
         }
     }
     
-    private func autoStore<T: UniqueCodableClass>(type: T.Type) {
+    public func store<T: UniqueCodableClass>(type: T.Type) {
         
         guard let diskStorageClient: DiskStorageClient = self.diskStorageClient else {
+            print("\(#function) Storage storing FAILED.")
             return
         }
         
         let generalType: [T] = localStorage.items.compactMap { $0 as? T }
         
-        
         do {
-            try diskStorageClient.codableLocalStorage?.save(generalType, for: appointmentsStoragePath)
+            try diskStorageClient.codableLocalStorage?.save(generalType, for: storagePath)
+            print("\(#function) Storage storing SUCCESS.")
         } catch let error {
-            print("\(#function) error: \(error.localizedDescription)")
             // TODO: Handle error.
+            print("\(#function) error: \(error.localizedDescription)")
         }
     }
     

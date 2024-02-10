@@ -8,8 +8,15 @@
 // MARK: - en (English).
 
 // MARK: - Main List Screen.
-"main_list_no_object_placeholder_title" = "No Appointments are available. Tap the + button to create your first appointment.";
+"main_list_no_object_placeholder_title" = "No Appointments are available. Tap the '+' button to create your first appointment.";
 
 // MARK: - Add New Object Screen.
 "add_new_object_header_title" = "New Appointment";
 "edit_new_object_header_title" = "Edit Appointment";
+
+// MARK: - Movemedical - Appointment Creation.
+"add_new_object_finish_title" = "Schedule";
+"edit_new_object_finis_title" = "Reschedule";
+"add_new_object_date_title" = "Date: ";
+"add_new_object_Description_title" = "Description: ";
+"add_new_object_location_title" = "Location: ";

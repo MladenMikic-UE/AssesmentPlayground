@@ -16,10 +16,10 @@ extension RSSArticle {
     /// - Returns: String
     func identifier() -> String {
         
-        let string = self.title
-        let inputData = Data(string.utf8)
-        let hashed = SHA256.hash(data: inputData)
-        let hashString = hashed.compactMap { String(format: "%02x", $0) }.joined()
+        let string: String = self.title
+        let inputData: Data = Data(string.utf8)
+        let hashed: SHA256.Digest = SHA256.hash(data: inputData)
+        let hashString: String = hashed.compactMap { String(format: "%02x", $0) }.joined()
         return hashString
     }
 }

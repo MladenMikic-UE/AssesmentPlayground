@@ -90,6 +90,30 @@ extension AppTheme {
             Font.custom("Verdana", size: 20)
         }
     }
+    
+    var smallUIFont: UIFont {
+        
+        switch self {
+        case .assesmentPlayground:
+            UIFont(name: "Helvetica", size: 16) ?? .systemFont(ofSize: 16)
+        case .movemedical:
+            UIFont(name: "Futura", size: 16) ?? .systemFont(ofSize: 16)
+        case .endava:
+            UIFont(name: "Verdana", size: 16) ?? .systemFont(ofSize: 16)
+        }
+    }
+    
+    var uiFont: UIFont {
+        
+        switch self {
+        case .assesmentPlayground:
+            UIFont(name: "Helvetica", size: 20) ?? .systemFont(ofSize: 20)
+        case .movemedical:
+            UIFont(name: "Futura", size: 20) ?? .systemFont(ofSize: 20)
+        case .endava:
+            UIFont(name: "Verdana", size: 20) ?? .systemFont(ofSize: 20)
+        }
+    }
 }
 
 // MARK: - Colors.
@@ -99,8 +123,16 @@ extension AppTheme {
         Asset.primarySelectionThemeLabelColor.swiftUIColor
     }
     
+    var selectionUIColor: UIColor {
+        Asset.primarySelectionThemeLabelColor.color
+    }
+    
     var backgroundColor: Color {
         Asset.themeBackgroundColor.swiftUIColor
+    }
+    
+    var fontUIColor: UIColor {
+        Asset.primayThemeLabelColor.color
     }
     
     var fontColor: Color {

@@ -20,15 +20,15 @@ class BaseConnector {
                                         _ success: @escaping (T) -> Void,
                                         _ fail: @escaping (BaseConnectorError) -> Void) {
         
-        let session = URLSession.shared
+        let session: URLSession = URLSession.shared
         
-        guard let url = URL(string: service) else {
+        guard let url: URL = URL(string: service) else {
             fail(BaseConnectorError.invalidServiceURL(service: service))
             return
         }
         
         /// Prepare request
-        var request = URLRequest(url: url)
+        var request: URLRequest = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.setValue("application/x-plist", forHTTPHeaderField: "Accept")
         
@@ -36,11 +36,11 @@ class BaseConnector {
         let task = session.dataTask(with: request) {(data, response, error) in
             
             /// Check if we have any error
-            if let error = error {
+            if let error: Error = error {
                 self.handleError(error: BaseConnectorError.underlyingError(error: error), fail)
             }
             /// Check if we have response data
-            else if let data = data {
+            else if let data: Data = data {
                 
                 /// Decode server data
                 guard let object = try? PropertyListDecoder().decode(T.self, from: data) else {

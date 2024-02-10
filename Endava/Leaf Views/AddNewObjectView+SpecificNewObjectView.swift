@@ -12,6 +12,9 @@ import SwiftUICoordinator
 public extension AddNewObjectView {
     
     @ViewBuilder func buildTargetSpecificCreateNewObjectView() -> some View {
-        Text("Endava")
+                
+        RSSFeedCreationView<MainCoordinator>(viewModel: .init(storageInteractor: viewModel.storageInteractor,
+                                                              coordinator: coordinator as? MainCoordinator),
+                                             theme: theme)
     }
 }

@@ -23,11 +23,11 @@ final class DependencyContainer {
     private(set) var appCoordinator: AppCoordinator?
     
     init(factory: NavigationControllerFactory? = nil,
-         storageInteractor: StorageInteractor = .init(diskStorageClient: nil),
+         storageInteractor: StorageInteractor = .init(diskStorageClient: nil, storagePath: Bundle.storagePath),
          appViewConfiguration: AppViewConfiguration = .init(),
          appCoordinator: AppCoordinator? = nil) {
         
-        
+        print("storagePath: \(Bundle.storagePath)")
         if let efactory: NavigationControllerFactory = factory {
             self.factory = efactory
         } else {

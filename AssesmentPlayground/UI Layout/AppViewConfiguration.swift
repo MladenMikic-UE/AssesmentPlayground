@@ -8,9 +8,12 @@
 import Foundation
 import SwiftUI
 
+fileprivate let defaultPaddingValue: CGFloat = 20.0
+
 class AppViewConfiguration: ObservableObject {
     
-    let bottomPadding: CGFloat = 20
+    
+    
     let regularButtonSize: CGSize = .init(width: 44, height: 44)
     let bigButtonSize: CGSize = .init(width: 66, height: 66)
     
@@ -18,10 +21,24 @@ class AppViewConfiguration: ObservableObject {
     let indicatorSize: CGSize = .init(width: 44, height: 44)
     let buttonImageSize: CGSize = .init(width: 22, height: 22)
     
-    let appPadding: UIEdgeInsets = .init(top: 20,
-                                         left: 20,
-                                         bottom: 20,
-                                         right: 20)
+    let appPadding: UIEdgeInsets = .init(top: defaultPaddingValue,
+                                         left: defaultPaddingValue,
+                                         bottom: defaultPaddingValue,
+                                         right: defaultPaddingValue)
     
     let cornerRadius: CGFloat = 20.0
+}
+
+extension UIEdgeInsets {
+    
+    func modified(top: CGFloat = defaultPaddingValue,
+                  left: CGFloat = defaultPaddingValue,
+                  bottom: CGFloat = defaultPaddingValue,
+                  right: CGFloat = defaultPaddingValue) -> UIEdgeInsets {
+        
+        UIEdgeInsets(top: top != defaultPaddingValue ? top : self.top,
+                     left: left != defaultPaddingValue ? left : self.left,
+                     bottom: bottom != defaultPaddingValue ? bottom : self.bottom,
+                     right: right != defaultPaddingValue ? right : self.right)
+    }
 }

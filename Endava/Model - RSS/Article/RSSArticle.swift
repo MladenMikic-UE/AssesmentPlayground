@@ -33,7 +33,7 @@ extension RSSArticle {
                        "cov-19"]
         
         // Filtred articles
-        let filtered = [self].filter { (article) -> Bool in
+        let filtered: [RSSArticle] = [self].filter { (article) -> Bool in
             let match = exclude.filter { article.allContentString().lowercased().range(of:$0) != nil }.count != 0
             return !match
         }

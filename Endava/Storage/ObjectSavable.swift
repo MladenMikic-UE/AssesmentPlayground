@@ -21,9 +21,9 @@ extension UserDefaults: ObjectSavable {
     ///   - forKey: String
     /// - Throws: ObjectSavableError
     func setObject<Object>(_ object: Object, forKey: String) throws where Object: Encodable {
-        let encoder = JSONEncoder()
+        let encoder: JSONEncoder = JSONEncoder()
         do {
-            let data = try encoder.encode(object)
+            let data: Data = try encoder.encode(object)
             set(data, forKey: forKey)
         } catch {
             throw ObjectSavableError.unableToEncode
@@ -37,8 +37,8 @@ extension UserDefaults: ObjectSavable {
     /// - Throws: ObjectSavableError
     /// - Returns: Object
     func getObject<Object>(forKey: String, castTo type: Object.Type) throws -> Object where Object: Decodable {
-        guard let data = data(forKey: forKey) else { throw ObjectSavableError.noValue }
-        let decoder = JSONDecoder()
+        guard let data: Data = data(forKey: forKey) else { throw ObjectSavableError.noValue }
+        let decoder: JSONDecoder = JSONDecoder()
         do {
             let object = try decoder.decode(type, from: data)
             return object

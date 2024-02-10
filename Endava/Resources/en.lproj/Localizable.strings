@@ -13,3 +13,14 @@
 // MARK: - Add New Object Screen.
 "add_new_object_header_title" = "New RSS Feed";
 "edit_new_object_header_title" = "Edit RSS Feed";
+"add_new_selected_object_header_title" = "Select New RSS Feed";
+
+"add_new_object_picker_title" = "Create New";
+"add_new_selected_object_picker_title" = "Select New";
+
+// MARK: - Endava - RSS Feed Creation.
+"add_new_object_finish_title" = "Create New";
+"add_new_selected_object_finish_title" = "Select New RSS Feed";
+"add_new_object_url_title" = "Title: ";
+"add_new_object_url_placeholder_description" = "Enter a RSS feed URL. Example: https://example.com/feed";
+"add_new_object_title_placeholder_description" = "Enter a RSS feed Title.";

@@ -10,8 +10,24 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Create New
+  internal static let addNewObjectFinishTitle = L10n.tr("Localizable", "add_new_object_finish_title", fallback: "Create New")
   /// New RSS Feed
   internal static let addNewObjectHeaderTitle = L10n.tr("Localizable", "add_new_object_header_title", fallback: "New RSS Feed")
+  /// Create New
+  internal static let addNewObjectPickerTitle = L10n.tr("Localizable", "add_new_object_picker_title", fallback: "Create New")
+  /// Enter a RSS feed Title.
+  internal static let addNewObjectTitlePlaceholderDescription = L10n.tr("Localizable", "add_new_object_title_placeholder_description", fallback: "Enter a RSS feed Title.")
+  /// Enter a RSS feed URL. Example: https://example.com/feed
+  internal static let addNewObjectUrlPlaceholderDescription = L10n.tr("Localizable", "add_new_object_url_placeholder_description", fallback: "Enter a RSS feed URL. Example: https://example.com/feed")
+  /// Title: 
+  internal static let addNewObjectUrlTitle = L10n.tr("Localizable", "add_new_object_url_title", fallback: "Title: ")
+  /// Select New RSS Feed
+  internal static let addNewSelectedObjectFinishTitle = L10n.tr("Localizable", "add_new_selected_object_finish_title", fallback: "Select New RSS Feed")
+  /// Select New RSS Feed
+  internal static let addNewSelectedObjectHeaderTitle = L10n.tr("Localizable", "add_new_selected_object_header_title", fallback: "Select New RSS Feed")
+  /// Select New
+  internal static let addNewSelectedObjectPickerTitle = L10n.tr("Localizable", "add_new_selected_object_picker_title", fallback: "Select New")
   /// Edit RSS Feed
   internal static let editNewObjectHeaderTitle = L10n.tr("Localizable", "edit_new_object_header_title", fallback: "Edit RSS Feed")
   /// Localizable.strings

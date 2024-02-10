@@ -8,8 +8,19 @@
 // MARK: - de (German).
 
 // MARK: - Main List Screen.
-"main_list_no_object_placeholder_title" = "Es sind keine RSS-Feeds verfügbar. Tippen Sie auf Plus „+“, um Ihren ersten RSS-Feed hinzuzufügen.";
+"main_list_no_object_placeholder_title" = "Es sind keine RSS-Feeds verfügbar. Tippen Sie auf Plus '+', um Ihren ersten RSS-Feed hinzuzufügen.";
 
 // MARK: - Add New Object Screen.
 "add_new_object_header_title" = "Neuer RSS-Feed";
 "edit_new_object_header_title" = "RSS-Feed Editieren";
+"add_new_selected_object_header_title" = "RSS-Feed-Auswahl";
+
+"add_new_object_picker_title" = "Neu erstellen";
+"add_new_selected_object_picker_title" = "Neue Auswahl";
+
+// MARK: - Endava - RSS Feed Creation.
+"add_new_object_finish_title" = "Neu erstellen";
+"add_new_selected_object_finish_title" = "Neue Auswahl";
+"add_new_object_url_title" = "Titel: ";
+"add_new_object_url_placeholder_description" = "Geben Sie eine RSS-Feed-URL ein. Beispiel: https://example.com/feed";
+"add_new_object_title_placeholder_description" = "Geben Sie einen RSS-Feed-Titel ein.";

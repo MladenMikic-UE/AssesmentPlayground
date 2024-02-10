@@ -16,7 +16,6 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
     @StateObject var viewStates: AppointmentCreationView.ViewStates
     @ObservedObject var viewModel: AppointmentCreationView.ViewModel<Coordinator>
     
-    @FocusState private var isTextFieldFocused: Bool
     @State private var descriptionText: String
     private let theme: AppTheme
     
@@ -83,7 +82,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                 .tint(theme.selectionColor)
                 .transition(.opacity)
             
-        }, enteredValue: .constant("Date: " + viewModel.date.getFormattedDate(format: "yyyy-MM-dd HH:mm")), 
+        }, enteredValue: .constant(L10n.addNewObjectDateTitle + viewModel.date.getFormattedDate(format: "yyyy-MM-dd HH:mm")),
                               selectionColor: (viewModel.date > viewModel.nowDate) ? theme.selectionColor : Color.black,
                               viewState: $viewStates.dateViewState,
                               theme: theme)
@@ -135,7 +134,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                     Spacer().frame(height: appViewConfiguration.appPadding.top)
                 }
             }
-        }, enteredValue: .constant("Location: \(viewModel.location)"), 
+        }, enteredValue: .constant("\(L10n.addNewObjectLocationTitle)\(viewModel.location)"),
                               selectionColor: (viewModel.availableLocations.contains(viewModel.location)) ? theme.selectionColor : Color.black,
                               viewState: $viewStates.locationViewState,
                               theme: theme)
@@ -158,9 +157,8 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                     .foregroundColor(Color.black)
                     .accentColor(Color.black)
                     .frame(minHeight: appViewConfiguration.bigButtonSize.height, alignment: .topLeading)
-                    .focused($isTextFieldFocused)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 20)
+                        RoundedRectangle(cornerRadius: appViewConfiguration.cornerRadius)
                             .stroke(viewModel.description.isEmpty ? Color.black : Color.clear, lineWidth: 2)
                         )
                     .onSubmit {
@@ -169,9 +167,8 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                     .background(viewModel.description.isEmpty ? Color.clear : theme.selectionColor)
                     .cornerRadius(appViewConfiguration.cornerRadius)
                 
-                Spacer().frame(height: appViewConfiguration.appPadding.bottom)
             }
-        }, enteredValue: .constant("Description: \(viewModel.description)"), 
+        }, enteredValue: .constant("\(L10n.addNewObjectDescriptionTitle)\(viewModel.description)"),
                               selectionColor: !viewModel.description.isEmpty ? theme.selectionColor : Color.black,
                               viewState: $viewStates.descriptionViewState, 
                               theme: theme)
@@ -193,7 +190,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                 VStack(spacing: .zero) {
                     Spacer()
                     
-                    Text(viewModel.oldAppointment == nil ? "Schedule" : "Reschedule")
+                    Text(viewModel.oldAppointment == nil ? L10n.addNewObjectFinishTitle : L10n.editNewObjectFinisTitle)
                         .font(theme.smallFont)
                         .foregroundColor(viewModel.isAppointmentDataValid ? Color.black : theme.fontColor)
                         .frame(maxWidth: .infinity)

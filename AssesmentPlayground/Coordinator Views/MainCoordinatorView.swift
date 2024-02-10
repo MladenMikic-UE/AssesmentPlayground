@@ -87,7 +87,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
                 }
             }
             
-            Spacer().frame(height: appViewConfiguration.bottomPadding)
+            Spacer().frame(height: appViewConfiguration.appPadding.bottom)
         }
     }
     

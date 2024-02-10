@@ -16,18 +16,18 @@ class RSSSourceManager: Codable {
     // Sources to parse
     var sources: [RSSSource]
     
-    init() {
+    private init() {
         
         self.sources = rssSources
         
-        if let dateValue = UserDefaults.standard.object(forKey: "lastUpdate") as? Date {
+        if let dateValue: Date = UserDefaults.standard.object(forKey: "lastUpdate") as? Date {
             lastUpdate = dateValue
         }
     }
     
     var lastUpdate: Date? = nil {
         didSet {
-            guard let lastUpdate = lastUpdate else {
+            guard let lastUpdate: Date = lastUpdate else {
                 return
             }
             UserDefaults.standard.set(lastUpdate, forKey: "lastUpdate")
@@ -37,11 +37,11 @@ class RSSSourceManager: Codable {
     
     func shouldUpdate() -> Bool {
         
-        guard let lastUpdate = lastUpdate else {
+        guard let lastUpdate: Date = lastUpdate else {
             return true
         }
         
-        let lastUpdateInMillisecondsAgo = lastUpdate.timeIntervalSinceNow
+        let lastUpdateInMillisecondsAgo: TimeInterval = lastUpdate.timeIntervalSinceNow
         return lastUpdateInMillisecondsAgo < -updatePeriodicity
     }
     
@@ -53,7 +53,7 @@ class RSSSourceManager: Codable {
         
         for source in sources {
             
-            guard let articles = source.articles else {
+            guard let articles: [RSSArticle] = source.articles else {
                 return nil
             }
             

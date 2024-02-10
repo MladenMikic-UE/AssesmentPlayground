@@ -14,15 +14,15 @@ extension RSSArticle {
     /// - Returns: String
     func searchString() -> String {
         
-        var string = ""
+        var string: String = ""
         
         string.append(title)
         
-        if let author = author {
+        if let author: String = author {
             string.append(" \(author)")
         }
         
-        if let author = author {
+        if let author: String = author {
             string.append(" \(author)")
         }
         
@@ -35,15 +35,15 @@ extension RSSArticle {
     /// - Returns: String
     func allContentString() -> String {
         
-        var string = ""
+        var string: String = ""
         
         string.append(title)
         
-        if let author = author {
+        if let author: String = author {
             string.append(" \(author)")
         }
         
-        if let description = description {
+        if let description: String = description {
             string.append(" \(description)")
         }
         

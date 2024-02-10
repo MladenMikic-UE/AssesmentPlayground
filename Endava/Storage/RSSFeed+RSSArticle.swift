@@ -14,7 +14,7 @@ extension RSSFeed {
     /// - Returns: [RSSArticle]
     func articles() -> [RSSArticle]? {
         
-        guard let items = items else {
+        guard let items: [RSSFeedItem] = items else {
             return nil
         }
         

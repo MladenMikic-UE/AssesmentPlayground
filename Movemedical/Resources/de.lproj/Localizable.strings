@@ -8,8 +8,15 @@
 // MARK: - de (German).
 
 // MARK: - Main List Screen.
-"main_list_no_object_placeholder_title" = "Es sind keine Termine verfügbar. Tippen Sie auf Plus „+“, um Ihren ersten Termin zu erstellen.";
+"main_list_no_object_placeholder_title" = "Es sind keine Termine verfügbar. Tippen Sie auf Plus '+', um Ihren ersten Termin zu erstellen.";
 
 // MARK: - Add New Object Screen.
 "add_new_object_header_title" = "Neuer Termin";
 "edit_new_object_header_title" = "Termin Editieren";
+
+// MARK: - Movemedical - Appointment Creation.
+"add_new_object_finish_title" = "Termin vereinbaren";
+"edit_new_object_finis_title" = "Termin verschieben";
+"add_new_object_date_title" = "Datum: ";
+"add_new_object_Description_title" = "Beschreibung: ";
+"add_new_object_location_title" = "Standort: ";

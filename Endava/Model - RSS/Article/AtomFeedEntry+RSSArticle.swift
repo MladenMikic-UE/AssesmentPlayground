@@ -16,22 +16,22 @@ extension AtomFeedEntry {
     func article() -> RSSArticle? {
         
         // Title
-        guard let title = title else {
+        guard let title: String = title else {
             return nil
         }
         
         // Date
-        guard let date = updated else {
+        guard let date: Date = updated else {
             return nil
         }
         
         // URL
-        guard let link = links?.first?.attributes?.href else {
+        guard let link: String = links?.first?.attributes?.href else {
             return nil
         }
         
         // Image
-        var imageUrl = summary?.value?.getImageUrl()
+        var imageUrl: URL? = summary?.value?.getImageUrl()
         
         // Image from media
         if imageUrl == nil {
@@ -46,12 +46,12 @@ extension AtomFeedEntry {
             }
         }
         
-        let article = RSSArticle(title: title,
-                                 description: summary?.value,
-                                 date: date,
-                                 link: link,
-                                 author: authors?.first?.name,
-                                 image: imageUrl)
+        let article: RSSArticle = RSSArticle(title: title,
+                                             description: summary?.value,
+                                             date: date,
+                                             link: link,
+                                             author: authors?.first?.name,
+                                             image: imageUrl)
         
         if article.isValid() {
             return article

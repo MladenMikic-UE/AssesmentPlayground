@@ -173,6 +173,11 @@
 		F63569932B7764100070C5B4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569912B7764100070C5B4 /* String+Extensions.swift */; };
 		F63569972B7764420070C5B4 /* Sweep in Frameworks */ = {isa = PBXBuildFile; productRef = F63569962B7764420070C5B4 /* Sweep */; };
 		F63569992B77648E0070C5B4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569982B77648D0070C5B4 /* Config.swift */; };
+		F635699F2B778DB40070C5B4 /* UISegmentedControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635699E2B778DB40070C5B4 /* UISegmentedControl+Ext.swift */; };
+		F63569A22B779F2D0070C5B4 /* RemoteRSSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A12B779F2D0070C5B4 /* RemoteRSSRepository.swift */; };
+		F63569A42B77FA6B0070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A32B77FA6B0070C5B4 /* StorageInteractor+Ext.swift */; };
+		F63569A62B77FB390070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A52B77FB390070C5B4 /* StorageInteractor+Ext.swift */; };
+		F63569A92B77FB650070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */; };
 		F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */; };
 		F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0462B6EE9120061A42C /* CenteredContainerView.swift */; };
 		F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
@@ -332,6 +337,11 @@
 		F63569782B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AtomFeedEntry+RSSArticle.swift"; sourceTree = "<group>"; };
 		F63569912B7764100070C5B4 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F63569982B77648D0070C5B4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F635699E2B778DB40070C5B4 /* UISegmentedControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Ext.swift"; sourceTree = "<group>"; };
+		F63569A12B779F2D0070C5B4 /* RemoteRSSRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRSSRepository.swift; sourceTree = "<group>"; };
+		F63569A32B77FA6B0070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
+		F63569A52B77FB390070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
+		F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
 		F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		F681D0462B6EE9120061A42C /* CenteredContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContainerView.swift; sourceTree = "<group>"; };
 		F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+Ext.swift"; sourceTree = "<group>"; };
@@ -410,7 +420,7 @@
 				F60F2EC52B752B4C004E6D76 /* Resources */,
 				F63569572B769A2C0070C5B4 /* Leaf Views */,
 				F63569642B7761D70070C5B4 /* Model - RSS */,
-				F635699D2B7766440070C5B4 /* Data Storage */,
+				F635699D2B7766440070C5B4 /* Storage */,
 				F63569902B7763F10070C5B4 /* Extensions */,
 				F60F2DB22B73EC50004E6D76 /* Preview Content */,
 			);
@@ -440,6 +450,7 @@
 				F60F2E602B73F872004E6D76 /* Launch Screen.storyboard */,
 				F60F2EC62B752B57004E6D76 /* Resources */,
 				F63569542B7698D20070C5B4 /* Leaf Views */,
+				F63569A72B77FB550070C5B4 /* Storage */,
 				F60F2E592B73F300004E6D76 /* Preview Content */,
 			);
 			path = Movemedical;
@@ -645,6 +656,7 @@
 			isa = PBXGroup;
 			children = (
 				F63569912B7764100070C5B4 /* String+Extensions.swift */,
+				F635699E2B778DB40070C5B4 /* UISegmentedControl+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -687,20 +699,31 @@
 			path = Article;
 			sourceTree = "<group>";
 		};
-		F635699D2B7766440070C5B4 /* Data Storage */ = {
+		F635699D2B7766440070C5B4 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				F63569A52B77FB390070C5B4 /* StorageInteractor+Ext.swift */,
 				F63569702B77625D0070C5B4 /* DataStorage.swift */,
 				F63569722B77625D0070C5B4 /* ObjectSavable.swift */,
 				F635696D2B77625D0070C5B4 /* RSSFeed+RSSArticle.swift */,
+				F63569A12B779F2D0070C5B4 /* RemoteRSSRepository.swift */,
 			);
-			path = "Data Storage";
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		F63569A72B77FB550070C5B4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		F681D0432B6EE47A0061A42C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
 				F681D0AA2B70DA0D0061A42C /* StorageInteractor.swift */,
+				F63569A32B77FA6B0070C5B4 /* StorageInteractor+Ext.swift */,
 				F681D0DE2B7193D80061A42C /* DiskStorageProcess.swift */,
 				F681D0A82B70D9EC0061A42C /* AppointmentRepository.swift */,
 				F681D0BB2B70DF560061A42C /* DiskStorageClient.swift */,
@@ -1032,6 +1055,7 @@
 				F63569812B77625D0070C5B4 /* RSSFeed+RSSArticle.swift in Sources */,
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,
+				F63569A62B77FB390070C5B4 /* StorageInteractor+Ext.swift in Sources */,
 				F60F2DC62B73ED04004E6D76 /* MainCoordinatorView.swift in Sources */,
 				F63569612B76A0290070C5B4 /* RSSFeedCreationView.swift in Sources */,
 				F60F2DE32B73ED2F004E6D76 /* Date+Ext.swift in Sources */,
@@ -1060,9 +1084,11 @@
 				F635697C2B77625D0070C5B4 /* BaseConnectorError.swift in Sources */,
 				F60F2ED32B754600004E6D76 /* Localized.swift in Sources */,
 				F63569802B77625D0070C5B4 /* BaseConnector.swift in Sources */,
+				F63569A22B779F2D0070C5B4 /* RemoteRSSRepository.swift in Sources */,
 				F60F2DD92B73ED18004E6D76 /* AnimatableGradientModifier.swift in Sources */,
 				F60F2DC52B73ECEB004E6D76 /* MainRoute.swift in Sources */,
 				F60F2DCA2B73ED09004E6D76 /* AddNewObjectView.swift in Sources */,
+				F635699F2B778DB40070C5B4 /* UISegmentedControl+Ext.swift in Sources */,
 				F60F2DC22B73ECE3004E6D76 /* CoordinatorFactory.swift in Sources */,
 				F635698C2B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift in Sources */,
 				F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
@@ -1078,6 +1104,7 @@
 				F60F2E5F2B73F30D004E6D76 /* Bundle+Ext.swift in Sources */,
 				F60F2E942B73FDC3004E6D76 /* MainAction.swift in Sources */,
 				F60F2E802B73FD99004E6D76 /* StorageInteractor.swift in Sources */,
+				F63569A92B77FB650070C5B4 /* StorageInteractor+Ext.swift in Sources */,
 				F60F2E832B73FD9E004E6D76 /* AddNewObjectView+Ext.swift in Sources */,
 				F60F2E902B73FDB1004E6D76 /* AppDelegate.swift in Sources */,
 				F60F2E952B73FDC3004E6D76 /* AppCoordinator.swift in Sources */,
@@ -1148,6 +1175,7 @@
 				F681D07C2B700A680061A42C /* AddNewObjectView+Ext.swift in Sources */,
 				F681D0A72B70D9A90061A42C /* Array+Ext.swift in Sources */,
 				F63459AD2B6E5484009554B1 /* AppTheme.swift in Sources */,
+				F63569A42B77FA6B0070C5B4 /* StorageInteractor+Ext.swift in Sources */,
 				F63459C32B6E9D36009554B1 /* AnimatableGradientModifier.swift in Sources */,
 				F681D0A12B70D92E0061A42C /* ContenRepository.swift in Sources */,
 				F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */,

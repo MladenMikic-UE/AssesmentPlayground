@@ -279,6 +279,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
              RoundedRectangle(cornerRadius: appViewConfiguration.bigButtonSize.width)
                  .stroke(Color.black, lineWidth: 2)
              )
+          // The horizontal border is cut by 1-2 points. Hotfix.
          .padding(.horizontal, 2)
     }
 }

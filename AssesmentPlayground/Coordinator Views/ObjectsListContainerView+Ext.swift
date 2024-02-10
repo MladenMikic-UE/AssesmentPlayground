@@ -38,7 +38,7 @@ extension ObjectsListContainerView {
                 let appointments: [T] = items.compactMap { $0 as? T }
                 self.models = appointments
             }
-                .store(in: &bag)
+            .store(in: &bag)
         }
         
         func editObjectButtonTapped(with model: UniqueCodableClass) {
