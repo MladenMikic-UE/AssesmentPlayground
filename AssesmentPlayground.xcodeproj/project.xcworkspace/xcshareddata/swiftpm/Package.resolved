@@ -1,6 +1,24 @@
 {
   "pins" : [
     {
+      "identity" : "feedkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nmdias/FeedKit",
+      "state" : {
+        "revision" : "68493a33d862c33c9a9f67ec729b3b7df1b20ade",
+        "version" : "9.1.2"
+      }
+    },
+    {
+      "identity" : "sweep",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Sweep",
+      "state" : {
+        "revision" : "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
+        "version" : "0.4.0"
+      }
+    },
+    {
       "identity" : "swiftgenplugin",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftGen/SwiftGenPlugin",

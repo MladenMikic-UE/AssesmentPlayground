@@ -149,6 +149,30 @@
 		F635695F2B769EAF0070C5B4 /* RawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635695C2B769E1B0070C5B4 /* RawViewState.swift */; };
 		F63569612B76A0290070C5B4 /* RSSFeedCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */; };
 		F63569632B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */; };
+		F63569792B77625D0070C5B4 /* RSSArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569652B77625D0070C5B4 /* RSSArticle.swift */; };
+		F635697A2B77625D0070C5B4 /* RSSDataStatusSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569662B77625D0070C5B4 /* RSSDataStatusSubscriber.swift */; };
+		F635697B2B77625D0070C5B4 /* RSSDataSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569672B77625D0070C5B4 /* RSSDataSubscriber.swift */; };
+		F635697C2B77625D0070C5B4 /* BaseConnectorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569682B77625D0070C5B4 /* BaseConnectorError.swift */; };
+		F635697D2B77625D0070C5B4 /* RSSUpdateStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569692B77625D0070C5B4 /* RSSUpdateStatus.swift */; };
+		F635697E2B77625D0070C5B4 /* RSSDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696A2B77625D0070C5B4 /* RSSDataParser.swift */; };
+		F635697F2B77625D0070C5B4 /* RSSArticle+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696B2B77625D0070C5B4 /* RSSArticle+Search.swift */; };
+		F63569802B77625D0070C5B4 /* BaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696C2B77625D0070C5B4 /* BaseConnector.swift */; };
+		F63569812B77625D0070C5B4 /* RSSFeed+RSSArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696D2B77625D0070C5B4 /* RSSFeed+RSSArticle.swift */; };
+		F63569822B77625D0070C5B4 /* RSSArticle+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696E2B77625D0070C5B4 /* RSSArticle+Identifier.swift */; };
+		F63569832B77625D0070C5B4 /* RSSSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635696F2B77625D0070C5B4 /* RSSSourceManager.swift */; };
+		F63569842B77625D0070C5B4 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569702B77625D0070C5B4 /* DataStorage.swift */; };
+		F63569852B77625D0070C5B4 /* RSSPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569712B77625D0070C5B4 /* RSSPlistReader.swift */; };
+		F63569862B77625D0070C5B4 /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569722B77625D0070C5B4 /* ObjectSavable.swift */; };
+		F63569872B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569732B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift */; };
+		F63569882B77625D0070C5B4 /* RSSSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569742B77625D0070C5B4 /* RSSSource.swift */; };
+		F63569892B77625D0070C5B4 /* BaseConnectorRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569752B77625D0070C5B4 /* BaseConnectorRequestMethod.swift */; };
+		F635698A2B77625D0070C5B4 /* BaseDispatchGroupConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569762B77625D0070C5B4 /* BaseDispatchGroupConnector.swift */; };
+		F635698B2B77625D0070C5B4 /* AtomFeed+RSSArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569772B77625D0070C5B4 /* AtomFeed+RSSArticle.swift */; };
+		F635698C2B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569782B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift */; };
+		F635698F2B77637A0070C5B4 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = F635698E2B77637A0070C5B4 /* FeedKit */; };
+		F63569932B7764100070C5B4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569912B7764100070C5B4 /* String+Extensions.swift */; };
+		F63569972B7764420070C5B4 /* Sweep in Frameworks */ = {isa = PBXBuildFile; productRef = F63569962B7764420070C5B4 /* Sweep */; };
+		F63569992B77648E0070C5B4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569982B77648D0070C5B4 /* Config.swift */; };
 		F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */; };
 		F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0462B6EE9120061A42C /* CenteredContainerView.swift */; };
 		F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
@@ -286,6 +310,28 @@
 		F635695C2B769E1B0070C5B4 /* RawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawViewState.swift; sourceTree = "<group>"; };
 		F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedCreationView.swift; sourceTree = "<group>"; };
 		F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSSFeedCreationView+Ext.swift"; sourceTree = "<group>"; };
+		F63569652B77625D0070C5B4 /* RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSArticle.swift; sourceTree = "<group>"; };
+		F63569662B77625D0070C5B4 /* RSSDataStatusSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSDataStatusSubscriber.swift; sourceTree = "<group>"; };
+		F63569672B77625D0070C5B4 /* RSSDataSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSDataSubscriber.swift; sourceTree = "<group>"; };
+		F63569682B77625D0070C5B4 /* BaseConnectorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnectorError.swift; sourceTree = "<group>"; };
+		F63569692B77625D0070C5B4 /* RSSUpdateStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSUpdateStatus.swift; sourceTree = "<group>"; };
+		F635696A2B77625D0070C5B4 /* RSSDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSDataParser.swift; sourceTree = "<group>"; };
+		F635696B2B77625D0070C5B4 /* RSSArticle+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSArticle+Search.swift"; sourceTree = "<group>"; };
+		F635696C2B77625D0070C5B4 /* BaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnector.swift; sourceTree = "<group>"; };
+		F635696D2B77625D0070C5B4 /* RSSFeed+RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSFeed+RSSArticle.swift"; sourceTree = "<group>"; };
+		F635696E2B77625D0070C5B4 /* RSSArticle+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSArticle+Identifier.swift"; sourceTree = "<group>"; };
+		F635696F2B77625D0070C5B4 /* RSSSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSSourceManager.swift; sourceTree = "<group>"; };
+		F63569702B77625D0070C5B4 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		F63569712B77625D0070C5B4 /* RSSPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSPlistReader.swift; sourceTree = "<group>"; };
+		F63569722B77625D0070C5B4 /* ObjectSavable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
+		F63569732B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSFeedItem+RSSArticle.swift"; sourceTree = "<group>"; };
+		F63569742B77625D0070C5B4 /* RSSSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSSource.swift; sourceTree = "<group>"; };
+		F63569752B77625D0070C5B4 /* BaseConnectorRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnectorRequestMethod.swift; sourceTree = "<group>"; };
+		F63569762B77625D0070C5B4 /* BaseDispatchGroupConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDispatchGroupConnector.swift; sourceTree = "<group>"; };
+		F63569772B77625D0070C5B4 /* AtomFeed+RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AtomFeed+RSSArticle.swift"; sourceTree = "<group>"; };
+		F63569782B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AtomFeedEntry+RSSArticle.swift"; sourceTree = "<group>"; };
+		F63569912B7764100070C5B4 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		F63569982B77648D0070C5B4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		F681D0462B6EE9120061A42C /* CenteredContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContainerView.swift; sourceTree = "<group>"; };
 		F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+Ext.swift"; sourceTree = "<group>"; };
@@ -329,6 +375,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F635698F2B77637A0070C5B4 /* FeedKit in Frameworks */,
+				F63569972B7764420070C5B4 /* Sweep in Frameworks */,
 				F60F2DE82B73ED5C004E6D76 /* StorageKit.framework in Frameworks */,
 				F60F2DEC2B73ED64004E6D76 /* SwiftUICoordinator in Frameworks */,
 			);
@@ -361,6 +409,9 @@
 				F60F2E622B73F8D7004E6D76 /* Launch Screen.storyboard */,
 				F60F2EC52B752B4C004E6D76 /* Resources */,
 				F63569572B769A2C0070C5B4 /* Leaf Views */,
+				F63569642B7761D70070C5B4 /* Model - RSS */,
+				F635699D2B7766440070C5B4 /* Data Storage */,
+				F63569902B7763F10070C5B4 /* Extensions */,
 				F60F2DB22B73EC50004E6D76 /* Preview Content */,
 			);
 			path = Endava;
@@ -579,6 +630,73 @@
 			path = "Leaf Views";
 			sourceTree = "<group>";
 		};
+		F63569642B7761D70070C5B4 /* Model - RSS */ = {
+			isa = PBXGroup;
+			children = (
+				F63569982B77648D0070C5B4 /* Config.swift */,
+				F635699A2B77654C0070C5B4 /* Server */,
+				F635699B2B77656C0070C5B4 /* RSS */,
+				F635699C2B7766210070C5B4 /* Article */,
+			);
+			path = "Model - RSS";
+			sourceTree = "<group>";
+		};
+		F63569902B7763F10070C5B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F63569912B7764100070C5B4 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F635699A2B77654C0070C5B4 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				F63569712B77625D0070C5B4 /* RSSPlistReader.swift */,
+				F635696C2B77625D0070C5B4 /* BaseConnector.swift */,
+				F63569682B77625D0070C5B4 /* BaseConnectorError.swift */,
+				F63569752B77625D0070C5B4 /* BaseConnectorRequestMethod.swift */,
+				F63569762B77625D0070C5B4 /* BaseDispatchGroupConnector.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		F635699B2B77656C0070C5B4 /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				F635696A2B77625D0070C5B4 /* RSSDataParser.swift */,
+				F63569662B77625D0070C5B4 /* RSSDataStatusSubscriber.swift */,
+				F63569672B77625D0070C5B4 /* RSSDataSubscriber.swift */,
+				F63569742B77625D0070C5B4 /* RSSSource.swift */,
+				F635696F2B77625D0070C5B4 /* RSSSourceManager.swift */,
+				F63569692B77625D0070C5B4 /* RSSUpdateStatus.swift */,
+			);
+			path = RSS;
+			sourceTree = "<group>";
+		};
+		F635699C2B7766210070C5B4 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				F63569732B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift */,
+				F63569772B77625D0070C5B4 /* AtomFeed+RSSArticle.swift */,
+				F63569782B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift */,
+				F63569652B77625D0070C5B4 /* RSSArticle.swift */,
+				F635696E2B77625D0070C5B4 /* RSSArticle+Identifier.swift */,
+				F635696B2B77625D0070C5B4 /* RSSArticle+Search.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		F635699D2B7766440070C5B4 /* Data Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F63569702B77625D0070C5B4 /* DataStorage.swift */,
+				F63569722B77625D0070C5B4 /* ObjectSavable.swift */,
+				F635696D2B77625D0070C5B4 /* RSSFeed+RSSArticle.swift */,
+			);
+			path = "Data Storage";
+			sourceTree = "<group>";
+		};
 		F681D0432B6EE47A0061A42C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +809,8 @@
 			name = Endava;
 			packageProductDependencies = (
 				F60F2DEB2B73ED64004E6D76 /* SwiftUICoordinator */,
+				F635698E2B77637A0070C5B4 /* FeedKit */,
+				F63569962B7764420070C5B4 /* Sweep */,
 			);
 			productName = Endava;
 			productReference = F60F2DAA2B73EC4F004E6D76 /* Endava.app */;
@@ -773,6 +893,8 @@
 			packageReferences = (
 				F681D0512B6F81BB0061A42C /* XCRemoteSwiftPackageReference "SwiftUICoordinator" */,
 				F60F2EBC2B740416004E6D76 /* XCRemoteSwiftPackageReference "SwiftGenPlugin" */,
+				F635698D2B77637A0070C5B4 /* XCRemoteSwiftPackageReference "FeedKit" */,
+				F63569952B7764420070C5B4 /* XCRemoteSwiftPackageReference "Sweep" */,
 			);
 			productRefGroup = F634599C2B6E4E3C009554B1 /* Products */;
 			projectDirPath = "";
@@ -870,25 +992,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F635698B2B77625D0070C5B4 /* AtomFeed+RSSArticle.swift in Sources */,
+				F635697B2B77625D0070C5B4 /* RSSDataSubscriber.swift in Sources */,
 				F60F2DC32B73ECE6004E6D76 /* DependencyContainer.swift in Sources */,
 				F60F2DC92B73ED04004E6D76 /* ObjectsListContainerView.swift in Sources */,
 				F63569632B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift in Sources */,
 				F60F2DE12B73ED2B004E6D76 /* CenteredContainerView.swift in Sources */,
 				F60F2DBA2B73ECA7004E6D76 /* SceneDelegate.swift in Sources */,
+				F63569852B77625D0070C5B4 /* RSSPlistReader.swift in Sources */,
+				F63569792B77625D0070C5B4 /* RSSArticle.swift in Sources */,
 				F60F2DBD2B73ECCF004E6D76 /* MainCoordinator.swift in Sources */,
 				F60F2DCE2B73ED09004E6D76 /* CircularProgressBar.swift in Sources */,
 				F60F2DBF2B73ECD5004E6D76 /* MainAction.swift in Sources */,
+				F63569932B7764100070C5B4 /* String+Extensions.swift in Sources */,
 				F60F2DD82B73ED18004E6D76 /* ActionGradient.swift in Sources */,
+				F635697F2B77625D0070C5B4 /* RSSArticle+Search.swift in Sources */,
 				F60F2DBE2B73ECD1004E6D76 /* MainCoordinator+Ext.swift in Sources */,
 				F60F2DD02B73ED0E004E6D76 /* DiskStorageProcess.swift in Sources */,
+				F635697E2B77625D0070C5B4 /* RSSDataParser.swift in Sources */,
 				F60F2DE62B73ED2F004E6D76 /* AnyTransition+Ext.swift in Sources */,
 				F60F2DD32B73ED0E004E6D76 /* UserDefaults+Ext.swift in Sources */,
+				F63569822B77625D0070C5B4 /* RSSArticle+Identifier.swift in Sources */,
 				F60F2DC12B73ECDD004E6D76 /* SlideTransition.swift in Sources */,
 				F60F2DCF2B73ED0E004E6D76 /* StorageInteractor.swift in Sources */,
 				F60F2DB92B73EC9A004E6D76 /* AppDelegate.swift in Sources */,
+				F63569832B77625D0070C5B4 /* RSSSourceManager.swift in Sources */,
+				F63569842B77625D0070C5B4 /* DataStorage.swift in Sources */,
 				F60F2DD72B73ED12004E6D76 /* IndicatorBuilder.swift in Sources */,
 				F60F2DC02B73ECDB004E6D76 /* FadeTransition.swift in Sources */,
 				F60F2DD22B73ED0E004E6D76 /* Storage+Protocols.swift in Sources */,
+				F63569862B77625D0070C5B4 /* ObjectSavable.swift in Sources */,
 				F60F2DC82B73ED04004E6D76 /* MainCoordinatorView+Ext.swift in Sources */,
 				F60F2DC72B73ED04004E6D76 /* ObjectsListContainerView+Ext.swift in Sources */,
 				F60F2DD42B73ED0E004E6D76 /* DiskStorageClient.swift in Sources */,
@@ -896,6 +1029,7 @@
 				F60F2DCC2B73ED09004E6D76 /* AddNewObjectView+Ext.swift in Sources */,
 				F60F2EDB2B754A8A004E6D76 /* Assets.swift in Sources */,
 				F60F2DD62B73ED0E004E6D76 /* AppointmentRepository.swift in Sources */,
+				F63569812B77625D0070C5B4 /* RSSFeed+RSSArticle.swift in Sources */,
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,
 				F60F2DC62B73ED04004E6D76 /* MainCoordinatorView.swift in Sources */,
@@ -906,23 +1040,33 @@
 				F60F2DC42B73ECE8004E6D76 /* DependencyContainer+Ext.swift in Sources */,
 				F60F2DE52B73ED2F004E6D76 /* View+Ext.swift in Sources */,
 				F60F2DE42B73ED2F004E6D76 /* Array+Ext.swift in Sources */,
+				F635698A2B77625D0070C5B4 /* BaseDispatchGroupConnector.swift in Sources */,
 				F60F2DB82B73EC95004E6D76 /* AssesmentPlaygroundApp.swift in Sources */,
 				F60F2DDD2B73ED25004E6D76 /* AppTheme.swift in Sources */,
 				F60F2DE02B73ED2B004E6D76 /* ThemeContainerView.swift in Sources */,
 				F60F2DD52B73ED0E004E6D76 /* ContenRepository.swift in Sources */,
+				F63569882B77625D0070C5B4 /* RSSSource.swift in Sources */,
 				F60F2DDB2B73ED21004E6D76 /* Appointment.swift in Sources */,
 				F63569592B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
 				F60F2DBB2B73ECB8004E6D76 /* Requirements.docc in Sources */,
+				F635697D2B77625D0070C5B4 /* RSSUpdateStatus.swift in Sources */,
 				F60F2DD12B73ED0E004E6D76 /* ContentError.swift in Sources */,
 				F60F2DE72B73ED2F004E6D76 /* Gradient+Ext.swift in Sources */,
+				F63569992B77648E0070C5B4 /* Config.swift in Sources */,
 				F60F2DBC2B73ECCB004E6D76 /* AppCoordinator.swift in Sources */,
+				F63569872B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift in Sources */,
 				F60F2DDF2B73ED2B004E6D76 /* DropDownContainerView.swift in Sources */,
+				F63569892B77625D0070C5B4 /* BaseConnectorRequestMethod.swift in Sources */,
+				F635697C2B77625D0070C5B4 /* BaseConnectorError.swift in Sources */,
 				F60F2ED32B754600004E6D76 /* Localized.swift in Sources */,
+				F63569802B77625D0070C5B4 /* BaseConnector.swift in Sources */,
 				F60F2DD92B73ED18004E6D76 /* AnimatableGradientModifier.swift in Sources */,
 				F60F2DC52B73ECEB004E6D76 /* MainRoute.swift in Sources */,
 				F60F2DCA2B73ED09004E6D76 /* AddNewObjectView.swift in Sources */,
 				F60F2DC22B73ECE3004E6D76 /* CoordinatorFactory.swift in Sources */,
+				F635698C2B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift in Sources */,
 				F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
+				F635697A2B77625D0070C5B4 /* RSSDataStatusSubscriber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1452,6 +1596,22 @@
 				minimumVersion = 6.6.2;
 			};
 		};
+		F635698D2B77637A0070C5B4 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+		F63569952B7764420070C5B4 /* XCRemoteSwiftPackageReference "Sweep" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Sweep";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 		F681D0512B6F81BB0061A42C /* XCRemoteSwiftPackageReference "SwiftUICoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/erikdrobne/SwiftUICoordinator";
@@ -1472,6 +1632,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F681D0512B6F81BB0061A42C /* XCRemoteSwiftPackageReference "SwiftUICoordinator" */;
 			productName = SwiftUICoordinator;
+		};
+		F635698E2B77637A0070C5B4 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F635698D2B77637A0070C5B4 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+		F63569962B7764420070C5B4 /* Sweep */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F63569952B7764420070C5B4 /* XCRemoteSwiftPackageReference "Sweep" */;
+			productName = Sweep;
 		};
 		F681D0522B6F81BB0061A42C /* SwiftUICoordinator */ = {
 			isa = XCSwiftPackageProductDependency;
