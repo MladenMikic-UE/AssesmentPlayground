@@ -36,6 +36,7 @@ public struct AddNewObjectView<Coordinator: Routing>: View {
                 }
             }
             .interactiveDismissDisabled()
+            .ignoresSafeArea(edges: .bottom)
     }
     
     @ViewBuilder private func buildContentContainerView() -> some View {
