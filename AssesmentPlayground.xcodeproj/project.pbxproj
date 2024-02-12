@@ -121,6 +121,9 @@
 		F60F2ED72B75492E004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2ED62B75492E004E6D76 /* Assets.swift */; };
 		F60F2ED92B754959004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2ED82B754959004E6D76 /* Assets.swift */; };
 		F60F2EDB2B754A8A004E6D76 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F2EDA2B754A8A004E6D76 /* Assets.swift */; };
+		F61CE7B42B7A228100AFB29C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F61CE7B32B7A228100AFB29C /* README.md */; };
+		F61CE7B52B7A228100AFB29C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F61CE7B32B7A228100AFB29C /* README.md */; };
+		F61CE7B62B7A228100AFB29C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F61CE7B32B7A228100AFB29C /* README.md */; };
 		F634599F2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F634599E2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift */; };
 		F63459A12B6E4E3C009554B1 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459A02B6E4E3C009554B1 /* MainCoordinatorView.swift */; };
 		F63459A32B6E4E3D009554B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63459A22B6E4E3D009554B1 /* Assets.xcassets */; };
@@ -332,6 +335,7 @@
 		F60F2ED62B75492E004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		F60F2ED82B754959004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		F60F2EDA2B754A8A004E6D76 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		F61CE7B32B7A228100AFB29C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F634599B2B6E4E3C009554B1 /* AssesmentPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssesmentPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F634599E2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentPlaygroundApp.swift; sourceTree = "<group>"; };
 		F63459A02B6E4E3C009554B1 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
@@ -648,6 +652,7 @@
 		F63459AE2B6E54C6009554B1 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				F61CE7B32B7A228100AFB29C /* README.md */,
 				F63459AF2B6E54E2009554B1 /* Requirements.docc */,
 			);
 			path = Documentation;
@@ -1110,6 +1115,7 @@
 			files = (
 				F60F2E632B73F8D7004E6D76 /* Launch Screen.storyboard in Resources */,
 				F60F2EA12B74003E004E6D76 /* Localizable.strings in Resources */,
+				F61CE7B52B7A228100AFB29C /* README.md in Resources */,
 				F60F2DB42B73EC50004E6D76 /* Preview Assets.xcassets in Resources */,
 				F60F2DB12B73EC50004E6D76 /* Assets.xcassets in Resources */,
 			);
@@ -1121,6 +1127,7 @@
 			files = (
 				F60F2E612B73F872004E6D76 /* Launch Screen.storyboard in Resources */,
 				F60F2EAF2B740119004E6D76 /* Localizable.strings in Resources */,
+				F61CE7B62B7A228100AFB29C /* README.md in Resources */,
 				F60F2E5B2B73F300004E6D76 /* Preview Assets.xcassets in Resources */,
 				F60F2E582B73F300004E6D76 /* Assets.xcassets in Resources */,
 			);
@@ -1132,6 +1139,7 @@
 			files = (
 				F681D0CB2B70F3E10061A42C /* Launch Screen.storyboard in Resources */,
 				F60F2EA92B7400EC004E6D76 /* Localizable.strings in Resources */,
+				F61CE7B42B7A228100AFB29C /* README.md in Resources */,
 				F63459A62B6E4E3D009554B1 /* Preview Assets.xcassets in Resources */,
 				F63459A32B6E4E3D009554B1 /* Assets.xcassets in Resources */,
 			);

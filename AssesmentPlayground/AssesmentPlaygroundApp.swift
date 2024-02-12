@@ -1,6 +1,6 @@
 //
-//  AssesmentPlaygroundApp.swift
-//  AssesmentPlayground
+//  AssessmentPlaygroundApp.swift
+//  AssessmentPlayground
 //
 //  Created by Mladen Mikic on 03.02.2024.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUICoordinator
 
 @main
-struct AssesmentPlaygroundApp: App {
+struct AssessmentPlaygroundApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 

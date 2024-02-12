@@ -2,7 +2,7 @@
 //  CloseButton.swift
 //  Shared
 //
-//  Created by Mlade nMikic on 10.02.2024.
+//  Created by Mladen Mikic on 10.02.2024.
 //
 
 import SwiftUI

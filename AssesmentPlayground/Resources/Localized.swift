@@ -15,7 +15,7 @@ internal enum L10n {
   /// Edit Appointment
   internal static let editNewObjectHeaderTitle = L10n.tr("Localizable", "edit_new_object_header_title", fallback: "Edit Appointment")
   /// Localizable.strings
-  ///   AssesmentPlayground
+  ///   AssessmentPlayground
   /// 
   ///   Created by Mladen Mikic on 07.02.2024.
   internal static let mainListNoObjectPlaceholderTitle = L10n.tr("Localizable", "main_list_no_object_placeholder_title", fallback: "No objects are available. Tap the '+' button to create your first appointment.")

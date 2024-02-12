@@ -1,2 +1,2 @@
-# Assesment Playgroud
-A playground for job assesments.
+# Assessment Playgroud
+A playground for job assessments and typos.

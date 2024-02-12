@@ -1,6 +1,6 @@
 //
 //  AddNewObjectView+SpecificNewObjectView.swift
-//  AssesmentPlayground
+//  AssessmentPlayground
 //
 //  Created by Mladen Mikic on 09.02.2024.
 //
@@ -13,6 +13,6 @@ public extension AddNewObjectView {
     
     @ViewBuilder func buildTargetSpecificCreateNewObjectView() -> some View {
         
-        Text("AssesmentPlayground")
+        Text("AssessmentPlayground")
     }
 }
