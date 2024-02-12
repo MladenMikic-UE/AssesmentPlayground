@@ -51,6 +51,7 @@ RSSFeed
 # Endava Assesment Known Issues
 
 ## Bugs 12.02.2024.
+TODO: Fix: Fix loading screen bug. The loading screen is black when the app starts for a few seconds.
 TODO: Fix: When a detail view is pushed then SwiftUI presents a invisible navigationBar. [P-random]
 TODO: Fix: Fixed iOS 15 iPhone 8 small UI-UX issues.
 
