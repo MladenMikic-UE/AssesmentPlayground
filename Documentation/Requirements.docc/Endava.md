@@ -48,4 +48,28 @@ RSSFeed
 * notifications status
 * favorites status
 
-## UI-UX
+# Endava Assesment Known Issues
+
+## Bugs 12.02.2024.
+TODO: Fix: When a detail view is pushed then SwiftUI presents a invisible navigationBar. [P-random]
+
+## Architecture
+TODO: Build a another interactor for network requsts [P2]
+TODO: Add new child coordinators (1 level will mostly be enought) [P7]
+
+## Refactorings
+TODO: Cleanup the Model (its a mess) [P2]
+- limit the update based on the availability state
+- remove the user defaults nonsense
+TODO: Add a logger [P1]
+TODO: Refactor state machine. [P3]
+TODO: Find a theme solution. The theme should be an Envir object.
+TODO: Cleanup project folder structure.
+
+## Features
+TODO: F1: Create an error pipeline and handle leftover errors. (AppError and child errors) [P5]
+TODO: F1: Present errors to the user (.isUserFacing) [P5]
+TODO: Add close button view with coordinator for web page dismissal per button [P6]
+
+## Test
+TODO: Test: Write (all the missing) unit tests. [P4]

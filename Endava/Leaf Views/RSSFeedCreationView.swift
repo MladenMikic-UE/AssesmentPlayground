@@ -32,12 +32,14 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
     var body: some View {
         
         buildContentContainerView()
-        .onAppear {
-            viewModel.coordinator = coordinator
-            withAnimation {
-                self.viewStates.startAnimations = true
+            .onAppear {
+                viewModel.coordinator = coordinator
+                withAnimation {
+                    self.viewStates.startAnimations = true
+                }
             }
-        }
+            // Fix: The default shows the navigation bar as a compact sized empty top view.
+            .hiddenNavigationBarStyle()
     }
     
     @ViewBuilder private func buildContentContainerView() -> some View {
@@ -54,7 +56,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
                             
                             Text(creationMethodTitle)
                                 .font(theme.font)
-                                .accentColor(.red)
+                                .accentColor(theme.fontColor)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -127,62 +129,66 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildSelectNewContainerView() -> some View {
         
-        ZStack {
+        VStack(spacing: .zero) {
             
-            Color.clear
-            
-            VStack(spacing: .zero) {
+            ScrollView {
                 
-                ForEach(viewModel.remoteRSSFeedRepository.rssFeeds, id: \.self) { rssFeed in
+                VStack(spacing: .zero) {
                     
-                    Button {
-                        withAnimation {
-                            viewModel.selectedRSSFeed = rssFeed
-                        }
-                    } label: {
+                    ForEach(viewModel.remoteRSSFeedRepository.rssFeeds, id: \.self) { rssFeed in
                         
-                        VStack(spacing: .zero) {
-                            Spacer()
+                        Button {
+                            withAnimation {
+                                viewModel.selectedRSSFeed = rssFeed
+                            }
+                        } label: {
                             
-                            Text(rssFeed.title)
-                                .font(theme.smallFont)
-                                .foregroundColor(rssFeed == viewModel.selectedRSSFeed ? Color.black : Color.white)
-                                .frame(maxWidth: .infinity)
+                            VStack(spacing: .zero) {
+                                Spacer()
+                                
+                                Text(rssFeed.title)
+                                    .font(theme.smallFont)
+                                    .foregroundColor(rssFeed == viewModel.selectedRSSFeed ? Color.black : Color.white)
+                                    .frame(maxWidth: .infinity)
 
-                            Spacer()
+                                Spacer()
+                            }
                         }
-                    }
-                    .compositingGroup()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .frame(height: appViewConfiguration.regularButtonSize.height)
-                    .if(rssFeed == viewModel.selectedRSSFeed, transform: { v in
-                        v.background(
-                            RoundedRectangle(cornerSize: appViewConfiguration.regularButtonSize)
-                                .fill(theme.fontColor)
-                        )
-                    })
-                    .if(rssFeed != viewModel.selectedRSSFeed, transform: { v in
-                        v.overlay(
-                            RoundedRectangle(cornerRadius: appViewConfiguration.regularButtonSize.width)
-                                .stroke(Color.black, lineWidth: 2)
+                        .compositingGroup()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(height: appViewConfiguration.regularButtonSize.height)
+                        .if(rssFeed == viewModel.selectedRSSFeed, transform: { v in
+                            v.background(
+                                RoundedRectangle(cornerSize: appViewConfiguration.regularButtonSize)
+                                    .fill(theme.fontColor)
                             )
-                    })
-                    // The horizontal border is cut by 1-2 points. Hotfix.
-                   .padding(.horizontal, 2)
+                        })
+                        .if(rssFeed != viewModel.selectedRSSFeed, transform: { v in
+                            v.overlay(
+                                RoundedRectangle(cornerRadius: appViewConfiguration.regularButtonSize.width)
+                                    .stroke(Color.black, lineWidth: 2)
+                                )
+                        })
+                        // The horizontal border is cut by 1-2 points. Hotfix.
+                       .padding(.horizontal, 2)
+                        
+                        Spacer().frame(height: appViewConfiguration.appPadding.top)
+                    }
                     
-                    Spacer().frame(height: appViewConfiguration.appPadding.top)
+                    Spacer().frame(minHeight: appViewConfiguration.appPadding.bottom)
                 }
-                
-                Spacer().frame(minHeight: appViewConfiguration.appPadding.bottom)
-                
-                buildFinisButtonView(isRSSFeedValid: viewModel.isSelectedObjectValid,
-                                     opacityLevel: viewModel.selectedRSSFeedOpacityLevel,
-                                     title: L10n.addNewSelectedObjectFinishTitle) {
-                    viewModel.createNewSelectedObjectButtonTapped()
-                }
+                // The top is cut by 1 points. Hotfix.
+               .padding(.top, 1)
             }
-            // The top is cut by 1 points. Hotfix.
-           .padding(.top, 1)
+            
+            Spacer().frame(height: appViewConfiguration.appPadding.bottom)
+            
+            buildFinisButtonView(isRSSFeedValid: viewModel.isSelectedObjectValid,
+                                 opacityLevel: viewModel.selectedRSSFeedOpacityLevel,
+                                 title: L10n.addNewSelectedObjectFinishTitle) {
+                viewModel.createNewSelectedObjectButtonTapped()
+            }
+
         }
         .cornerRadius(appViewConfiguration.cornerRadius)
         .shadow(color: theme.shadowColor,

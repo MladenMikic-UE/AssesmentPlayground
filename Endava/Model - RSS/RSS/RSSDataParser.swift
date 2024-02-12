@@ -1,6 +1,6 @@
 //
 //  RSSDataManager.swift
-//  RSS Feed
+//  Endava
 //
 //  Created by Borinschi Ivan on 20.04.2021.
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
@@ -8,7 +8,6 @@
 
 import FeedKit
 import Foundation
-// import DSKit
 import Combine
 
 class RSSDataParser {
@@ -21,17 +20,23 @@ class RSSDataParser {
     
     init() {
         
-        Timer.scheduledTimer(timeInterval: 60 * 15,
+        print("\(#function) - \(#line)")
+        let originalTimerUpdate: TimeInterval = 60 * 15
+        Timer.scheduledTimer(timeInterval: 15,
                                          target: self,
                                          selector: #selector(fireTimer),
                                          userInfo: nil, repeats: true)
     }
     
     @objc func fireTimer() {
+        
+        print("\(#function) - \(#line)")
         update()
     }
     
     public func update() {
+        
+        print("\(#function) - \(#line)")
         
         if readPropertyListFromServer {
             
@@ -56,6 +61,8 @@ class RSSDataParser {
     
     fileprivate func prepareAndStartUpdate() {
         
+        print("\(#function) - \(#line)")
+        
         if !updateInProgress {
             
             updateInProgress = true
@@ -76,6 +83,8 @@ class RSSDataParser {
     
     internal func updateNextInQueueIfNeed() {
                 
+        print("\(#function) - \(#line)")
+        
         // Get next source to update
         let filtered: [RSSSource] = RSSSourceManager.shared.sources.filter { (source) -> Bool in
             source.updated == false
@@ -106,6 +115,8 @@ class RSSDataParser {
     
     internal func didFinishUpdate() {
         
+        print("\(#function) - \(#line)")
+        
         DispatchQueue.main.async { [weak self] in
             self?.dataPublisher.send(RSSSourceManager.shared.sources)
             self?.updateInProgress = false
@@ -113,6 +124,8 @@ class RSSDataParser {
     }
     
     internal func update(source: RSSSource) {
+        
+        print("\(#function) - \(#line)")
         
         guard let feedURL: URL = URL(string: source.url.replace(target: "\n", withString: "")) else {
             
@@ -134,6 +147,9 @@ class RSSDataParser {
                 case let .atom(feed):
                     
                     source.articles = feed.articles()
+                    
+                    print("\(#function) - \(#line) - articles: \(source.articles)")
+                    
                     source.updated = true
                     self.updateNextInQueueIfNeed()
                     
@@ -141,19 +157,28 @@ class RSSDataParser {
                     
                     source.articles = feed.articles()
                     source.updated = true
+                    
+                    print("\(#function) - \(#line) - articles: \(source.articles)")
+                    
                     self.updateNextInQueueIfNeed()
                     
                 case let .json(_):
                     
                     source.articles = nil
                     source.updated = true
+                    
+                    print("\(#function) - \(#line) - articles: \(source.articles)")
+
                     self.updateNextInQueueIfNeed()
                 }
                 
             case .failure(_):
-                
+                                
                 source.articles = nil
                 source.updated = true
+                
+                print("\(#function) - \(#line) - articles: \(source.articles)")
+
                 self.updateNextInQueueIfNeed()
             }
         }

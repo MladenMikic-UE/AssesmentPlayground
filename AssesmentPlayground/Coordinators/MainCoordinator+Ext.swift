@@ -37,6 +37,10 @@ extension MainCoordinator: RouterViewFactory {
     
             AddNewObjectView<MainCoordinator>(theme: theme, viewModel: viewModel)
                 .environmentObject(appViewConfiguration)
+        case .webpage(let url):
+            WebViewRepresentable(url: url)
+        case .detail(_):
+            EmptyView()
         }
     }
 }

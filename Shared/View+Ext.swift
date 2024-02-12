@@ -1,15 +1,26 @@
 //
 //  View+Ext.swift
-//  AssesmentPlayground
+//  Shared
 //
-//  Created by Mladen Mikic on 03.02.2024.
+//  Created by Mladen Mikic on 11.02.2024.
 //
 
-import Foundation
 import SwiftUI
-import Combine
 
-extension View {
+public struct HiddenNavigationBar: ViewModifier {
+    
+    public func body(content: Content) -> some View {
+        content
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
+    }
+}
+
+public extension View {
+    
+    func hiddenNavigationBarStyle() -> some View {
+        modifier( HiddenNavigationBar() )
+    }
     
     func animatable(gradientRange: AnimatedGradient, progress: CGFloat) -> some View {
         self.modifier(AnimatableGradientModifier(fromGradient: gradientRange.original, toGradient: gradientRange.reversed, progress: progress))

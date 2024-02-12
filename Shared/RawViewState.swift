@@ -1,6 +1,6 @@
 //
 //  RawViewState.swift
-//  AssesmentPlayground
+//  Shared
 //
 //  Created by Mladen Mikic on 09.02.2024.
 //

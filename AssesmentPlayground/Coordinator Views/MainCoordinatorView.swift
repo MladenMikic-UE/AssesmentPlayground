@@ -13,8 +13,8 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var appViewConfiguration: AppViewConfiguration
     @ObservedObject var viewModel: ViewModel<Coordinator>
-    @State private var theme: AppTheme
-    @State private var viewState: MainCoordinatorView.ViewState = .init()
+    @State public private(set) var theme: AppTheme
+    @State public private(set) var viewState: MainCoordinatorView.ViewState = .init()
     
     // MARK: - Init.
     public init(theme: AppTheme,
@@ -33,6 +33,8 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
                     self.viewState.startAnimations = true
                 }
             }
+            // Fix: The default shows the navigation bar as a compact sized empty top view.
+            .hiddenNavigationBarStyle()
     }
     
     @ViewBuilder private func buildContentView(for viewContentState:  MainCoordinatorView.ViewContentState) -> some View {
@@ -125,17 +127,6 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
             }
         }
         .transition(.popUpFromBottomTransitionSequence)
-    }
-    
-    @ViewBuilder private func buildFilledContentView() -> some View {
-     
-        if self.viewState.startAnimations {
-
-            ObjectsListContainerView<MainCoordinator>(viewModel: .init(coordinator: coordinator as? MainCoordinator,
-                                                                       storageInteractor: viewModel.storageInteractor),
-                                                      theme: theme)
-                .transition(.popUpWithOpacityTransitionSequence)
-        }
     }
     
     @ViewBuilder private func buildLoadingContentView() -> some View {

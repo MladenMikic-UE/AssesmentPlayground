@@ -34,7 +34,11 @@ final class SceneDelegate: NSObject, UIWindowSceneDelegate {
                 return
             }
             
-            let coordinator = self.dependencyContainer.makeMainCoordinator(parent: appCoordinator,
+            guard let _appCoordinator = self.appCoordinator else {
+                return
+            }
+            
+            let coordinator = self.dependencyContainer.makeMainCoordinator(parent: _appCoordinator,
                                                                            storageInteractor: self.dependencyContainer.storageInteractor)
 
             switch loadProcess {
@@ -42,16 +46,20 @@ final class SceneDelegate: NSObject, UIWindowSceneDelegate {
                 self.appCoordinator?.start(with: coordinator)
             case .failed(let error):
                 self.appCoordinator?.start(with: coordinator)
-                // TODO: Add error handling. 
+                // TODO: F1: Add error handling. 
             default: break
             }
         }
         .store(in: &bag)
     }
+
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        
+        handlesSceneDidBecomeActive(scene)
+    }
     
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        // Used for deeplink implementation in the SwiftUICoordinator example.
+    func sceneDidEnterBackground(_ scene: UIScene) {
+      
+        handleSceneDidEnterBackground(scene)
     }
 }
-
-

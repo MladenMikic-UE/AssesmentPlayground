@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// TODO: Test: Write unit tests.
 public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     
     // MARK: - Identifiable.
@@ -76,9 +77,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     /// - Features:
     ///     - Duplicate check (ordered merging).
     public func add(item: SingleItem) {
-        
-        // Logging...
-        
+                
         self.itemQueue.async { [weak self] in
             
             guard let self else {
@@ -100,9 +99,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     /// - Features:
     ///     - Duplicate check (ordered merging).
     public func add(item: SingleItem,  completion: @escaping () -> ()) {
-        
-        // Logging...
-        
+                
         self.itemQueue.async { [weak self] in
             
             guard let self else {
@@ -127,9 +124,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     // MARK: - Update.
     /// - Note: Thread-safe. Performed on `itemQueue` serial `DispatchQueue`.
     public func update(item: SingleItem) {
-        
-        // Logging...
-        
+                
         self.itemQueue.async { [weak self] in
             
             guard let self else {
@@ -150,9 +145,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     // MARK: - Delete.
     /// - Note: Thread-safe. Performed on `itemQueue` serial `DispatchQueue`.
     public func delete(itemContainer: Container) {
-      
-        // Logging...
-        
+              
         self.itemQueue.async { [weak self] in
             
             guard let self else {
@@ -165,9 +158,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     
     /// - Note: Thread-safe. Performed on `itemQueue` serial `DispatchQueue`.
     public func delete(item: SingleItem) {
-        
-        // Logging...
-        
+                
         self.itemQueue.async { [weak self] in
             
             guard let self else {
@@ -187,8 +178,6 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     
     /// - Note: Thread-safe. Performed on `itemQueue` serial `DispatchQueue`.
     public func delete(item: SingleItem, completion: @escaping () -> ()) {
-        
-        // Logging...
         
         self.itemQueue.async { [weak self] in
             
@@ -211,9 +200,7 @@ public class ContenRepository: Identifiable, ItemsProtocol, ObservableObject {
     }
 
     private func handle(error: ContentError) {
-        
-        // Logging...
-        
+                
         DispatchQueue.main.async { [weak self] in
             
             guard let self else {

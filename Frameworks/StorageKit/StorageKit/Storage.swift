@@ -34,11 +34,11 @@ public class Storage: STLoggerProtocol {
             if let availableCapacity = values.volumeAvailableCapacity {
                 result = Capacity(bytes: availableCapacity)
             } else {
-                // TODO: Handle error. It is not a critical error.
+                // TODO: F1: Handle error. It is not a critical error.
                 self.log(message: "availableDiskSize is unavailable")
             }
         } catch let error {
-            // TODO: Handle error. It is not a critical error.
+            // TODO: F1: Handle error. It is not a critical error.
             self.log(message: "Error retrieving availableDiskSize: \(error)")
         }
         return result
@@ -65,7 +65,7 @@ public class Storage: STLoggerProtocol {
             if let capacity = values.volumeTotalCapacity {
                 result = Capacity(bytes: capacity)
             } else {
-                // TODO: Handle error. It is not a critical error.
+                // TODO: F1: Handle error. It is not a critical error.
                 if Storage.allowsLogging {
                     STLogger.shared.log(message: "totalDiskSize is unavailable")
                 }
@@ -74,7 +74,7 @@ public class Storage: STLoggerProtocol {
             if Storage.allowsLogging {
                 STLogger.shared.log(message: "Error retrieving totalDiskSize: \(error.localizedDescription)")
             }
-            // TODO: Handle error. It is not a critical error.
+            // TODO: F1: Handle error. It is not a critical error.
         }
         
         self.totalDiskSize = result
@@ -90,6 +90,7 @@ public class Storage: STLoggerProtocol {
             try codableFileStorage.save(value, for: key)
             self.log(message: "\(self): \(#function): SAVED \n\tin: \(path) \n\tfor key: \(key).")
         } catch let error {
+            // TODO: F1: Handle error.
             self.log(message: "\(self): \(#function): FAILED TO SAVE \n\tin: \(path) \n\tfor key: \(key)\n\twith error: \(error)")
         }
     }

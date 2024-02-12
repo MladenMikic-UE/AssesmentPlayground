@@ -25,3 +25,20 @@
 "add_new_object_url_title" = "Titel: ";
 "add_new_object_url_placeholder_description" = "Geben Sie eine RSS-Feed-URL ein. Beispiel: https://example.com/feed";
 "add_new_object_title_placeholder_description" = "Geben Sie einen RSS-Feed-Titel ein.";
+
+// MARK: - Endava - RSS Feed Settings.
+"settings_header_title" = "RSS-Feed-Einstellungen";
+"settings_rss_title" = "RSS Feed";
+"settings_open_web_pages_title" = "Alle Webseiten außerhalb der App öffnen (Standardbrowser)";
+"settings_dissable_rss_feed_title" = "Deaktivieren Sie diesen RSS-Feed";
+"settings_dissable_rss_feed_articles_title" = "Deaktivieren Sie das Abrufen neuer Artikel für diesen RSS-Feed";
+"settings_dissable_rss_feed_push_notifications_title" = "Deaktivieren Sie Push-Benachrichtigungen für diesen RSS-Feed";
+"settings_all_articles_tab_title" = "Alle Artikel";
+"settings_settings_tab_title" = "Einstellungen";
+
+// MARK: - Endava - Main Tab.
+"main_tab_articles_title" = "Artikel";
+"main_tab_favourites_title" = "Favoriten";
+
+// MARK: - Endava - Article Detail.
+"article_detail_open_article_title" = "Artikel öffnen";

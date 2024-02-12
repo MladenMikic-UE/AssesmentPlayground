@@ -1,6 +1,6 @@
 //
 //  Bundle+Ext.swift
-//  AssesmentPlayground
+//  Shared
 //
 //  Created by Mladen Mikic on 07.02.2024.
 //

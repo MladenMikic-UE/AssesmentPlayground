@@ -30,7 +30,7 @@ final public class StorageInteractor: ObservableObject {
             do {
                 self.diskStorageClient = try DiskStorageClient()
             } catch let error {
-                // TODO: Error handling.
+                // TODO: F1: Handle error.
                 print("\(#function) error: \(error.localizedDescription)")
                 self.diskStorageClient = nil
             }
@@ -74,6 +74,7 @@ final public class StorageInteractor: ObservableObject {
             self.localStorage.add(itemContainer: items)
         } catch let error {
             print("\(#function) error: \(error.localizedDescription)")
+            // TODO: F1: Handle error.
             update(loadProcess: .failed(error: error))
         }
     }
@@ -91,7 +92,7 @@ final public class StorageInteractor: ObservableObject {
             try diskStorageClient.codableLocalStorage?.save(generalType, for: storagePath)
             print("\(#function) Storage storing SUCCESS.")
         } catch let error {
-            // TODO: Handle error.
+            // TODO: F1: Handle error.
             print("\(#function) error: \(error.localizedDescription)")
         }
     }

@@ -30,13 +30,18 @@ struct UserDefault<Value> {
 extension UserDefaults {
 
     // MARK: - UI.
-    @UserDefault(key: "currentTheme", defaultValue: "endava")
+    @UserDefault(key: "currentTheme", defaultValue: "assesmentPlayground")
     static var currentTheme: String
 
     @UserDefault(key: "presentedWelcomeScreen", defaultValue: false)
     static var presentedWelcomeScreen: Bool
     
+    @UserDefault(key: "openAllWebPagesOutsideOfTheApp", defaultValue: true)
+    static var openAllWebPagesOutsideOfTheApp: Bool
+    
     static func restartAllValues() {
-        currentTheme = "white"
+        currentTheme = "assesmentPlayground"
+        presentedWelcomeScreen = false
+        openAllWebPagesOutsideOfTheApp = true
     }
 }

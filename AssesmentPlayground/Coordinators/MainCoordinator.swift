@@ -51,6 +51,10 @@ class MainCoordinator: Routing {
             } else {
                 self.dismiss(animated: true)
             }
+        case MainAction.openWebpage(let url):
+            try? show(route: .webpage(url: url))
+        case MainAction.detail(let object):
+            try? show(route: .detail(object: object))
         default:
             parent?.handle(action)
         }

@@ -37,6 +37,8 @@ public struct AddNewObjectView<Coordinator: Routing>: View {
             }
             .interactiveDismissDisabled()
             .ignoresSafeArea(edges: .bottom)
+            // Fix: The default shows the navigation bar as a compact sized empty top view.
+            .hiddenNavigationBarStyle()
     }
     
     @ViewBuilder private func buildContentContainerView() -> some View {
@@ -49,16 +51,16 @@ public struct AddNewObjectView<Coordinator: Routing>: View {
                     
                     LinearGradient(gradient: theme.bottomHeavyGradient, startPoint: .topTrailing, endPoint: .bottomLeading)
                         .cornerRadius(appViewConfiguration.cornerRadius)
+                        .compositingGroup()
+                        .shadow(color: theme.shadowColor,
+                                radius: theme.regularButtonShadowMetadata.radius,
+                                x: theme.regularButtonShadowMetadata.x,
+                                y: theme.regularButtonShadowMetadata.y)
                     
                     buildContentView()
                 }
                 
             }, padding: appViewConfiguration.appPadding)
-            .compositingGroup()
-            .shadow(color: theme.shadowColor,
-                    radius: theme.regularButtonShadowMetadata.radius,
-                    x: theme.regularButtonShadowMetadata.x,
-                    y: theme.regularButtonShadowMetadata.y)
 
         }, theme: theme)
     }
@@ -105,49 +107,15 @@ public struct AddNewObjectView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildCloseButton() -> some View {
                 
-        Button {
+        CloseButton(theme: theme) {
             self.viewModel.closeButtonTapped()
-        } label: {
-            VStack(spacing: .zero) {
-                Spacer()
-                Text("x")
-                    .font(theme.font)
-                    .foregroundColor(theme.fontColor)
-                    .frame(alignment: .center)
-                    .padding(.top, -4)
-                Spacer()
-            }
-            .frame(height: appViewConfiguration.regularButtonSize.height)
         }
-        .defaultAppButtonBackground(color: Color.black, frame: appViewConfiguration.regularButtonSize)
-        .shadow(color: theme.shadowColor,
-                radius: theme.regularButtonShadowMetadata.radius,
-                x: theme.regularButtonShadowMetadata.x,
-                y: theme.regularButtonShadowMetadata.y)
     }
     
     @ViewBuilder private func buildDeleteButton() -> some View {
-                
-        Button {
+             
+        DeleteButton(theme: theme) {
             self.viewModel.deleteButtonTapped()
-        } label: {
-            VStack(spacing: .zero) {
-                
-                Spacer()
-                
-                Image(systemName: "trash")
-                    .resizable()
-                    .foregroundColor(Color.red)
-                    .frame(width: 14, height: 18)
-                
-                Spacer()
-            }
-            .frame(height: appViewConfiguration.regularButtonSize.height)
         }
-        .defaultAppButtonBackground(color: Color.black, frame: appViewConfiguration.regularButtonSize)
-        .shadow(color: theme.shadowColor,
-                radius: theme.regularButtonShadowMetadata.radius,
-                x: theme.regularButtonShadowMetadata.x,
-                y: theme.regularButtonShadowMetadata.y)
     }
 }

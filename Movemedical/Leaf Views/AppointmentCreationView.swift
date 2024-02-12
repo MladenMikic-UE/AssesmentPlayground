@@ -32,11 +32,13 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
     var body: some View {
         
         buildContentView()
-        .onAppear {
-            withAnimation {
-                self.viewStates.startAnimations = true
+            .onAppear {
+                withAnimation {
+                    self.viewStates.startAnimations = true
+                }
             }
-        }
+            // Fix: The default shows the navigation bar as a compact sized empty top view.
+            .hiddenNavigationBarStyle()
     }
     
     @ViewBuilder private func buildContentView() -> some View {

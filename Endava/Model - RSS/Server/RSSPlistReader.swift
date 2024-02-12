@@ -1,6 +1,6 @@
 //
 //  RSSPlistReader.swift
-//  RSS Feed
+//  Endava
 //
 //  Created by Borinschi Ivan on 25.05.2021.
 //

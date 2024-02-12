@@ -13,6 +13,8 @@ enum MainRoute: NavigationRoute {
     case main
     case addNewObject
     case edit(object: UniqueCodableClass)
+    case detail(object: UniqueCodableClass)
+    case webpage(url: URL)
 
     var title: String? {
         
@@ -22,18 +24,21 @@ enum MainRoute: NavigationRoute {
         case .addNewObject:
             return "Add New"
         case .edit(_):
-            return "Edit"
+            return ""
+        case .webpage(_):
+            return ""
+        case .detail(_):
+            return ""
         }
     }
 
     var action: TransitionAction? {
         
         switch self {
-        case .addNewObject:
-            // We have to pass nil for the route presenting a child coordinator.
-            return .present(animated: true, modalPresentationStyle: .automatic, delegate: nil) {}
-        case .edit(_):
+        case .edit(_), .detail(_):
             return .push(animated: true)
+        case .webpage(_), .addNewObject:
+            return .present(animated: true, modalPresentationStyle: .automatic, delegate: nil) {}
         default:
             return .push(animated: true)
         }
@@ -48,6 +53,7 @@ extension MainRoute: Equatable {
         case (.main, .main): return true
         case (.addNewObject, .addNewObject): return true
         case (.edit(let lObject), edit(let rObject)): return lObject == rObject
+        case (.webpage(let lURL), webpage(let rURL)): return lURL == rURL
         default: return false
         }
     }

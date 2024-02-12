@@ -13,7 +13,7 @@ final class DependencyContainer {
     
     let factory: NavigationControllerFactory
     @Published private(set) var storageInteractor: StorageInteractor
-    lazy var delegate = factory.makeNavigationDelegate([FadeTransition()])
+    lazy var delegate = factory.makeNavigationDelegate([])
     lazy var navigationController = factory.makeNavigationController(delegate: delegate)
 
     let theme: AppTheme = AppTheme.bundleTheme
@@ -45,7 +45,7 @@ final class DependencyContainer {
         clearNavAppearance.backgroundColor = .clear
         clearNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.clear]
         clearNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.clear]
-                      
+        
         UINavigationBar.appearance().standardAppearance = clearNavAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = clearNavAppearance
     }

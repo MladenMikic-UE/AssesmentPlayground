@@ -46,3 +46,11 @@ TODO: Add a new add_new_object screen that is agnostic to model
 DONE: Setup swift gen for localizations
 DONE: Fix localization on all projects
 3)
+
+
+### Technical Debt
+1) Use New Coordinators
+2) Refactor state machine
+3) Write tests for state machine and others using new framework (Nimble)
+4) Implement snapshot testing
+https://medium.com/cstech/ui-test-automation-snapshot-testing-in-ios-bd8bcb595cf8

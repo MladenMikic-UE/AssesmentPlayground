@@ -72,7 +72,7 @@ extension AppointmentCreationView {
                     guard let self else {
                         return
                     }
-                    
+                
                     let isAppointmentDataValid: Bool = self.isValid(newDate: result.0) && self.isValid(newLocation: result.2) && self.isValid(newDescription: result.1)
                     self.isAppointmentDataValid = isAppointmentDataValid
                 }

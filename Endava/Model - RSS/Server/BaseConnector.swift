@@ -1,6 +1,6 @@
 //
 //  BaseConnector.swift
-//  RSS Feed
+//  Endava
 //
 //  Created by Borinschi Ivan on 24.11.2020.
 //

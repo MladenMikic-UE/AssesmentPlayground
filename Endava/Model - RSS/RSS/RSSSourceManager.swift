@@ -1,6 +1,6 @@
 //
 //  RSSSourceManager.swift
-//  RSS Feed
+//  Endava
 //
 //  Created by Borinschi Ivan on 20.04.2021.
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
@@ -18,7 +18,7 @@ class RSSSourceManager: Codable {
     
     private init() {
         
-        self.sources = rssSources
+        self.sources = []
         
         if let dateValue: Date = UserDefaults.standard.object(forKey: "lastUpdate") as? Date {
             lastUpdate = dateValue
@@ -36,7 +36,7 @@ class RSSSourceManager: Codable {
     }
     
     func shouldUpdate() -> Bool {
-        
+
         guard let lastUpdate: Date = lastUpdate else {
             return true
         }

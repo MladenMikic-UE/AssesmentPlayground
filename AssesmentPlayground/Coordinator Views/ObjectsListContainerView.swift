@@ -14,8 +14,8 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     @EnvironmentObject var appViewConfiguration: AppViewConfiguration
     @ObservedObject var viewModel: ViewModel<Coordinator, UniqueCodableClass>
     
-    @ObservedObject private var viewState: MainCoordinatorView<MainCoordinator>.ViewState = MainCoordinatorView<MainCoordinator>.ViewState()
-    @State private var theme: AppTheme
+    @ObservedObject public private(set) var viewState: MainCoordinatorView<MainCoordinator>.ViewState = MainCoordinatorView<MainCoordinator>.ViewState()
+    @State public var theme: AppTheme
     
     // MARK: - Init.
     init(viewModel: ViewModel<Coordinator, UniqueCodableClass>,
@@ -26,12 +26,16 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     
     var body: some View {
         
+        let _ = print("ObjectsListContainerView")
+        
         buildContentContainerView()
             .onAppear {
                 withAnimation {
                     self.viewState.startAnimations = true
                 }
             }
+            // Fix: The default shows the navigation bar as a compact sized empty top view.
+            .hiddenNavigationBarStyle()
     }
     
     @ViewBuilder private func buildContentContainerView() -> some View {
@@ -54,6 +58,11 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                             
                             LinearGradient(gradient: theme.bottomHeavyGradient, startPoint: .topTrailing, endPoint: .bottomLeading)
                                 .cornerRadius(appViewConfiguration.cornerRadius)
+                                .compositingGroup()
+                                .shadow(color: theme.shadowColor,
+                                        radius: theme.regularButtonShadowMetadata.radius,
+                                        x: theme.regularButtonShadowMetadata.x,
+                                        y: theme.regularButtonShadowMetadata.y)
                             
                             buildBodyContentView()
                         }
@@ -61,12 +70,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                     }
                 }
             }, padding: .zero)
-            .compositingGroup()
-            .shadow(color: theme.shadowColor, 
-                    radius: theme.regularButtonShadowMetadata.radius,
-                    x: theme.regularButtonShadowMetadata.x,
-                    y: theme.regularButtonShadowMetadata.y)
-
+            
         }, theme: theme)
     }
     
@@ -93,7 +97,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                     buildHeaderControlView()
                         .transition(.popUpWithOpacityTransitionSequence)
 
-                }                
+                }
             }
             
             Spacer().frame(height: appViewConfiguration.appPadding.bottom)
@@ -101,6 +105,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     }
     
     @ViewBuilder private func buildHeaderView() -> some View {
+        
         Text(L10n.mainListObjectHeaderTitle)
             .font(theme.bigFont)
             .foregroundColor(theme.fontColor)
@@ -128,6 +133,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                 radius: theme.regularButtonShadowMetadata.radius,
                 x: theme.regularButtonShadowMetadata.x,
                 y: theme.regularButtonShadowMetadata.y)
+        .padding(.trailing, 2)
         .onAppear {
             withAnimation(.linear(duration: appViewConfiguration.gradientAnimationDuration).repeatForever(autoreverses: true)) {
                 self.viewState.leftButtonProgress = 1.0
@@ -139,146 +145,6 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildBodyContentView() -> some View {
         
-        switch theme {
-        case .assesmentPlayground:
-            EmptyView()
-        case .movemedical:
-            buildMoveMedicalListView()
-        case .endava:
-            EmptyView()
-        }
-    }
-    
-    @ViewBuilder private func buildMoveMedicalListView() -> some View {
-        
-        HStack(spacing: .zero) {
-            
-            Spacer().frame(width: appViewConfiguration.appPadding.left)
-            
-            ScrollView {
-             
-                VStack(spacing: appViewConfiguration.appPadding.top) {
-                    
-                    Spacer().frame(height: appViewConfiguration.appPadding.top)
-                    
-                    ForEach(viewModel.models, id: \.self) { item in
-                        
-                        if let appoitment: Appointment = item as? Appointment {
-                            buildAppointmentListItemView(model: appoitment)
-                        } else {
-                            EmptyView()
-                        }
-                    }
-                }
-            }
-            
-            Spacer().frame(width: appViewConfiguration.appPadding.right)
-        }
-    }
-    
-    @ViewBuilder private func buildAppointmentListItemView(model: Appointment) -> some View {
-     
-         Button {
-             withAnimation {
-                 viewModel.editObjectButtonTapped(with: model)
-             }
-         } label: {
-             
-             ZStack {
-                 
-                 VStack(spacing: .zero) {
-                     
-                     Spacer()
-                                      
-                     HStack(spacing: .zero) {
-                         
-                         Spacer().frame(width: appViewConfiguration.appPadding.left * 2)
-                         
-                         Image(systemName: "calendar")
-                             .resizable()
-                             .foregroundColor(theme.primaryFontColor)
-                             .frame(width: 16, height: 16)
-                         
-                         Spacer().frame(width: appViewConfiguration.appPadding.left)
-                         
-                         VStack(spacing: .zero) {
-                             
-                             Spacer()
-                             
-                             Text(model.date.getFormattedDate(format: "yyyy-MM-dd HH:mm"))
-                                 .font(theme.smallFont)
-                                 .foregroundColor(theme.fontColor)
-                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                 .frame(height: 16)
-
-                             Spacer()
-                         }
-                         
-                         Spacer().frame(width: appViewConfiguration.appPadding.right * 2)
-                     }
-                     .frame(height: appViewConfiguration.regularButtonSize.height / 1.6)
-                     
-                     Spacer().frame(height: 2)
-                     
-                     HStack(spacing: .zero) {
-                         
-                         Spacer().frame(width: appViewConfiguration.appPadding.left * 2)
-                         
-                         Image(systemName: "location")
-                             .resizable()
-                             .foregroundColor(theme.primaryFontColor)
-                             .frame(width: 16, height: 16)
-                         
-                         Spacer().frame(width: appViewConfiguration.appPadding.left)
-                         
-                         VStack(spacing: .zero) {
-                             
-                             Spacer()
-                             
-                             Text(model.location)
-                                 .font(theme.smallFont)
-                                 .foregroundColor(theme.fontColor)
-                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                 .frame(height: 16)
-
-                             Spacer()
-                         }
-                                                  
-                         Spacer().frame(width: appViewConfiguration.appPadding.right * 2)
-                     }
-                     .frame(height: appViewConfiguration.regularButtonSize.height / 1.6)
-                     
-                     Spacer()
-                 }
-              
-                 HStack(spacing: .zero) {
-                     
-                     Spacer()
-                     
-                     VStack(spacing: .zero) {
-                        
-                         Spacer()
-                         
-                         Image(systemName: "chevron.right")
-                             .resizable()
-                             .frame(width: 10, height: 18, alignment: .center)
-                             .foregroundColor(theme.fontColor)
-                         
-                         Spacer()
-                     }
-                     
-                     Spacer().frame(width: appViewConfiguration.appPadding.right * 2)
-                 }
-             }
-         }
-         .compositingGroup()
-         .frame(maxWidth: .infinity, alignment: .leading)
-         .frame(height: appViewConfiguration.bigButtonSize.height)
-         .overlay(
-             RoundedRectangle(cornerRadius: appViewConfiguration.bigButtonSize.width)
-                 .stroke(Color.black, lineWidth: 2)
-             )
-          // The horizontal border is cut by 1-2 points. Hotfix.
-         .padding(.horizontal, 2)
+        buildListView()
     }
 }

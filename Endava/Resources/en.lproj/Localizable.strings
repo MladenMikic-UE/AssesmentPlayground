@@ -25,3 +25,20 @@
 "add_new_object_url_title" = "Title: ";
 "add_new_object_url_placeholder_description" = "Enter a RSS feed URL. Example: https://example.com/feed";
 "add_new_object_title_placeholder_description" = "Enter a RSS feed Title.";
+
+// MARK: - Endava - RSS Feed Settings.
+"settings_header_title" = "RSS Feed Settings";
+"settings_rss_title" = "RSS Feed";
+"settings_open_web_pages_title" = "Open all web pages outside of the App (Default Browser)";
+"settings_dissable_rss_feed_title" = "Disable this RSS Feed";
+"settings_dissable_rss_feed_articles_title" = "Disable new articles being fetched for this RSS feed";
+"settings_dissable_rss_feed_push_notifications_title" = "Disable push notifications for this RSS feed";
+"settings_all_articles_tab_title" = "All Articles";
+"settings_settings_tab_title" = "Settings";
+
+// MARK: - Endava - Main Tab.
+"main_tab_articles_title" = "Articles";
+"main_tab_favourites_title" = "Favourites";
+
+// MARK: - Endava - Article Detail.
+"article_detail_open_article_title" = "Open Article";

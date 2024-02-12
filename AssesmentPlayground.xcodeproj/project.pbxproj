@@ -15,7 +15,6 @@
 		F60F2DBB2B73ECB8004E6D76 /* Requirements.docc in Sources */ = {isa = PBXBuildFile; fileRef = F63459AF2B6E54E2009554B1 /* Requirements.docc */; };
 		F60F2DBC2B73ECCB004E6D76 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0602B6F82FE0061A42C /* AppCoordinator.swift */; };
 		F60F2DBD2B73ECCF004E6D76 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0642B6F8D450061A42C /* MainCoordinator.swift */; };
-		F60F2DBE2B73ECD1004E6D76 /* MainCoordinator+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0D82B7191170061A42C /* MainCoordinator+Ext.swift */; };
 		F60F2DBF2B73ECD5004E6D76 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0D62B718FEE0061A42C /* MainAction.swift */; };
 		F60F2DC02B73ECDB004E6D76 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D05B2B6F82AA0061A42C /* FadeTransition.swift */; };
 		F60F2DC12B73ECDD004E6D76 /* SlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D05A2B6F82AA0061A42C /* SlideTransition.swift */; };
@@ -52,7 +51,6 @@
 		F60F2DE22B73ED2F004E6D76 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07D2B700A910061A42C /* Color+Ext.swift */; };
 		F60F2DE32B73ED2F004E6D76 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07F2B700AAD0061A42C /* Date+Ext.swift */; };
 		F60F2DE42B73ED2F004E6D76 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0A62B70D9A90061A42C /* Array+Ext.swift */; };
-		F60F2DE52B73ED2F004E6D76 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C92B6EBA3E009554B1 /* View+Ext.swift */; };
 		F60F2DE62B73ED2F004E6D76 /* AnyTransition+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459CB2B6EBA86009554B1 /* AnyTransition+Ext.swift */; };
 		F60F2DE72B73ED2F004E6D76 /* Gradient+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C72B6EB997009554B1 /* Gradient+Ext.swift */; };
 		F60F2DE82B73ED5C004E6D76 /* StorageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F681D0B22B70DDA90061A42C /* StorageKit.framework */; };
@@ -69,7 +67,6 @@
 		F60F2E662B73FA90004E6D76 /* StorageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F681D0B22B70DDA90061A42C /* StorageKit.framework */; };
 		F60F2E672B73FA90004E6D76 /* StorageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F681D0B22B70DDA90061A42C /* StorageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F60F2E692B73FD6D004E6D76 /* Storage+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0A42B70D9780061A42C /* Storage+Protocols.swift */; };
-		F60F2E6A2B73FD7A004E6D76 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C92B6EBA3E009554B1 /* View+Ext.swift */; };
 		F60F2E6B2B73FD7A004E6D76 /* AnyTransition+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459CB2B6EBA86009554B1 /* AnyTransition+Ext.swift */; };
 		F60F2E6C2B73FD7A004E6D76 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D07F2B700AAD0061A42C /* Date+Ext.swift */; };
 		F60F2E6D2B73FD7A004E6D76 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0A62B70D9A90061A42C /* Array+Ext.swift */; };
@@ -113,7 +110,6 @@
 		F60F2E932B73FDC3004E6D76 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0642B6F8D450061A42C /* MainCoordinator.swift */; };
 		F60F2E942B73FDC3004E6D76 /* MainAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0D62B718FEE0061A42C /* MainAction.swift */; };
 		F60F2E952B73FDC3004E6D76 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0602B6F82FE0061A42C /* AppCoordinator.swift */; };
-		F60F2E962B73FDC3004E6D76 /* MainCoordinator+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0D82B7191170061A42C /* MainCoordinator+Ext.swift */; };
 		F60F2E972B73FDC7004E6D76 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D05B2B6F82AA0061A42C /* FadeTransition.swift */; };
 		F60F2E982B73FDC7004E6D76 /* SlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D05A2B6F82AA0061A42C /* SlideTransition.swift */; };
 		F60F2EA12B74003E004E6D76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F60F2EA32B74003E004E6D76 /* Localizable.strings */; };
@@ -133,7 +129,6 @@
 		F63459B02B6E54E2009554B1 /* Requirements.docc in Sources */ = {isa = PBXBuildFile; fileRef = F63459AF2B6E54E2009554B1 /* Requirements.docc */; };
 		F63459C32B6E9D36009554B1 /* AnimatableGradientModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C22B6E9D36009554B1 /* AnimatableGradientModifier.swift */; };
 		F63459C82B6EB997009554B1 /* Gradient+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C72B6EB997009554B1 /* Gradient+Ext.swift */; };
-		F63459CA2B6EBA3E009554B1 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459C92B6EBA3E009554B1 /* View+Ext.swift */; };
 		F63459CC2B6EBA86009554B1 /* AnyTransition+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459CB2B6EBA86009554B1 /* AnyTransition+Ext.swift */; };
 		F63459CF2B6EBACC009554B1 /* ThemeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459CE2B6EBACC009554B1 /* ThemeContainerView.swift */; };
 		F63459D12B6EBAE5009554B1 /* PaddingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63459D02B6EBAE5009554B1 /* PaddingContainerView.swift */; };
@@ -178,6 +173,48 @@
 		F63569A42B77FA6B0070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A32B77FA6B0070C5B4 /* StorageInteractor+Ext.swift */; };
 		F63569A62B77FB390070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A52B77FB390070C5B4 /* StorageInteractor+Ext.swift */; };
 		F63569A92B77FB650070C5B4 /* StorageInteractor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */; };
+		F63569B12B7803660070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569B02B7803660070C5B4 /* ObjectsListContainerView+buildList.swift */; };
+		F63569B32B78042B0070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569B22B78042B0070C5B4 /* ObjectsListContainerView+buildList.swift */; };
+		F63569B52B7804380070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569B42B7804380070C5B4 /* ObjectsListContainerView+buildList.swift */; };
+		F63569B92B781BB60070C5B4 /* MainCoordinator+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569B82B781BB60070C5B4 /* MainCoordinator+Ext.swift */; };
+		F63569BB2B781BC30070C5B4 /* MainCoordinator+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569BA2B781BC30070C5B4 /* MainCoordinator+Ext.swift */; };
+		F63569BD2B781C3B0070C5B4 /* RSSFeedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569BC2B781C3B0070C5B4 /* RSSFeedSettingsView.swift */; };
+		F63569BF2B781D410070C5B4 /* RSSFeedSettingsView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569BE2B781D410070C5B4 /* RSSFeedSettingsView+Ext.swift */; };
+		F63569C12B7820300070C5B4 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C02B7820300070C5B4 /* DeleteButton.swift */; };
+		F63569C92B7821630070C5B4 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C82B7821630070C5B4 /* CloseButton.swift */; };
+		F63569CB2B7835BC0070C5B4 /* SafarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CA2B7835BC0070C5B4 /* SafarImageView.swift */; };
+		F63569CC2B7835CA0070C5B4 /* SafarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CA2B7835BC0070C5B4 /* SafarImageView.swift */; };
+		F63569CD2B7835CB0070C5B4 /* SafarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CA2B7835BC0070C5B4 /* SafarImageView.swift */; };
+		F63569CF2B78362A0070C5B4 /* ChevronRightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CE2B78362A0070C5B4 /* ChevronRightImageView.swift */; };
+		F63569D72B78D0F20070C5B4 /* RSSFeedAvailabilityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569D62B78D0F20070C5B4 /* RSSFeedAvailabilityState.swift */; };
+		F63569D92B78E1530070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569D82B78E1530070C5B4 /* ObjectsListContainerView+buildList.swift */; };
+		F63569DA2B78E2040070C5B4 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C82B7821630070C5B4 /* CloseButton.swift */; };
+		F63569DB2B78E2070070C5B4 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C82B7821630070C5B4 /* CloseButton.swift */; };
+		F63569DC2B78E20A0070C5B4 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C02B7820300070C5B4 /* DeleteButton.swift */; };
+		F63569DD2B78E20B0070C5B4 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569C02B7820300070C5B4 /* DeleteButton.swift */; };
+		F63569DE2B78E2100070C5B4 /* ChevronRightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CE2B78362A0070C5B4 /* ChevronRightImageView.swift */; };
+		F63569DF2B78E2110070C5B4 /* ChevronRightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569CE2B78362A0070C5B4 /* ChevronRightImageView.swift */; };
+		F63569E12B78E24A0070C5B4 /* WebViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569E02B78E24A0070C5B4 /* WebViewRepresentable.swift */; };
+		F63569E22B78E2F30070C5B4 /* WebViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569E02B78E24A0070C5B4 /* WebViewRepresentable.swift */; };
+		F63569E32B78E2F30070C5B4 /* WebViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569E02B78E24A0070C5B4 /* WebViewRepresentable.swift */; };
+		F63569E52B78E7E90070C5B4 /* MainCoordinatorTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569E42B78E7E90070C5B4 /* MainCoordinatorTabView.swift */; };
+		F63569E72B78E9970070C5B4 /* MainCoordinatorView+build.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569E62B78E9970070C5B4 /* MainCoordinatorView+build.swift */; };
+		F63569EB2B791A820070C5B4 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569EA2B791A820070C5B4 /* AppDelegate+Ext.swift */; };
+		F63569ED2B791AD80070C5B4 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569EC2B791AD80070C5B4 /* AppDelegate+Ext.swift */; };
+		F63569EF2B791AE20070C5B4 /* AppDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569EE2B791AE20070C5B4 /* AppDelegate+Ext.swift */; };
+		F63569F12B791D930070C5B4 /* SceneDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569F02B791D930070C5B4 /* SceneDelegate+Ext.swift */; };
+		F63569F32B791E0F0070C5B4 /* SceneDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569F22B791E0E0070C5B4 /* SceneDelegate+Ext.swift */; };
+		F63569F52B791E1F0070C5B4 /* SceneDelegate+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569F42B791E1F0070C5B4 /* SceneDelegate+Ext.swift */; };
+		F63569F72B7920960070C5B4 /* MainCoordinatorTabView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569F62B7920960070C5B4 /* MainCoordinatorTabView+Ext.swift */; };
+		F63569F92B7925ED0070C5B4 /* RSSTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569F82B7925ED0070C5B4 /* RSSTimeLine.swift */; };
+		F63569FB2B7944580070C5B4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569FA2B7944580070C5B4 /* HeaderView.swift */; };
+		F63569FD2B7959010070C5B4 /* RSSArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569FC2B7959010070C5B4 /* RSSArticleDetailView.swift */; };
+		F63569FF2B7959B60070C5B4 /* RSSArticleDetailView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63569FE2B7959B60070C5B4 /* RSSArticleDetailView+Ext.swift */; };
+		F65E1AF52B7975B0009F44A4 /* OpenWebPageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E1AF42B7975B0009F44A4 /* OpenWebPageButtonView.swift */; };
+		F65E1AF72B797F4D009F44A4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E1AF62B797F4D009F44A4 /* View+Ext.swift */; };
+		F65E1AF82B797F4E009F44A4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E1AF62B797F4D009F44A4 /* View+Ext.swift */; };
+		F65E1AF92B797F4F009F44A4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E1AF62B797F4D009F44A4 /* View+Ext.swift */; };
+		F65E1AFB2B79FE24009F44A4 /* RSSArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E1AFA2B79FE24009F44A4 /* RSSArticleListView.swift */; };
 		F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */; };
 		F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D0462B6EE9120061A42C /* CenteredContainerView.swift */; };
 		F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */; };
@@ -301,7 +338,6 @@
 		F63459AF2B6E54E2009554B1 /* Requirements.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Requirements.docc; sourceTree = "<group>"; };
 		F63459C22B6E9D36009554B1 /* AnimatableGradientModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableGradientModifier.swift; sourceTree = "<group>"; };
 		F63459C72B6EB997009554B1 /* Gradient+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+Ext.swift"; sourceTree = "<group>"; };
-		F63459C92B6EBA3E009554B1 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		F63459CB2B6EBA86009554B1 /* AnyTransition+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Ext.swift"; sourceTree = "<group>"; };
 		F63459CE2B6EBACC009554B1 /* ThemeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeContainerView.swift; sourceTree = "<group>"; };
 		F63459D02B6EBAE5009554B1 /* PaddingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingContainerView.swift; sourceTree = "<group>"; };
@@ -342,6 +378,37 @@
 		F63569A32B77FA6B0070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
 		F63569A52B77FB390070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
 		F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageInteractor+Ext.swift"; sourceTree = "<group>"; };
+		F63569B02B7803660070C5B4 /* ObjectsListContainerView+buildList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectsListContainerView+buildList.swift"; sourceTree = "<group>"; };
+		F63569B22B78042B0070C5B4 /* ObjectsListContainerView+buildList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectsListContainerView+buildList.swift"; path = "Movemedical/Leaf Views/ObjectsListContainerView+buildList.swift"; sourceTree = SOURCE_ROOT; };
+		F63569B42B7804380070C5B4 /* ObjectsListContainerView+buildList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectsListContainerView+buildList.swift"; sourceTree = "<group>"; };
+		F63569B82B781BB60070C5B4 /* MainCoordinator+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Ext.swift"; sourceTree = "<group>"; };
+		F63569BA2B781BC30070C5B4 /* MainCoordinator+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Ext.swift"; sourceTree = "<group>"; };
+		F63569BC2B781C3B0070C5B4 /* RSSFeedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedSettingsView.swift; sourceTree = "<group>"; };
+		F63569BE2B781D410070C5B4 /* RSSFeedSettingsView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSSFeedSettingsView+Ext.swift"; sourceTree = "<group>"; };
+		F63569C02B7820300070C5B4 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		F63569C82B7821630070C5B4 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		F63569CA2B7835BC0070C5B4 /* SafarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafarImageView.swift; sourceTree = "<group>"; };
+		F63569CE2B78362A0070C5B4 /* ChevronRightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronRightImageView.swift; sourceTree = "<group>"; };
+		F63569D62B78D0F20070C5B4 /* RSSFeedAvailabilityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedAvailabilityState.swift; sourceTree = "<group>"; };
+		F63569D82B78E1530070C5B4 /* ObjectsListContainerView+buildList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectsListContainerView+buildList.swift"; sourceTree = "<group>"; };
+		F63569E02B78E24A0070C5B4 /* WebViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRepresentable.swift; sourceTree = "<group>"; };
+		F63569E42B78E7E90070C5B4 /* MainCoordinatorTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTabView.swift; sourceTree = "<group>"; };
+		F63569E62B78E9970070C5B4 /* MainCoordinatorView+build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+build.swift"; sourceTree = "<group>"; };
+		F63569E82B7917A20070C5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F63569EA2B791A820070C5B4 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569EC2B791AD80070C5B4 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569EE2B791AE20070C5B4 /* AppDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569F02B791D930070C5B4 /* SceneDelegate+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569F22B791E0E0070C5B4 /* SceneDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569F42B791E1F0070C5B4 /* SceneDelegate+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Ext.swift"; sourceTree = "<group>"; };
+		F63569F62B7920960070C5B4 /* MainCoordinatorTabView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorTabView+Ext.swift"; sourceTree = "<group>"; };
+		F63569F82B7925ED0070C5B4 /* RSSTimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTimeLine.swift; sourceTree = "<group>"; };
+		F63569FA2B7944580070C5B4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F63569FC2B7959010070C5B4 /* RSSArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSArticleDetailView.swift; sourceTree = "<group>"; };
+		F63569FE2B7959B60070C5B4 /* RSSArticleDetailView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSSArticleDetailView+Ext.swift"; sourceTree = "<group>"; };
+		F65E1AF42B7975B0009F44A4 /* OpenWebPageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWebPageButtonView.swift; sourceTree = "<group>"; };
+		F65E1AF62B797F4D009F44A4 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		F65E1AFA2B79FE24009F44A4 /* RSSArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSArticleListView.swift; sourceTree = "<group>"; };
 		F681D0442B6EE4870061A42C /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		F681D0462B6EE9120061A42C /* CenteredContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContainerView.swift; sourceTree = "<group>"; };
 		F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinatorView+Ext.swift"; sourceTree = "<group>"; };
@@ -416,8 +483,12 @@
 		F60F2DAB2B73EC4F004E6D76 /* Endava */ = {
 			isa = PBXGroup;
 			children = (
+				F63569E82B7917A20070C5B4 /* Info.plist */,
+				F63569EC2B791AD80070C5B4 /* AppDelegate+Ext.swift */,
+				F63569F22B791E0E0070C5B4 /* SceneDelegate+Ext.swift */,
 				F60F2E622B73F8D7004E6D76 /* Launch Screen.storyboard */,
 				F60F2EC52B752B4C004E6D76 /* Resources */,
+				F63569B62B781B780070C5B4 /* Coordinators */,
 				F63569572B769A2C0070C5B4 /* Leaf Views */,
 				F63569642B7761D70070C5B4 /* Model - RSS */,
 				F635699D2B7766440070C5B4 /* Storage */,
@@ -440,6 +511,13 @@
 			children = (
 				F60F2DEF2B73F0FF004E6D76 /* Bundle+Ext.swift */,
 				F635695C2B769E1B0070C5B4 /* RawViewState.swift */,
+				F63569FA2B7944580070C5B4 /* HeaderView.swift */,
+				F63569C02B7820300070C5B4 /* DeleteButton.swift */,
+				F63569C82B7821630070C5B4 /* CloseButton.swift */,
+				F63569CA2B7835BC0070C5B4 /* SafarImageView.swift */,
+				F63569CE2B78362A0070C5B4 /* ChevronRightImageView.swift */,
+				F63569E02B78E24A0070C5B4 /* WebViewRepresentable.swift */,
+				F65E1AF62B797F4D009F44A4 /* View+Ext.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -448,6 +526,9 @@
 			isa = PBXGroup;
 			children = (
 				F60F2E602B73F872004E6D76 /* Launch Screen.storyboard */,
+				F63569EE2B791AE20070C5B4 /* AppDelegate+Ext.swift */,
+				F63569F42B791E1F0070C5B4 /* SceneDelegate+Ext.swift */,
+				F63569B72B781B960070C5B4 /* Coordinators */,
 				F60F2EC62B752B57004E6D76 /* Resources */,
 				F63569542B7698D20070C5B4 /* Leaf Views */,
 				F63569A72B77FB550070C5B4 /* Storage */,
@@ -529,7 +610,9 @@
 				F60F2EC42B752B36004E6D76 /* Resources */,
 				F634599E2B6E4E3C009554B1 /* AssesmentPlaygroundApp.swift */,
 				F681D0D42B718E890061A42C /* AppDelegate.swift */,
+				F63569EA2B791A820070C5B4 /* AppDelegate+Ext.swift */,
 				F681D0662B6F8F380061A42C /* SceneDelegate.swift */,
+				F63569F02B791D930070C5B4 /* SceneDelegate+Ext.swift */,
 				F681D0482B6EEDAB0061A42C /* Coordinators */,
 				F681D0592B6F829D0061A42C /* Transitions */,
 				F681D0542B6F822F0061A42C /* Dependencies */,
@@ -568,7 +651,6 @@
 			isa = PBXGroup;
 			children = (
 				F63459C72B6EB997009554B1 /* Gradient+Ext.swift */,
-				F63459C92B6EBA3E009554B1 /* View+Ext.swift */,
 				F63459CB2B6EBA86009554B1 /* AnyTransition+Ext.swift */,
 				F681D07D2B700A910061A42C /* Color+Ext.swift */,
 				F681D07F2B700AAD0061A42C /* Date+Ext.swift */,
@@ -627,6 +709,7 @@
 				F681D0752B7009EE0061A42C /* AppointmentCreationView.swift */,
 				F681D0792B700A3F0061A42C /* AppointmentCreationView+Ext.swift */,
 				F63569552B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
+				F63569D82B78E1530070C5B4 /* ObjectsListContainerView+buildList.swift */,
 			);
 			path = "Leaf Views";
 			sourceTree = "<group>";
@@ -637,6 +720,12 @@
 				F63569582B769A400070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift */,
 				F63569602B76A0290070C5B4 /* RSSFeedCreationView.swift */,
 				F63569622B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift */,
+				F63569BC2B781C3B0070C5B4 /* RSSFeedSettingsView.swift */,
+				F63569BE2B781D410070C5B4 /* RSSFeedSettingsView+Ext.swift */,
+				F63569B42B7804380070C5B4 /* ObjectsListContainerView+buildList.swift */,
+				F63569FC2B7959010070C5B4 /* RSSArticleDetailView.swift */,
+				F63569FE2B7959B60070C5B4 /* RSSArticleDetailView+Ext.swift */,
+				F65E1AF42B7975B0009F44A4 /* OpenWebPageButtonView.swift */,
 			);
 			path = "Leaf Views";
 			sourceTree = "<group>";
@@ -645,6 +734,7 @@
 			isa = PBXGroup;
 			children = (
 				F63569982B77648D0070C5B4 /* Config.swift */,
+				F63569F82B7925ED0070C5B4 /* RSSTimeLine.swift */,
 				F635699A2B77654C0070C5B4 /* Server */,
 				F635699B2B77656C0070C5B4 /* RSS */,
 				F635699C2B7766210070C5B4 /* Article */,
@@ -680,6 +770,7 @@
 				F63569662B77625D0070C5B4 /* RSSDataStatusSubscriber.swift */,
 				F63569672B77625D0070C5B4 /* RSSDataSubscriber.swift */,
 				F63569742B77625D0070C5B4 /* RSSSource.swift */,
+				F63569D62B78D0F20070C5B4 /* RSSFeedAvailabilityState.swift */,
 				F635696F2B77625D0070C5B4 /* RSSSourceManager.swift */,
 				F63569692B77625D0070C5B4 /* RSSUpdateStatus.swift */,
 			);
@@ -714,9 +805,30 @@
 		F63569A72B77FB550070C5B4 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				F63569B22B78042B0070C5B4 /* ObjectsListContainerView+buildList.swift */,
 				F63569A82B77FB650070C5B4 /* StorageInteractor+Ext.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		F63569B62B781B780070C5B4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F63569B82B781BB60070C5B4 /* MainCoordinator+Ext.swift */,
+				F63569E62B78E9970070C5B4 /* MainCoordinatorView+build.swift */,
+				F63569E42B78E7E90070C5B4 /* MainCoordinatorTabView.swift */,
+				F63569F62B7920960070C5B4 /* MainCoordinatorTabView+Ext.swift */,
+				F65E1AFA2B79FE24009F44A4 /* RSSArticleListView.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F63569B72B781B960070C5B4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F63569BA2B781BC30070C5B4 /* MainCoordinator+Ext.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		F681D0432B6EE47A0061A42C /* Storage */ = {
@@ -753,6 +865,7 @@
 				F681D04B2B6EEE280061A42C /* MainCoordinatorView+Ext.swift */,
 				F681D0CE2B70FFC00061A42C /* ObjectsListContainerView.swift */,
 				F681D0D22B713A350061A42C /* ObjectsListContainerView+Ext.swift */,
+				F63569B02B7803660070C5B4 /* ObjectsListContainerView+buildList.swift */,
 			);
 			path = "Coordinator Views";
 			sourceTree = "<group>";
@@ -1017,20 +1130,24 @@
 			files = (
 				F635698B2B77625D0070C5B4 /* AtomFeed+RSSArticle.swift in Sources */,
 				F635697B2B77625D0070C5B4 /* RSSDataSubscriber.swift in Sources */,
+				F63569ED2B791AD80070C5B4 /* AppDelegate+Ext.swift in Sources */,
 				F60F2DC32B73ECE6004E6D76 /* DependencyContainer.swift in Sources */,
 				F60F2DC92B73ED04004E6D76 /* ObjectsListContainerView.swift in Sources */,
+				F63569C92B7821630070C5B4 /* CloseButton.swift in Sources */,
 				F63569632B76A1E80070C5B4 /* RSSFeedCreationView+Ext.swift in Sources */,
+				F63569CF2B78362A0070C5B4 /* ChevronRightImageView.swift in Sources */,
 				F60F2DE12B73ED2B004E6D76 /* CenteredContainerView.swift in Sources */,
 				F60F2DBA2B73ECA7004E6D76 /* SceneDelegate.swift in Sources */,
 				F63569852B77625D0070C5B4 /* RSSPlistReader.swift in Sources */,
+				F63569C12B7820300070C5B4 /* DeleteButton.swift in Sources */,
 				F63569792B77625D0070C5B4 /* RSSArticle.swift in Sources */,
 				F60F2DBD2B73ECCF004E6D76 /* MainCoordinator.swift in Sources */,
 				F60F2DCE2B73ED09004E6D76 /* CircularProgressBar.swift in Sources */,
+				F63569FD2B7959010070C5B4 /* RSSArticleDetailView.swift in Sources */,
 				F60F2DBF2B73ECD5004E6D76 /* MainAction.swift in Sources */,
 				F63569932B7764100070C5B4 /* String+Extensions.swift in Sources */,
 				F60F2DD82B73ED18004E6D76 /* ActionGradient.swift in Sources */,
 				F635697F2B77625D0070C5B4 /* RSSArticle+Search.swift in Sources */,
-				F60F2DBE2B73ECD1004E6D76 /* MainCoordinator+Ext.swift in Sources */,
 				F60F2DD02B73ED0E004E6D76 /* DiskStorageProcess.swift in Sources */,
 				F635697E2B77625D0070C5B4 /* RSSDataParser.swift in Sources */,
 				F60F2DE62B73ED2F004E6D76 /* AnyTransition+Ext.swift in Sources */,
@@ -1038,9 +1155,13 @@
 				F63569822B77625D0070C5B4 /* RSSArticle+Identifier.swift in Sources */,
 				F60F2DC12B73ECDD004E6D76 /* SlideTransition.swift in Sources */,
 				F60F2DCF2B73ED0E004E6D76 /* StorageInteractor.swift in Sources */,
+				F65E1AF52B7975B0009F44A4 /* OpenWebPageButtonView.swift in Sources */,
 				F60F2DB92B73EC9A004E6D76 /* AppDelegate.swift in Sources */,
+				F63569FB2B7944580070C5B4 /* HeaderView.swift in Sources */,
 				F63569832B77625D0070C5B4 /* RSSSourceManager.swift in Sources */,
+				F63569CB2B7835BC0070C5B4 /* SafarImageView.swift in Sources */,
 				F63569842B77625D0070C5B4 /* DataStorage.swift in Sources */,
+				F63569FF2B7959B60070C5B4 /* RSSArticleDetailView+Ext.swift in Sources */,
 				F60F2DD72B73ED12004E6D76 /* IndicatorBuilder.swift in Sources */,
 				F60F2DC02B73ECDB004E6D76 /* FadeTransition.swift in Sources */,
 				F60F2DD22B73ED0E004E6D76 /* Storage+Protocols.swift in Sources */,
@@ -1050,21 +1171,27 @@
 				F60F2DD42B73ED0E004E6D76 /* DiskStorageClient.swift in Sources */,
 				F60F2DDA2B73ED1C004E6D76 /* AppViewConfiguration.swift in Sources */,
 				F60F2DCC2B73ED09004E6D76 /* AddNewObjectView+Ext.swift in Sources */,
+				F63569F32B791E0F0070C5B4 /* SceneDelegate+Ext.swift in Sources */,
 				F60F2EDB2B754A8A004E6D76 /* Assets.swift in Sources */,
+				F63569E22B78E2F30070C5B4 /* WebViewRepresentable.swift in Sources */,
 				F60F2DD62B73ED0E004E6D76 /* AppointmentRepository.swift in Sources */,
 				F63569812B77625D0070C5B4 /* RSSFeed+RSSArticle.swift in Sources */,
 				F60F2DDE2B73ED2B004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2DF72B73F178004E6D76 /* Bundle+Ext.swift in Sources */,
 				F63569A62B77FB390070C5B4 /* StorageInteractor+Ext.swift in Sources */,
+				F63569B92B781BB60070C5B4 /* MainCoordinator+Ext.swift in Sources */,
+				F63569BF2B781D410070C5B4 /* RSSFeedSettingsView+Ext.swift in Sources */,
 				F60F2DC62B73ED04004E6D76 /* MainCoordinatorView.swift in Sources */,
 				F63569612B76A0290070C5B4 /* RSSFeedCreationView.swift in Sources */,
 				F60F2DE32B73ED2F004E6D76 /* Date+Ext.swift in Sources */,
+				F63569BD2B781C3B0070C5B4 /* RSSFeedSettingsView.swift in Sources */,
 				F60F2DDC2B73ED21004E6D76 /* HospitalRepository.swift in Sources */,
+				F63569B52B7804380070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */,
 				F60F2DE22B73ED2F004E6D76 /* Color+Ext.swift in Sources */,
 				F60F2DC42B73ECE8004E6D76 /* DependencyContainer+Ext.swift in Sources */,
-				F60F2DE52B73ED2F004E6D76 /* View+Ext.swift in Sources */,
 				F60F2DE42B73ED2F004E6D76 /* Array+Ext.swift in Sources */,
 				F635698A2B77625D0070C5B4 /* BaseDispatchGroupConnector.swift in Sources */,
+				F63569E52B78E7E90070C5B4 /* MainCoordinatorTabView.swift in Sources */,
 				F60F2DB82B73EC95004E6D76 /* AssesmentPlaygroundApp.swift in Sources */,
 				F60F2DDD2B73ED25004E6D76 /* AppTheme.swift in Sources */,
 				F60F2DE02B73ED2B004E6D76 /* ThemeContainerView.swift in Sources */,
@@ -1079,20 +1206,26 @@
 				F63569992B77648E0070C5B4 /* Config.swift in Sources */,
 				F60F2DBC2B73ECCB004E6D76 /* AppCoordinator.swift in Sources */,
 				F63569872B77625D0070C5B4 /* RSSFeedItem+RSSArticle.swift in Sources */,
+				F63569F92B7925ED0070C5B4 /* RSSTimeLine.swift in Sources */,
 				F60F2DDF2B73ED2B004E6D76 /* DropDownContainerView.swift in Sources */,
 				F63569892B77625D0070C5B4 /* BaseConnectorRequestMethod.swift in Sources */,
 				F635697C2B77625D0070C5B4 /* BaseConnectorError.swift in Sources */,
 				F60F2ED32B754600004E6D76 /* Localized.swift in Sources */,
+				F65E1AF72B797F4D009F44A4 /* View+Ext.swift in Sources */,
 				F63569802B77625D0070C5B4 /* BaseConnector.swift in Sources */,
 				F63569A22B779F2D0070C5B4 /* RemoteRSSRepository.swift in Sources */,
 				F60F2DD92B73ED18004E6D76 /* AnimatableGradientModifier.swift in Sources */,
 				F60F2DC52B73ECEB004E6D76 /* MainRoute.swift in Sources */,
 				F60F2DCA2B73ED09004E6D76 /* AddNewObjectView.swift in Sources */,
+				F63569F72B7920960070C5B4 /* MainCoordinatorTabView+Ext.swift in Sources */,
 				F635699F2B778DB40070C5B4 /* UISegmentedControl+Ext.swift in Sources */,
+				F63569D72B78D0F20070C5B4 /* RSSFeedAvailabilityState.swift in Sources */,
 				F60F2DC22B73ECE3004E6D76 /* CoordinatorFactory.swift in Sources */,
 				F635698C2B77625D0070C5B4 /* AtomFeedEntry+RSSArticle.swift in Sources */,
+				F65E1AFB2B79FE24009F44A4 /* RSSArticleListView.swift in Sources */,
 				F635695E2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
 				F635697A2B77625D0070C5B4 /* RSSDataStatusSubscriber.swift in Sources */,
+				F63569E72B78E9970070C5B4 /* MainCoordinatorView+build.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1103,6 +1236,7 @@
 				F60F2E842B73FD9E004E6D76 /* AddNewObjectView.swift in Sources */,
 				F60F2E5F2B73F30D004E6D76 /* Bundle+Ext.swift in Sources */,
 				F60F2E942B73FDC3004E6D76 /* MainAction.swift in Sources */,
+				F63569E12B78E24A0070C5B4 /* WebViewRepresentable.swift in Sources */,
 				F60F2E802B73FD99004E6D76 /* StorageInteractor.swift in Sources */,
 				F63569A92B77FB650070C5B4 /* StorageInteractor+Ext.swift in Sources */,
 				F60F2E832B73FD9E004E6D76 /* AddNewObjectView+Ext.swift in Sources */,
@@ -1113,21 +1247,28 @@
 				F60F2E6E2B73FD7A004E6D76 /* Gradient+Ext.swift in Sources */,
 				F60F2E972B73FDC7004E6D76 /* FadeTransition.swift in Sources */,
 				F60F2E6B2B73FD7A004E6D76 /* AnyTransition+Ext.swift in Sources */,
+				F63569EF2B791AE20070C5B4 /* AppDelegate+Ext.swift in Sources */,
 				F60F2E8E2B73FDA8004E6D76 /* MainRoute.swift in Sources */,
 				F60F2E922B73FDBD004E6D76 /* Requirements.docc in Sources */,
 				F60F2E852B73FD9E004E6D76 /* AppointmentCreationView+Ext.swift in Sources */,
+				F63569BB2B781BC30070C5B4 /* MainCoordinator+Ext.swift in Sources */,
 				F60F2E792B73FD90004E6D76 /* ActionGradient.swift in Sources */,
 				F60F2E742B73FD82004E6D76 /* AppTheme.swift in Sources */,
 				F60F2E7C2B73FD99004E6D76 /* DiskStorageClient.swift in Sources */,
 				F635695F2B769EAF0070C5B4 /* RawViewState.swift in Sources */,
 				F60F2E692B73FD6D004E6D76 /* Storage+Protocols.swift in Sources */,
+				F63569DB2B78E2070070C5B4 /* CloseButton.swift in Sources */,
 				F60F2E752B73FD87004E6D76 /* HospitalRepository.swift in Sources */,
 				F60F2E8C2B73FDA8004E6D76 /* DependencyContainer.swift in Sources */,
 				F60F2E982B73FDC7004E6D76 /* SlideTransition.swift in Sources */,
 				F60F2E912B73FDB1004E6D76 /* AssesmentPlaygroundApp.swift in Sources */,
+				F63569CD2B7835CB0070C5B4 /* SafarImageView.swift in Sources */,
 				F60F2ED92B754959004E6D76 /* Assets.swift in Sources */,
 				F60F2E8F2B73FDB1004E6D76 /* SceneDelegate.swift in Sources */,
+				F65E1AF82B797F4E009F44A4 /* View+Ext.swift in Sources */,
+				F63569F52B791E1F0070C5B4 /* SceneDelegate+Ext.swift in Sources */,
 				F60F2E722B73FD7F004E6D76 /* DropDownContainerView.swift in Sources */,
+				F63569DF2B78E2110070C5B4 /* ChevronRightImageView.swift in Sources */,
 				F60F2E712B73FD7F004E6D76 /* PaddingContainerView.swift in Sources */,
 				F60F2E8A2B73FDA3004E6D76 /* MainCoordinatorView+Ext.swift in Sources */,
 				F60F2E892B73FDA3004E6D76 /* ObjectsListContainerView+Ext.swift in Sources */,
@@ -1142,16 +1283,17 @@
 				F60F2E772B73FD8C004E6D76 /* AppViewConfiguration.swift in Sources */,
 				F60F2E7D2B73FD99004E6D76 /* ContentError.swift in Sources */,
 				F60F2E762B73FD87004E6D76 /* Appointment.swift in Sources */,
+				F63569DD2B78E20B0070C5B4 /* DeleteButton.swift in Sources */,
+				F63569D92B78E1530070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */,
+				F63569B32B78042B0070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */,
 				F60F2E6D2B73FD7A004E6D76 /* Array+Ext.swift in Sources */,
 				F63569562B7698F80070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
 				F60F2E872B73FDA3004E6D76 /* MainCoordinatorView.swift in Sources */,
 				F60F2E6F2B73FD7A004E6D76 /* Color+Ext.swift in Sources */,
-				F60F2E962B73FDC3004E6D76 /* MainCoordinator+Ext.swift in Sources */,
 				F60F2E7A2B73FD94004E6D76 /* IndicatorBuilder.swift in Sources */,
 				F60F2E702B73FD7F004E6D76 /* ThemeContainerView.swift in Sources */,
 				F60F2ED52B75460E004E6D76 /* Localized.swift in Sources */,
 				F60F2E7F2B73FD99004E6D76 /* UserDefaults+Ext.swift in Sources */,
-				F60F2E6A2B73FD7A004E6D76 /* View+Ext.swift in Sources */,
 				F60F2E7E2B73FD99004E6D76 /* ContenRepository.swift in Sources */,
 				F60F2E6C2B73FD7A004E6D76 /* Date+Ext.swift in Sources */,
 			);
@@ -1165,21 +1307,25 @@
 				F681D04C2B6EEE280061A42C /* MainCoordinatorView+Ext.swift in Sources */,
 				F63459B02B6E54E2009554B1 /* Requirements.docc in Sources */,
 				F681D0D52B718E890061A42C /* AppDelegate.swift in Sources */,
+				F63569DC2B78E20A0070C5B4 /* DeleteButton.swift in Sources */,
 				F681D0A32B70D9510061A42C /* ContentError.swift in Sources */,
 				F681D0DB2B7191FB0061A42C /* DependencyContainer+Ext.swift in Sources */,
 				F681D05C2B6F82AA0061A42C /* SlideTransition.swift in Sources */,
 				F681D07E2B700A910061A42C /* Color+Ext.swift in Sources */,
 				F681D0802B700AAD0061A42C /* Date+Ext.swift in Sources */,
-				F63459CA2B6EBA3E009554B1 /* View+Ext.swift in Sources */,
+				F63569E32B78E2F30070C5B4 /* WebViewRepresentable.swift in Sources */,
 				F63459DD2B6ECB68009554B1 /* CircularProgressBar.swift in Sources */,
 				F681D07C2B700A680061A42C /* AddNewObjectView+Ext.swift in Sources */,
 				F681D0A72B70D9A90061A42C /* Array+Ext.swift in Sources */,
 				F63459AD2B6E5484009554B1 /* AppTheme.swift in Sources */,
+				F63569CC2B7835CA0070C5B4 /* SafarImageView.swift in Sources */,
+				F63569DA2B78E2040070C5B4 /* CloseButton.swift in Sources */,
 				F63569A42B77FA6B0070C5B4 /* StorageInteractor+Ext.swift in Sources */,
 				F63459C32B6E9D36009554B1 /* AnimatableGradientModifier.swift in Sources */,
 				F681D0A12B70D92E0061A42C /* ContenRepository.swift in Sources */,
 				F681D0472B6EE9120061A42C /* CenteredContainerView.swift in Sources */,
 				F681D0692B6F91250061A42C /* AddNewObjectView.swift in Sources */,
+				F63569DE2B78E2100070C5B4 /* ChevronRightImageView.swift in Sources */,
 				F681D0BC2B70DF560061A42C /* DiskStorageClient.swift in Sources */,
 				F63459D12B6EBAE5009554B1 /* PaddingContainerView.swift in Sources */,
 				F681D0672B6F8F380061A42C /* SceneDelegate.swift in Sources */,
@@ -1197,14 +1343,18 @@
 				F63459DB2B6ECB54009554B1 /* IndicatorBuilder.swift in Sources */,
 				F681D0452B6EE4870061A42C /* UserDefaults+Ext.swift in Sources */,
 				F681D0DF2B7193D80061A42C /* DiskStorageProcess.swift in Sources */,
+				F63569B12B7803660070C5B4 /* ObjectsListContainerView+buildList.swift in Sources */,
 				F681D0622B6F82FE0061A42C /* AppCoordinator.swift in Sources */,
 				F681D0D12B71266E0061A42C /* Appointment.swift in Sources */,
 				F63459C82B6EB997009554B1 /* Gradient+Ext.swift in Sources */,
 				F681D0832B70481C0061A42C /* HospitalRepository.swift in Sources */,
 				F635695B2B769A840070C5B4 /* AddNewObjectView+SpecificNewObjectView.swift in Sources */,
+				F63569F12B791D930070C5B4 /* SceneDelegate+Ext.swift in Sources */,
 				F681D0AB2B70DA0D0061A42C /* StorageInteractor.swift in Sources */,
+				F63569EB2B791A820070C5B4 /* AppDelegate+Ext.swift in Sources */,
 				F681D0D92B7191170061A42C /* MainCoordinator+Ext.swift in Sources */,
 				F681D0D32B713A350061A42C /* ObjectsListContainerView+Ext.swift in Sources */,
+				F65E1AF92B797F4F009F44A4 /* View+Ext.swift in Sources */,
 				F681D0782B700A090061A42C /* DropDownContainerView.swift in Sources */,
 				F63459CC2B6EBA86009554B1 /* AnyTransition+Ext.swift in Sources */,
 				F60F2ECF2B7545C7004E6D76 /* Localized.swift in Sources */,
@@ -1260,6 +1410,7 @@
 				DEVELOPMENT_TEAM = 4574F346W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Endava/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1296,6 +1447,7 @@
 				DEVELOPMENT_TEAM = 4574F346W6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Endava/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

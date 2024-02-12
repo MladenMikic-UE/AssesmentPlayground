@@ -12,10 +12,9 @@ fileprivate let defaultPaddingValue: CGFloat = 20.0
 
 class AppViewConfiguration: ObservableObject {
     
-    
-    
     let regularButtonSize: CGSize = .init(width: 44, height: 44)
     let bigButtonSize: CGSize = .init(width: 66, height: 66)
+    let hugeButtonSize: CGSize = .init(width: 88, height: 88)
     
     let gradientAnimationDuration: CGFloat = 4.0
     let indicatorSize: CGSize = .init(width: 44, height: 44)
@@ -26,7 +25,7 @@ class AppViewConfiguration: ObservableObject {
                                          bottom: defaultPaddingValue,
                                          right: defaultPaddingValue)
     
-    let cornerRadius: CGFloat = 20.0
+    let cornerRadius: CGFloat = defaultPaddingValue
 }
 
 extension UIEdgeInsets {

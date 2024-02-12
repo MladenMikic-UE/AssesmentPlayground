@@ -31,7 +31,7 @@ public enum AppTheme: String, CaseIterable {
         
         switch self {
         case .assesmentPlayground:
-            "White"
+            "assesmentPlayground"
         case .movemedical:
             "Movemedical"
         case .endava:
@@ -64,6 +64,30 @@ extension AppTheme {
             Font.custom("Futura", size: 24)
         case .endava:
             Font.custom("Verdana", size: 24)
+        }
+    }
+    
+    var tinyFont: Font {
+        
+        switch self {
+        case .assesmentPlayground:
+            Font.custom("Helvetica", size: 12)
+        case .movemedical:
+            Font.custom("Futura", size: 12)
+        case .endava:
+            Font.custom("Verdana", size: 12)
+        }
+    }
+    
+    var miniFont: Font {
+        
+        switch self {
+        case .assesmentPlayground:
+            Font.custom("Helvetica", size: 14)
+        case .movemedical:
+            Font.custom("Futura", size: 14)
+        case .endava:
+            Font.custom("Verdana", size: 14)
         }
     }
     

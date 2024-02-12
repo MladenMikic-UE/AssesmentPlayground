@@ -1,6 +1,6 @@
 //
 //  RSSFeed+RSSArticle.swift
-//  RSS Feed
+//  Endava
 //
 //  Created by Borinschi Ivan on 21.04.2021.
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
