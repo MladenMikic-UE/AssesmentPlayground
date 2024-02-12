@@ -102,6 +102,11 @@ extension RSSFeedSettingsView {
                     print(log)
                 }
                 .store(in: &bag)
+            
+            $openWebPagesExernally.sink { openWebPagesExernally in
+                UserDefaults.openAllWebPagesOutsideOfTheApp = openWebPagesExernally
+            }
+            .store(in: &bag)
         }
         
         func deleteObjectButtonTapped() {
