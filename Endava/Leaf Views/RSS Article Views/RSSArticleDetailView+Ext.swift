@@ -45,6 +45,7 @@ extension RSSArticleDetailView {
         
         @Published var startAnimations: Bool
         
+        // MARK: - Init.
         init(startAnimations: Bool = false) {
             
             self.startAnimations = startAnimations

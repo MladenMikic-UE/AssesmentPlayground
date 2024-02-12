@@ -11,7 +11,7 @@ extension MainCoordinatorView {
     
     @ViewBuilder public func buildFilledContentView() -> some View {
         
-        if self.viewState.startAnimations {
+        if viewState.startAnimations {
             
             ObjectsListContainerView<MainCoordinator>(viewModel: .init(coordinator: coordinator as? MainCoordinator,
                                                                        storageInteractor: viewModel.storageInteractor),
@@ -133,9 +133,7 @@ extension ObjectsListContainerView {
                         
                          Spacer()
                          
-                         Image(systemName: "chevron.right")
-                             .resizable()
-                             .frame(width: 10, height: 18, alignment: .center)
+                         ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
                              .foregroundColor(theme.fontColor)
                          
                          Spacer()

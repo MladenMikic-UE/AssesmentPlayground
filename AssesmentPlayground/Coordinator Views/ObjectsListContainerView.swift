@@ -31,7 +31,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
         buildContentContainerView()
             .onAppear {
                 withAnimation {
-                    self.viewState.startAnimations = true
+                    viewState.startAnimations = true
                 }
             }
             // Fix: The default shows the navigation bar as a compact sized empty top view.
@@ -46,13 +46,13 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                 
                 VStack(spacing: .zero) {
                     
-                    if self.viewState.startAnimations {
+                    if viewState.startAnimations {
                         
                         buildHeaderContainerView()
                             .transition(.popUpWithOpacityTransitionSequence)
                     }
                  
-                    if self.viewState.startAnimations {
+                    if viewState.startAnimations {
                      
                         ZStack {
                             
@@ -84,7 +84,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
             
             HStack(spacing: .zero) {
                                 
-                if self.viewState.startAnimations {
+                if viewState.startAnimations {
                     
                     buildHeaderView()
                         .transition(.popUpWithOpacityTransitionSequence)
@@ -92,7 +92,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
                 
                 Spacer()
                 
-                if self.viewState.startAnimations {
+                if viewState.startAnimations {
                     
                     buildHeaderControlView()
                         .transition(.popUpWithOpacityTransitionSequence)
@@ -136,7 +136,7 @@ struct ObjectsListContainerView<Coordinator: Routing>: View {
         .padding(.trailing, 2)
         .onAppear {
             withAnimation(.linear(duration: appViewConfiguration.gradientAnimationDuration).repeatForever(autoreverses: true)) {
-                self.viewState.leftButtonProgress = 1.0
+                viewState.leftButtonProgress = 1.0
             }
         }
     }

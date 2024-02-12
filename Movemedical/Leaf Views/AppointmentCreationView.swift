@@ -34,7 +34,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
         buildContentView()
             .onAppear {
                 withAnimation {
-                    self.viewStates.startAnimations = true
+                    viewStates.startAnimations = true
                 }
             }
             // Fix: The default shows the navigation bar as a compact sized empty top view.
@@ -47,7 +47,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
             
             ScrollView {
                 
-                if self.viewStates.startAnimations {
+                if viewStates.startAnimations {
                     
                     buildDateSelectionContainerView()
 
@@ -57,7 +57,7 @@ struct AppointmentCreationView<Coordinator: Routing>: View {
                 }
             }
             
-            if self.viewStates.startAnimations {
+            if viewStates.startAnimations {
                 
                 VStack(spacing: .zero) {
                     

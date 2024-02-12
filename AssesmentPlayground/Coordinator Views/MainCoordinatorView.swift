@@ -30,7 +30,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
             .onAppear {
                 viewModel.coordinator = coordinator
                 withAnimation {
-                    self.viewState.startAnimations = true
+                    viewState.startAnimations = true
                 }
             }
             // Fix: The default shows the navigation bar as a compact sized empty top view.
@@ -72,7 +72,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
                 
                 Spacer()
                 
-                if self.viewState.startAnimations {
+                if viewState.startAnimations {
                     
                     buildEmptyTextPlaceholderView()
                 }
@@ -83,7 +83,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
             
             HStack(spacing: .zero) {
                 
-                if self.viewState.startAnimations {
+                if viewState.startAnimations {
                     
                     buildEmptyAddButtonView()
                 }
@@ -123,7 +123,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
                 y: theme.bigButtonShadowMetadata.y)
         .onAppear {
             withAnimation(.linear(duration: appViewConfiguration.gradientAnimationDuration).repeatForever(autoreverses: true)) {
-                self.viewState.leftButtonProgress = 1.0
+                viewState.leftButtonProgress = 1.0
             }
         }
         .transition(.popUpFromBottomTransitionSequence)
@@ -139,7 +139,7 @@ public struct MainCoordinatorView<Coordinator: Routing>: View {
                 
                 Spacer()
 
-                if self.viewState.startAnimations {
+                if viewState.startAnimations {
 
                     IndicatorBuilder.build(intent: .disk, theme: theme, viewConfiguration: appViewConfiguration)
                         .transition(.popUpWithOpacityTransitionSequence)

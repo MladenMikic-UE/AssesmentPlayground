@@ -21,15 +21,6 @@ let rssSources = [RSSSource(title: "Hacking with Swift", url: "https://www.hacki
                   RSSSource(title: "The.Swift.Dev", url: "https://theswiftdev.com/rss.xml"),
                   RSSSource(title: "Swift by Sundell", url: "https://swiftbysundell.com/rss"),
                   RSSSource(title: "Hacking with Swift", url: "https://www.hackingwithswift.com/articles/rss")
-                  /*,
-                                    RSSSource(title: "Advanced Swift", url: "https://www.advancedswift.com/rss/"),
-                                    RSSSource(title: "IOSCREATOR", url: "https://www.ioscreator.com/tutorials?format=RSS"),
-                                    RSSSource(title: "Ole Begemann's Blog", url: "https://oleb.net/feed"),
-                                    RSSSource(title: "SwiftLee Blog", url: "https://www.avanderlee.com/feed/"),
-                                    RSSSource(title: "YASB", url: "https://www.vadimbulavin.com/feed.xml"),
-                                    RSSSource(title: "The.Swift.Dev", url: "https://theswiftdev.com/rss.xml"),
-                                    RSSSource(title: "Swift by Sundell", url: "https://swiftbysundell.com/rss")
-                   */
 ]
 
 let readPropertyListFromServer: Bool = false

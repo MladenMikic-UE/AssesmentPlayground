@@ -18,8 +18,8 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
     @ObservedObject var viewModel: RSSFeedSettingsView.ViewModel<Coordinator>
     
     private let theme: AppTheme
+    
     // MARK: - Init.
-
     init(viewModel: RSSFeedSettingsView<Coordinator>.ViewModel<Coordinator>,
          viewStates: RSSFeedSettingsView.ViewStates = .init(),
          theme: AppTheme) {
@@ -36,10 +36,9 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
             .onAppear {
                 viewModel.coordinator = coordinator
                 withAnimation {
-                    self.viewStates.startAnimations = true
+                    viewStates.startAnimations = true
                 }
             }
-            .ignoresSafeArea(edges: .bottom)
     }
     
     @ViewBuilder private func buildContentContainerView() -> some View {
@@ -50,7 +49,7 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
                 
                 VStack(spacing: .zero) {
                     
-                    if self.viewStates.startAnimations {
+                    if viewStates.startAnimations {
                         
                         Picker("", selection: $viewModel.selectedTab.animation()) {
                             
@@ -79,17 +78,18 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
         }, theme: theme)
     }
     
+    // MARK: - Build Tabs.
     @ViewBuilder private func buildContainerTabView() -> some View {
         
-        if self.viewStates.startAnimations {
+        if viewStates.startAnimations {
             
             TabView(selection: $viewModel.selectedTab) {
                 
-                buildAllArticlesContainerView()
+                buildAllArticlesTab()
                     .tag(L10n.settingsAllArticlesTabTitle)
                     .transition(.move(edge: .leading))
                 
-                buildSettingsContainerView()
+                buildSettingsTab()
                     .tag(L10n.settingsSettingsTabTitle)
                     .transition(.move(edge: .trailing))
             }
@@ -98,7 +98,7 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
         }
     }
   
-    @ViewBuilder private func buildAllArticlesContainerView() -> some View {
+    @ViewBuilder private func buildAllArticlesTab() -> some View {
         
         ZStack {
             
@@ -109,68 +109,82 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
                         radius: theme.regularButtonShadowMetadata.radius,
                         x: theme.regularButtonShadowMetadata.x,
                         y: theme.regularButtonShadowMetadata.y)
+            
+            buildbuildAllArticlesContentView()
+        }
+        .transition(.popUpWithOpacityTransitionSequence)
+    }
+     
+    @ViewBuilder private func buildSettingsTab() -> some View {
+        
+        ZStack {
+            
+            LinearGradient(gradient: theme.bottomHeavyGradient, startPoint: .topTrailing, endPoint: .bottomLeading)
+                .cornerRadius(appViewConfiguration.cornerRadius)
+                .compositingGroup()
+                .shadow(color: theme.shadowColor,
+                        radius: theme.regularButtonShadowMetadata.radius,
+                        x: theme.regularButtonShadowMetadata.x,
+                        y: theme.regularButtonShadowMetadata.y)
+            
+            buildSettingsTabContentView()
+        }
+    }
+    
+    @ViewBuilder private func buildSettingsTabContentView() -> some View {
+        
+        if viewStates.startAnimations {
+    
+            PaddingContainerView(content: {
+                
+                VStack(spacing: .zero) {
+                                
+                    HStack(spacing: .zero) {
+                                            
+                        if viewStates.startAnimations {
+                            
+                            Text(L10n.settingsHeaderTitle)
+                                .font(theme.bigFont)
+                                .foregroundColor(theme.primaryFontColor)
+                                .transition(.popUpWithOpacityTransitionSequence)
+                        }
+                      
+                        Spacer()
+                        
+                        buildDeleteButton()
+                        
+                        Spacer().frame(width: appViewConfiguration.appPadding.right)
+                    }
+                    
+                    Spacer().frame(height: appViewConfiguration.appPadding.bottom)
+                    
+                    buildSettingsViewContainer()
+                }
+                
+            }, padding: appViewConfiguration.appPadding)
+            .transition(.popUpWithOpacityTransitionSequence)
+        }
+    }
+    
+    @ViewBuilder private func buildbuildAllArticlesContentView() -> some View {
+        
+        if viewStates.startAnimations {
             
             if viewModel.model.articles == nil {
                 
                 IndicatorBuilder.build(intent: .web,
                                        theme: theme,
                                        viewConfiguration: appViewConfiguration)
+                .transition(.popUpWithOpacityTransitionSequence)
             } else {
              
                 RSSArticleListView<MainCoordinator>(articles: .constant(viewModel.model.articles ?? []),
                                    theme: theme) { article in
                     viewModel.showDetail(for: article)
                 }
+                .transition(.popUpWithOpacityTransitionSequence)
             }
         }
-        .transition(.popUpWithOpacityTransitionSequence)
-    }
-     
-    @ViewBuilder private func buildSettingsContainerView() -> some View {
-        
-        ZStack {
-            
-            LinearGradient(gradient: theme.bottomHeavyGradient, startPoint: .topTrailing, endPoint: .bottomLeading)
-                .cornerRadius(appViewConfiguration.cornerRadius)
-                .compositingGroup()
-                .shadow(color: theme.shadowColor,
-                        radius: theme.regularButtonShadowMetadata.radius,
-                        x: theme.regularButtonShadowMetadata.x,
-                        y: theme.regularButtonShadowMetadata.y)
-            
-            buildContentView()
-        }
-    }
-    
-    @ViewBuilder private func buildContentView() -> some View {
-        
-        PaddingContainerView(content: {
-            
-            VStack(spacing: .zero) {
-                            
-                HStack(spacing: .zero) {
-                                        
-                    if viewStates.startAnimations {
-                        
-                        Text(L10n.settingsHeaderTitle)
-                            .font(theme.bigFont)
-                            .foregroundColor(theme.primaryFontColor)
-                            .transition(.popUpWithOpacityTransitionSequence)
-                    }
-                  
-                    Spacer()
-                    
-                    buildDeleteButton()
-                    
-                    Spacer().frame(width: appViewConfiguration.appPadding.right)
-                }
-                
-                Spacer().frame(height: appViewConfiguration.appPadding.bottom)
-                
-                buildSettingsViewContainer()
-            }
-            
-        }, padding: appViewConfiguration.appPadding)
     }
     
     @ViewBuilder private func buildDeleteButton() -> some View {
@@ -322,7 +336,8 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
                         Spacer().frame(width: appViewConfiguration.appPadding.right)
                         
                         if viewModel.openWebPagesExernally {
-                            ChevronRightImageView(theme: theme)
+                            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
+                                .foregroundColor(theme.fontColor)
                         } else {
                             SafarImageView(theme: theme)
                         }
@@ -332,7 +347,8 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
                         if viewModel.openWebPagesExernally {
                             SafarImageView(theme: theme)
                         } else {
-                            ChevronRightImageView(theme: theme)
+                            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
+                                .foregroundColor(theme.fontColor)
                         }
                         
                         Spacer().frame(width: appViewConfiguration.appPadding.right)
@@ -386,7 +402,7 @@ struct RSSFeedSettingsView<Coordinator: Routing>: View {
                 Spacer().frame(width: appViewConfiguration.appPadding.left / 2.0)
                 
                 Toggle(isOn: isOn, label: { EmptyView() })
-                    .frame(width: 50)
+                    .frame(width: appViewConfiguration.toggleWidth)
                     .tint(Color.black)
                 
                 Spacer().frame(width: appViewConfiguration.appPadding.right)

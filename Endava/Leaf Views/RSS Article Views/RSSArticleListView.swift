@@ -19,6 +19,7 @@ struct RSSArticleListView<Coordinator: Routing>: View {
     private let showDetailAction: (RSSArticle) -> Void
     private let theme: AppTheme
     
+    // MARK: - Init.
     init(articles: Binding<[RSSArticle]>,
          theme: AppTheme,
          showDetailAction: @escaping (RSSArticle) -> Void) {
@@ -31,6 +32,16 @@ struct RSSArticleListView<Coordinator: Routing>: View {
     
     var body: some View {
         
+        buildContentContainerView()
+        .onAppear {
+            withAnimation {
+                self.startAnimations = true
+            }
+        }
+    }
+    
+    @ViewBuilder private func buildContentContainerView() -> some View {
+        
         ScrollView {
             
             Spacer(minLength: appViewConfiguration.appPadding.top)
@@ -40,11 +51,6 @@ struct RSSArticleListView<Coordinator: Routing>: View {
             Spacer(minLength: appViewConfiguration.appPadding.bottom)
         }
         .clipped()
-        .onAppear {
-            withAnimation {
-                self.startAnimations = true
-            }
-        }
     }
     
     @ViewBuilder private func buildScrollViewContent() -> some View {
@@ -100,9 +106,7 @@ struct RSSArticleListView<Coordinator: Routing>: View {
                         
                          Spacer()
                          
-                         Image(systemName: "chevron.right")
-                             .resizable()
-                             .frame(width: 10, height: 18, alignment: .center)
+                         ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
                              .foregroundColor(theme.fontColor)
                          
                          Spacer()

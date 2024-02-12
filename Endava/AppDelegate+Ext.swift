@@ -36,7 +36,7 @@ public extension AppDelegate {
     
     func scheduleNextUpdate() {
         
-        let request = BGAppRefreshTaskRequest(identifier: "com.rss.news.refresh")
+        let request: BGAppRefreshTaskRequest = BGAppRefreshTaskRequest(identifier: "com.rss.news.refresh")
         request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60)
         
         do {

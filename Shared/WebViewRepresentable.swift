@@ -12,39 +12,40 @@ public struct WebViewRepresentable: UIViewRepresentable {
     public var url: URL?
     public var hTMLString: String?
     
+    // MARK: - Init.
     /// Uses the raw `url` value for `URLRequest` creation and loading.
     public init(url: URL) {
+        
         self.url = url
     }
     
     /// Creates a `URL` from the provided `string`.
     /// Attempts to validate the `URL` creation with `addingPercentEncoding`.
     public init?(string: String) {
-        guard let validString = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+        
+        guard let validString: String = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
         self.url = URL(string: validString)
     }
     
     /// Uses the raw `hTMLString` value for `loadHTMLString`.
     public init(hTMLString: String) {
+        
         self.hTMLString = hTMLString
     }
  
+    // MARK: - UIViewRepresentable.
     public func makeUIView(context: Context) -> WKWebView {
         return FullScreenWKWebView()
     }
  
     public func updateUIView(_ webView: WKWebView, context: Context) {
-        if let url = url {
-            let request = URLRequest(url: url)
+        
+        if let url: URL = url {
+            let request: URLRequest = URLRequest(url: url)
             webView.load(request)
-        } else if let hTMLString = hTMLString {
+        } else if let hTMLString: String = hTMLString {
             webView.loadHTMLString(hTMLString, baseURL: Bundle.main.bundleURL)
         }
     }
 }
 
-class FullScreenWKWebView: WKWebView {
-    override var safeAreaInsets: UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-}

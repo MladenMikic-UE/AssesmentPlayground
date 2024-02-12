@@ -104,13 +104,13 @@ extension RSSFeedSettingsView {
                 .store(in: &bag)
         }
         
-        public func deleteObjectButtonTapped() {
+        func deleteObjectButtonTapped() {
             
             storageInteractor.remove(item: model)
             coordinator?.handle(Action.done(model))
         }
         
-        public func openWebpage(url: URL?) {
+        func openWebpage(url: URL?) {
             
             guard let eURL: URL = url else {
                 return

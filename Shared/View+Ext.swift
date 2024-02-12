@@ -19,7 +19,7 @@ public struct HiddenNavigationBar: ViewModifier {
 public extension View {
     
     func hiddenNavigationBarStyle() -> some View {
-        modifier( HiddenNavigationBar() )
+        modifier(HiddenNavigationBar())
     }
     
     func animatable(gradientRange: AnimatedGradient, progress: CGFloat) -> some View {
@@ -41,6 +41,7 @@ public extension View {
     ///   - transform: The transform to apply to the source `View`.
     /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
     @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        
         if condition {
             transform(self)
         } else {
@@ -59,6 +60,7 @@ public extension View {
     
     /// Add a border for debug builds.
     func debugBorder(_ color: Color = .random, width: CGFloat = 1) -> some View {
+        
         debugModifier {
             $0.border(color, width: width)
         }
@@ -66,6 +68,7 @@ public extension View {
     
     /// Add a background color for debug builds.
     func debugBackground(_ color: Color = .random) -> some View {
+        
         debugModifier {
             $0.background(color)
         }

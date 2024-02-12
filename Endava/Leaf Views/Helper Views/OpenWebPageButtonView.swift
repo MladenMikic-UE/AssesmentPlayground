@@ -15,7 +15,11 @@ struct OpenWebPageButtonView: View {
     private let theme: AppTheme
     private let action: () -> Void
     
-    internal init(title: String, theme: AppTheme, action: @escaping () -> Void) {
+    // MARK: - Init.
+    init(title: String, 
+         theme: AppTheme,
+         action: @escaping () -> Void) {
+        
         self.title = title
         self.theme = theme
         self.action = action
@@ -51,7 +55,8 @@ struct OpenWebPageButtonView: View {
                         Spacer().frame(width: appViewConfiguration.appPadding.right)
                         
                         if UserDefaults.openAllWebPagesOutsideOfTheApp {
-                            ChevronRightImageView(theme: theme)
+                            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
+                                .foregroundColor(theme.fontColor)
                         } else {
                             SafarImageView(theme: theme)
                         }
@@ -61,7 +66,8 @@ struct OpenWebPageButtonView: View {
                         if UserDefaults.openAllWebPagesOutsideOfTheApp {
                             SafarImageView(theme: theme)
                         } else {
-                            ChevronRightImageView(theme: theme)
+                            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
+                                .foregroundColor(theme.fontColor)
                         }
                         
                         Spacer().frame(width: appViewConfiguration.appPadding.right)

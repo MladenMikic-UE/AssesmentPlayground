@@ -121,9 +121,7 @@ extension ObjectsListContainerView {
                         
                          Spacer()
                          
-                         Image(systemName: "chevron.right")
-                             .resizable()
-                             .frame(width: 10, height: 18, alignment: .center)
+                         ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
                              .foregroundColor(theme.fontColor)
                          
                          Spacer()

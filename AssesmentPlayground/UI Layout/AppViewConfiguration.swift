@@ -20,12 +20,15 @@ class AppViewConfiguration: ObservableObject {
     let indicatorSize: CGSize = .init(width: 44, height: 44)
     let buttonImageSize: CGSize = .init(width: 22, height: 22)
     
+    let toggleWidth: CGFloat = 50.0
     let appPadding: UIEdgeInsets = .init(top: defaultPaddingValue,
                                          left: defaultPaddingValue,
                                          bottom: defaultPaddingValue,
                                          right: defaultPaddingValue)
     
     let cornerRadius: CGFloat = defaultPaddingValue
+    
+    let shevronRightSize: CGSize = .init(width: 10, height: 18)
 }
 
 extension UIEdgeInsets {

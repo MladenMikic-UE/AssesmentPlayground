@@ -11,7 +11,7 @@ extension MainCoordinatorView {
     
     @ViewBuilder public func buildFilledContentView() -> some View {
         
-        if self.viewState.startAnimations {
+        if viewState.startAnimations {
             
             MainCoordinatorTabView<MainCoordinator>(theme: theme, 
                                                     viewModel: .init(storageInteractor: viewModel.storageInteractor,

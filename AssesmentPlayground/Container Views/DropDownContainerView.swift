@@ -101,15 +101,12 @@ struct DropDownContainerView<Content>: View where Content: View {
     @ViewBuilder private func buildChevronImageView() -> some View {
         
         if viewState == .full {
-            Image(systemName: "chevron.right")
-                .resizable()
-                .frame(width: 10, height: 18)
+           
+            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
                 .foregroundColor(theme.selectionColor)
                 .rotationEffect(.degrees(270))
         } else {
-            Image(systemName: "chevron.right")
-                .resizable()
-                .frame(width: 10, height: 18)
+            ImageViewBuilder.buildChevronRightImageView(appVC: appViewConfiguration)
                 .foregroundColor(theme.fontColor)
                 .rotationEffect(.degrees(90))
         }

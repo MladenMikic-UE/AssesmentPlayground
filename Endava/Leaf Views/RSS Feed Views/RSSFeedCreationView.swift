@@ -18,11 +18,12 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
     @ObservedObject var viewModel: RSSFeedCreationView.ViewModel<Coordinator>
     
     private let theme: AppTheme
+    
     // MARK: - Init.
-
     init(viewModel: RSSFeedCreationView<Coordinator>.ViewModel<Coordinator>,
          viewStates: RSSFeedCreationView.ViewStates = .init(),
          theme: AppTheme) {
+        
         self.viewModel = viewModel
         self._viewStates = StateObject(wrappedValue: viewStates)
         self.theme = theme
@@ -35,7 +36,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
             .onAppear {
                 viewModel.coordinator = coordinator
                 withAnimation {
-                    self.viewStates.startAnimations = true
+                    viewStates.startAnimations = true
                 }
             }
             // Fix: The default shows the navigation bar as a compact sized empty top view.
@@ -48,7 +49,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
             
             VStack(spacing: .zero) {
                 
-                if self.viewStates.startAnimations {
+                if viewStates.startAnimations {
                     
                     Picker("", selection: $viewModel.selectedCreationMethod.animation()) {
                         
@@ -76,7 +77,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildContainerTabView() -> some View {
         
-        if self.viewStates.startAnimations {
+        if viewStates.startAnimations {
          
             TabView(selection: $viewModel.selectedCreationMethod) {
                 
@@ -95,29 +96,24 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
     
     @ViewBuilder private func buildCreateNewContainerView() -> some View {
         
-        ZStack {
+        VStack(spacing: .zero) {
             
-            Color.clear
-
-            VStack(spacing: .zero) {
+            ScrollView {
                 
-                ScrollView {
+                if viewStates.startAnimations {
                     
-                    if self.viewStates.startAnimations {
-                        
-                        buildURLCreationContainerView()
-                        
-                        buildTitleCreationContainerView()
-                    }
+                    buildURLCreationContainerView()
+                    
+                    buildTitleCreationContainerView()
                 }
-                
-                Spacer().frame(height: appViewConfiguration.appPadding.bottom)
-                
-                buildFinisButtonView(isRSSFeedValid: viewModel.isCreatedObjectValid,
-                                     opacityLevel: viewModel.newRSSFeedOpacityLevel,
-                                     title: L10n.addNewObjectFinishTitle) {
-                    viewModel.createNewObjectButtonTapped()
-                }
+            }
+            
+            Spacer().frame(height: appViewConfiguration.appPadding.bottom)
+            
+            buildFinisButtonView(isRSSFeedValid: viewModel.isCreatedObjectValid,
+                                 opacityLevel: viewModel.newRSSFeedOpacityLevel,
+                                 title: L10n.addNewObjectFinishTitle) {
+                viewModel.createNewObjectButtonTapped()
             }
         }
         .cornerRadius(appViewConfiguration.cornerRadius)
@@ -202,7 +198,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
                                                    title: String,
                                                    action: @escaping () -> Void) -> some View {
         
-        if self.viewStates.startAnimations {
+        if viewStates.startAnimations {
             
             Button {
                 withAnimation {
@@ -211,6 +207,7 @@ struct RSSFeedCreationView<Coordinator: Routing>: View {
             } label: {
                 
                 VStack(spacing: .zero) {
+                    
                     Spacer()
                     
                     Text(title)

@@ -14,7 +14,9 @@ public struct DeleteButton: View {
     private let theme: AppTheme
     private let action: () -> Void
     
-    public init(theme: AppTheme, action: @escaping () -> Void) {
+    // MARK: - Init.
+    public init(theme: AppTheme, 
+                action: @escaping () -> Void) {
         self.theme = theme
         self.action = action
     }

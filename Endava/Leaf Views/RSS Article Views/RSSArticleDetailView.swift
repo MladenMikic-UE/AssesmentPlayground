@@ -18,8 +18,8 @@ struct RSSArticleDetailView<Coordinator: Routing>: View {
     @ObservedObject var viewModel: RSSArticleDetailView.ViewModel<Coordinator>
     
     private let theme: AppTheme
+    
     // MARK: - Init.
-
     init(viewModel: RSSArticleDetailView<Coordinator>.ViewModel<Coordinator>,
          viewStates: RSSArticleDetailView.ViewStates = .init(),
          theme: AppTheme) {
@@ -34,7 +34,7 @@ struct RSSArticleDetailView<Coordinator: Routing>: View {
             .onAppear {
                 viewModel.coordinator = coordinator
                 withAnimation {
-                    self.viewStates.startAnimations = true
+                    viewStates.startAnimations = true
                 }
             }
     }

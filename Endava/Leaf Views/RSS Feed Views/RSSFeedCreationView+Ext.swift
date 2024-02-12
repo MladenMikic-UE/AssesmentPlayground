@@ -34,6 +34,7 @@ extension RSSFeedCreationView {
         @Published private var isRSSFeedTitleValid: Bool = false
         private var bag: Set<AnyCancellable> = Set<AnyCancellable>()
        
+        // MARK: - Refactor ViewModel (to manu properties with init).
         // MARK: - Init.
         init(isCreatedObjectValid: Bool = false,
              isSelectedObjectValid: Bool = false,
@@ -137,6 +138,7 @@ extension RSSFeedCreationView {
         @Published var rssFeedTitleViewState: RawViewState
         @Published var startAnimations: Bool
         
+        // MARK: - Init.
         init(rssFeedURLViewState: RawViewState = .full,
              rssFeedTitleViewState: RawViewState = .glance,
              startAnimations: Bool = false) {

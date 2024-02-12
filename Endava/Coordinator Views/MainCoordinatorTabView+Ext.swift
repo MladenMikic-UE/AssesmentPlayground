@@ -17,12 +17,15 @@ extension MainCoordinatorTabView {
         @Published var storageInteractor: StorageInteractor
         @Published var selectedArticle: RSSArticle?
         @Published var articles: [RSSArticle]
-        private let timeline: RSSTimeLine
+        // TODO: Refactor this model ->
         private let sourceManager: RSSSourceManager
+        private let timeline: RSSTimeLine
         private let dataSubscriber: RSSDataSubscriber = RSSDataSubscriber()
         private let rssDataStatus: RSSDataStatusSubscriber = RSSDataStatusSubscriber()
+        // <-
         private var bag: Set<AnyCancellable> = Set<AnyCancellable>()
         
+        // MARK: - Init.
         public init(storageInteractor: StorageInteractor,
                     coordinator: R?,
                     timeline: RSSTimeLine,
@@ -36,8 +39,13 @@ extension MainCoordinatorTabView {
             self.sourceManager = sourceManager
             self.articles = articles
             self.selectedArticle = selectedArticle
-            self.updateContent()
-            self.setUpRSSUpdateSubscriber()
+            
+            updateContent()
+            setUpRSSUpdateSubscriber()
+            setupPublishers()
+        }
+        
+        private func setupPublishers() {
             
             storageInteractor.localStorage.$items
                 .sink { [weak self] items in
@@ -54,6 +62,7 @@ extension MainCoordinatorTabView {
         }
         
         func showDetail(for article: RSSArticle) {
+            
             self.selectedArticle = article
             coordinator?.handle(MainAction.detail(object: article))
         }
@@ -84,7 +93,7 @@ extension MainCoordinatorTabView {
             
             let sources: [RSSSource] = RSSSourceManager.shared.sources
             let articles: [RSSArticle] = RSSTimeLine.rssFeedTimeLine(for: sources)
-            
+            /*
             let log =
             """
             
@@ -94,6 +103,7 @@ extension MainCoordinatorTabView {
 
             """
             print(log)
+            */
             withAnimation {
                 self.articles = articles
             }
@@ -104,6 +114,7 @@ extension MainCoordinatorTabView {
         
         @Published var startAnimations: Bool
         
+        // MARK: - Init.
         public init(startAnimations: Bool = true) {
             self.startAnimations = startAnimations
         }

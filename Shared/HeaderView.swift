@@ -16,6 +16,12 @@ public struct HeaderView: View {
     private let height: CGFloat
     private let fixedHeight: CGFloat?
     
+    // MARK: - Init.
+    /// - Parameters:
+    ///   - title: The header title.
+    ///   - theme: The theme used for coloring the view layout.
+    ///   - height: The ideal height that should be used.
+    ///   - fixedHeight: If this height is available it will be used.
     public init(title: String,
                 theme: AppTheme,
                 height: CGFloat = .infinity,

@@ -11,7 +11,8 @@ public struct SafarImageView: View {
 
     private let theme: AppTheme
     
-    public  init(theme: AppTheme) {
+    // MARK: - Init.
+    public init(theme: AppTheme) {
         self.theme = theme
     }
     
