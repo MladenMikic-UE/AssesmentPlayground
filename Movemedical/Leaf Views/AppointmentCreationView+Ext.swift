@@ -34,6 +34,7 @@ extension AppointmentCreationView {
         private var cancellable: AnyCancellable?
         private let dateFormatter: DateFormatter = DateFormatter()
         
+        // MARK: - Init.
         init(date: Date = .now,
              description: String = "",
              location: String = "",
@@ -105,6 +106,7 @@ extension AppointmentCreationView {
         @Published var scheduleButtonViewState: RawViewState
         @Published var startAnimations: Bool
         
+        // MARK: - Init.
         init(locationViewState: RawViewState = .glance,
              dateViewState: RawViewState = .glance,
              descriptionViewState: RawViewState = .glance,
